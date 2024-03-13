@@ -1,0 +1,101 @@
+{"text_id": 0, "task_id": "PandasEval/0", "text": "You can specify a new column named `mean_along_rows` that contains the mean of each row. You also need to compute the mean along the rows, so use axis=1. Finally, return the dataframe with the new column."}
+{"text_id": 1, "task_id": "PandasEval/1", "text": "How do I select rows from a DataFrame df based on column values? Return rows whose column value named `col_name` is in an iterable `values`"}
+{"text_id": 2, "task_id": "PandasEval/2", "text": "How do I change the column labels of df\uff1f And return the dataframe that has been renamed"}
+{"text_id": 3, "task_id": "PandasEval/3", "text": "deleting a column from a Pandas DataFrame return the changged dataframe"}
+{"text_id": 4, "task_id": "PandasEval/4", "text": "How do I select the given columns and return the new DataFrame?"}
+{"text_id": 5, "task_id": "PandasEval/5", "text": "Return the row count of df"}
+{"text_id": 6, "task_id": "PandasEval/6", "text": "I want to get a list of the column headers from a Pandas DataFrame. The DataFrame will come from user input, so I won't know how many columns there will be or what they will be called. Return a list of the column headers."}
+{"text_id": 7, "task_id": "PandasEval/7", "text": "How to add a new column to an existing DataFrame? I would like to add a new column data with the column name, to the existing dataframe"}
+{"text_id": 8, "task_id": "PandasEval/8", "text": "Change all columns type of DataFrame to numeric And return the new DataFrame The code is:"}
+{"text_id": 9, "task_id": "PandasEval/9", "text": "How to drop rows of Pandas DataFrame whose value in a certain column is NaN"}
+{"text_id": 11, "task_id": "PandasEval/11", "text": "Params: df: The dataframe to append to. list_to_append: The list to append. column_name_list: The column names of the list to append. Returns: The dataframe with the list appended."}
+{"text_id": 12, "task_id": "PandasEval/12", "text": "I am trying to extract the last year (YY) of a fiscal date string in the format of YYYY-YY. e.g The last year of this '1999-00' would be 2000. I need a logic to include a case where if it is the end of the century then my apply method should add to the first two digits. the column_name is the column name of the dataframe that contains the date strings. return the numerical Series obj of the last year."}
+{"text_id": 13, "task_id": "PandasEval/13", "text": "How to get the last N rows of a pandas DataFrame?"}
+{"text_id": 14, "task_id": "PandasEval/14", "text": "how do I get the value at an nth row of a given column name in Pandas? return the value"}
+{"text_id": 15, "task_id": "PandasEval/15", "text": "creating a new dataframe of all same with df_original one, but no any rows return the new dataframe"}
+{"text_id": 20, "task_id": "PandasEval/20", "text": "What is the best way to do a groupby on a Pandas dataframe, but exclude some columns from that groupby? I want to groupby the column `Country` and `Item_Code` and only compute the sum of the rows falling under the columns ['Y1961', 'Y1962' and 'Y1963']."}
+{"text_id": 10, "task_id": "PandasEval/10", "text": "creating a Series from a list [56, 24, 421, 90]"}
+{"text_id": 16, "task_id": "PandasEval/16", "text": "What I want is to clip the values of `col_1` between -2 to 2 if `col_0` is `a`. Using `clip` function in pandas."}
+{"text_id": 17, "task_id": "PandasEval/17", "text": "I would like to create new dataframe out of the old one in a way that there will only be values that exceed the mean value of the column. We can compare values and then add NaNs by indexing or `where` We want remove NaNs also in first rows add custom function with `dropna`"}
+{"text_id": 18, "task_id": "PandasEval/18", "text": "Appending the source series to the target series, with ignoring the index or resetting index"}
+{"text_id": 19, "task_id": "PandasEval/19", "text": "Selecting rows where column x2 is NaN"}
+{"text_id": 21, "task_id": "PandasEval/21", "text": "I want to convert a table, represented as a list of lists, into a pandas DataFrame. The columns are ['one', 'two'] What is the best way to convert the columns to the appropriate types, in this case the 'two' column into floats?"}
+{"text_id": 22, "task_id": "PandasEval/22", "text": "I need to change the dtype of multiple columns but the dataframe has different kind of dtypes. Some columns dtypes are float64 whereas some columns are int64 I need to change all float64 to float32."}
+{"text_id": 23, "task_id": "PandasEval/23", "text": "I have a dataframe that has two columns, the second column is one of only a few values. I want to return a dataframe where only the rows where that col2 had a specific value 'Jimmy' are included."}
+{"text_id": 24, "task_id": "PandasEval/24", "text": "df = df.reset_index() make sure indexes pair with number of rows (for index, row in DataFrame.iterrows) is a generator which yields both the index and row (as a Series) for each row in the DataFrame, we need put the row['MSRA'] (as key) and row['THU'] (as value) into a rows_dict rows_dict = {} {MSRA: THU, ...}"}
+{"text_id": 25, "task_id": "PandasEval/25", "text": "I have a dataframe in pandas where each column has different value range. Any idea how I can normalize the columns of this dataframe where each value is between 0 and 1?"}
+{"text_id": 26, "task_id": "PandasEval/26", "text": "I want to create a dataframe with one of the column as a list or array. After you assign a list like or array like value to the columns, the column should be considered as type object Now I want to assign the emails to first row and the 'Email' column"}
+{"text_id": 28, "task_id": "PandasEval/28", "text": "In my code, I have several variables which can either contain a pandas DataFrame or nothing at all. Let's say I want to test and see if a certain DataFrame has been created yet or not."}
+{"text_id": 29, "task_id": "PandasEval/29", "text": "I need to remain the rows where line_num is not equal to 0. What's the most efficient way to do it? it should be as simple as:"}
+{"text_id": 30, "task_id": "PandasEval/30", "text": "I would like to drop all data in a pandas dataframe Using df.index to drop all rows"}
+{"text_id": 31, "task_id": "PandasEval/31", "text": "I would like to add a new column C that is the sum value of A and B cell."}
+{"text_id": 32, "task_id": "PandasEval/32", "text": "Move next value to first empty row pandas how do i move each value from a column to the first empty \"row/cell\" in pandas? use sorted to align non NULL data at the top, use dropna to drop all rows with all NaN"}
+{"text_id": 33, "task_id": "PandasEval/33", "text": "I want to make all column headers in my pandas data frame lower case"}
+{"text_id": 35, "task_id": "PandasEval/35", "text": "How to get the first largest value in column a\uff1f Using nlargest and iloc to implemente this"}
+{"text_id": 36, "task_id": "PandasEval/36", "text": "I have a Pandas dataframe and I want to find all the unique values in that dataframe...irrespective of row/columns. If I have a 10 x 10 dataframe, and suppose they have 84 unique values, I need to find them - Not the count. Using xx.values.ravel to get the flattened array of the dataframe Getting the unique values by numpy.unique"}
+{"text_id": 37, "task_id": "PandasEval/37", "text": "How to group values of pandas dataframe and select the latest by date from each group? Sorting values by `date` (ascending is True), and then grouping by `id`"}
+{"text_id": 38, "task_id": "PandasEval/38", "text": "i want to drop 2 rows in the dataframe if zero comes in the column if 0 comes on odd index drop previous row as well as current row using pandas Assuming your dataframe is indexed starting from 0 Rows with column2 = 0 and on odd index The rows above them A new dataframe with those rows removed"}
+{"text_id": 39, "task_id": "PandasEval/39", "text": "Shift column in pandas dataframe up by one? In detail, in 'gdp' column, shift up by one and return dataframe with the changed gdp column."}
+{"text_id": 40, "task_id": "PandasEval/40", "text": "I was wondering if there is an elegant and shorthand way in Pandas DataFrames to select columns by data type (dtype). i.e. Select only float64 columns from a DataFrame"}
+{"text_id": 41, "task_id": "PandasEval/41", "text": "How to merge two dataframes with different column names but same number of rows? I have two different data frames in pandas. Example: df1=a b df2= c 0 1 1 1 2 2 2 3 3 I want to merge them so df1= a b c 0 1 1 1 2 2 2 3 3 In order to merge two dataframes you can use this two examples. Both returns the same goal Using merge plus additional arguments instructing it to use the indexes Specially, we can set left_index and right_index to True"}
+{"text_id": 42, "task_id": "PandasEval/42", "text": "How can I delete multiple columns in one pass? In detail, I would like to delete columns A and C, but I don't know how to do it in one pass."}
+{"text_id": 43, "task_id": "PandasEval/43", "text": "I want to get the counts of unique values of the dataframe. count_values implements this however I want to use its output somewhere else. How can I convert .count_values output to a pandas dataframe. Use rename_axis('unique_values') for name ('counts') of column from index and reset_index return the final dataframe"}
+{"text_id": 44, "task_id": "PandasEval/44", "text": "How do I change the column labels of a pandas DataFrame from ['A', 'B', 'C'] to ['a', 'b', 'c']?"}
+{"text_id": 45, "task_id": "PandasEval/45", "text": "I want to make all column headers in my pandas data frame lower case Return the changed dataframe"}
+{"text_id": 46, "task_id": "PandasEval/46", "text": "Say i have a dataframe with 100,000 entries and want to split it into 100 sections of 1000 entries. How do i take a random sample of say size 50 of just one of the 100 sections. the data set is already ordered such that the first 1000 results are the first section the next section the next and so on. You could add a \"section\" column to your data then perform a groupby and sample(n=50):"}
+{"text_id": 47, "task_id": "PandasEval/47", "text": "Example DataFrame Want to remove all the numbers from the Name column. Any idea how to do it in a better way at the series/dataframe level."}
+{"text_id": 48, "task_id": "PandasEval/48", "text": "How do I find all rows in a pandas DataFrame which have the max value for 'num' column, after grouping by 'Mt' column?"}
+{"text_id": 49, "task_id": "PandasEval/49", "text": "transfer column date to datetime type when there is a string that is not capable of beeing turned into datetime format, skip that row, use errors='coerce' for this"}
+{"text_id": 50, "task_id": "PandasEval/50", "text": "How to check if any value is NaN in a Pandas DataFrame? Return the result."}
+{"text_id": 51, "task_id": "PandasEval/51", "text": "Sorting columns in pandas dataframe based on column name Note that axis is one"}
+{"text_id": 52, "task_id": "PandasEval/52", "text": "How can I get the values of column `A` when column `B`=3?"}
+{"text_id": 53, "task_id": "PandasEval/53", "text": "return the column average/mean"}
+{"text_id": 54, "task_id": "PandasEval/54", "text": "How do I combine two dataframes with ignore index? Return the concated dataframe."}
+{"text_id": 55, "task_id": "PandasEval/55", "text": "This is my DataFrame that should be repeated for 5 times: I haven't found anything practical, including those like np.repeat ---- it just doesn't work on a DataFrame. You can use the concat function:"}
+{"text_id": 56, "task_id": "PandasEval/56", "text": "Pandas DataFrame to List of Dictionaries Use df.to_dict() to solve it and return the result"}
+{"text_id": 57, "task_id": "PandasEval/57", "text": "Convert Column `Date` to Date Format using pandas function return the coverted dataframe"}
+{"text_id": 58, "task_id": "PandasEval/58", "text": "Counting consecutive positive values in Python/pandas array I'm trying to count consecutive up days in equity return data; so if a positive day is 1 and a negative is 0, a list y=[0,0,1,1,1,0,0,1,0,1,1] should return z=[0,0,1,2,3,0,0,1,0,1,2]. Return the result"}
+{"text_id": 59, "task_id": "PandasEval/59", "text": "Inserts a row into a dataframe at a specified row with no ingore index, and sort & reset the index with drop=True. Returns the new dataframe."}
+{"text_id": 60, "task_id": "PandasEval/60", "text": "list_of_lists format: [header, [row1], [row2], ...] header format: [column1, column2, ...] row format: [value1, value2, ...] How to convert list to dataframe? Return the dataframe"}
+{"text_id": 61, "task_id": "PandasEval/61", "text": "How do I merge two dataframes by index? Set left&right indexs to True"}
+{"text_id": 62, "task_id": "PandasEval/62", "text": "How to obtain pandas DataFrame without index I want to print the whole dataframe, but I don't want to print the index"}
+{"text_id": 63, "task_id": "PandasEval/63", "text": "We will drop all Nan rows. Return the changed dataframe."}
+{"text_id": 64, "task_id": "PandasEval/64", "text": "How to determine whether a Pandas Column contains a particular value? Return the result"}
+{"text_id": 65, "task_id": "PandasEval/65", "text": "How would I rename the only one column header? return the changed dataframe"}
+{"text_id": 66, "task_id": "PandasEval/66", "text": "I have a dataframe with repeat values in column `col1`. I want to drop duplicates, keeping the row with the last value in column `col2`. How would I do that? return the final dataframe"}
+{"text_id": 67, "task_id": "PandasEval/67", "text": "Pandas create empty DataFrame with only column names Return: DataFrame"}
+{"text_id": 68, "task_id": "PandasEval/68", "text": "Delete first n rows of a dataframe Input: df: DataFrame n: int Return: DataFrame"}
+{"text_id": 69, "task_id": "PandasEval/69", "text": "Here's a one solution to remove columns based on duplicate column names: Return the duplicated dataframe"}
+{"text_id": 70, "task_id": "PandasEval/70", "text": "How can I map True/False to 1/0 in a Pandas DataFrame? return the dataframe with the column converted to int"}
+{"text_id": 71, "task_id": "PandasEval/71", "text": "How do I retrieve the number of columns in a Pandas data frame? Return the number of columns in the dataframe"}
+{"text_id": 72, "task_id": "PandasEval/72", "text": "How do I determine which columns contain NaN values? In particular, can I get a list of the column names containing NaNs? Return a list of the column names containing NaNs"}
+{"text_id": 73, "task_id": "PandasEval/73", "text": "How to get the last N rows of a pandas DataFrame?"}
+{"text_id": 74, "task_id": "PandasEval/74", "text": "replace field that's entirely space (or empty) with NaN using regex return the result"}
+{"text_id": 75, "task_id": "PandasEval/75", "text": "Pandas dataframe fillna() only some columns in place This function fills all columns with 0 Return the changed dataframe"}
+{"text_id": 76, "task_id": "PandasEval/76", "text": "Given that all the dataframes have the same columns, you can simply concat them: return the concated dataframe"}
+{"text_id": 77, "task_id": "PandasEval/77", "text": "Extract first and last row of a dataframe in pandas Return the dataframe with the first and last row"}
+{"text_id": 78, "task_id": "PandasEval/78", "text": "Return the dataframe with the rows with one or more NaN values"}
+{"text_id": 79, "task_id": "PandasEval/79", "text": "Return the row-index values of the dataframe as a list"}
+{"text_id": 80, "task_id": "PandasEval/80", "text": "I find myself often having to check whether a column or row exists in a dataframe before trying to reference it. Is there any way to do this more nicely? For example on an arbitrary object I can do x = getattr(anobject, 'id', default) - is there anything similar to this in pandas? Really any way to achieve what I'm doing more gracefully? Output the second row of data in `mycol` column if it exists, otherwise output NaN"}
+{"text_id": 81, "task_id": "PandasEval/81", "text": "Count the number of occurrences of a value in a series Return the count"}
+{"text_id": 82, "task_id": "PandasEval/82", "text": "Find rows in df where col_a > col_b Return the rows"}
+{"text_id": 83, "task_id": "PandasEval/83", "text": "Drop consecutive duplicates Return the result"}
+{"text_id": 84, "task_id": "PandasEval/84", "text": "Round a single column `A` Return the dataframe"}
+{"text_id": 85, "task_id": "PandasEval/85", "text": "Add Leading Zeros to Strings at `col_name` in Pandas Dataframe The maximum length of the string is 15 Return the dataframe"}
+{"text_id": 86, "task_id": "PandasEval/86", "text": "append dictionary to data frame return the data frame"}
+{"text_id": 87, "task_id": "PandasEval/87", "text": "transform timestamp to pydatetime object return pydatetime object"}
+{"text_id": 88, "task_id": "PandasEval/88", "text": "Given a pandas series that represents frequencies of a value, how can I turn those frequencies into percentages? Return the percentage of each gender."}
+{"text_id": 89, "task_id": "PandasEval/89", "text": "I need to divide all ['B','C'] columns but the first column 'A' in a DataFrame by the first column. Return the result."}
+{"text_id": 90, "task_id": "PandasEval/90", "text": "ceiling of a pandas series Return the result."}
+{"text_id": 91, "task_id": "PandasEval/91", "text": "Delete all columns that contain all NaN values Return the result."}
+{"text_id": 92, "task_id": "PandasEval/92", "text": "add the row at top in df resort the index by inplace"}
+{"text_id": 93, "task_id": "PandasEval/93", "text": "Set value to an entire column `B` of a pandas dataframe Return the changed dataframe."}
+{"text_id": 94, "task_id": "PandasEval/94", "text": "Finding the intersection between two series In detail, first we create two sets, one for each series. Then we find the intersection of the two sets."}
+{"text_id": 95, "task_id": "PandasEval/95", "text": "I would simply like to slice the Data Frame and take the first n rows. Return the result"}
+{"text_id": 96, "task_id": "PandasEval/96", "text": "Add a new column named 'Fruit Total' that sums the values of the other columns Note that igonring the NaN values"}
+{"text_id": 97, "task_id": "PandasEval/97", "text": "Finding non-numeric rows in dataframe in pandas Return the raws that contain non-numeric values So to get the subDataFrame of rouges, (Note: the negation, ~, of the above finds the ones which have at least one rogue non-numeric):"}
+{"text_id": 98, "task_id": "PandasEval/98", "text": "merge the above two dataframes on column 'company'"}
+{"text_id": 99, "task_id": "PandasEval/99", "text": "counting the number of missing/NaN in each column Get a series with the number of missing/NaN in each column"}
+{"text_id": 100, "task_id": "PandasEval/100", "text": "Any word from `targets` are present in sentence."}
+{"text_id": 34, "task_id": "PandasEval/34", "text": "I need to calculate the difference between two rows groupwise using pandas. To calculate the sum I would use pandas.groupby('Group').sum(), but how do you calculate the difference between rows where the row ordering is important? I think we need custom function with apply which return DataFrame for each group, for select by position is used iat: Return the result"}
+{"text_id": 27, "task_id": "PandasEval/27", "text": "Normalization using pandas We simply subtract the mean and divide by standard deviation on df.iloc[:,0,-1] obj with axis is zero. Return the normalized dataframe"}

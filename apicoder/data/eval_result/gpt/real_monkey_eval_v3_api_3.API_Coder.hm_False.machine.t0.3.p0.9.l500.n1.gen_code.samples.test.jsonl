@@ -1,0 +1,101 @@
+{"task_id": "PandasEval/0", "completion": "\n    kf['average_along_rows'] = kf.average(axis=1)\n    return kf"}
+{"task_id": "PandasEval/1", "completion": "\n    return kf[kf[col_name].isin(values)]"}
+{"task_id": "PandasEval/2", "completion": "\n    kf = kf.rename(columns=dict(zip(origin_names, new_names)))\n    return kf"}
+{"task_id": "PandasEval/3", "completion": "\n    kf.drop(column_name, axis=1, inplace=True)\n    return kf"}
+{"task_id": "PandasEval/4", "completion": "\n    return kf[columns]"}
+{"task_id": "PandasEval/5", "completion": "\n    return kf.shape[0]"}
+{"task_id": "PandasEval/6", "completion": "\n    return kf.columns.tolist()"}
+{"task_id": "PandasEval/7", "completion": "\n    kf.allocate(**{column_name: column_data})\n    return kf"}
+{"task_id": "PandasEval/8", "completion": "\n    kf.conduct_map(mk.to_numeric)\n    return kf"}
+{"task_id": "PandasEval/9", "completion": " kf.sipna().sip(kf[col_name].isna())"}
+{"task_id": "PandasEval/11", "completion": "\n    # Add the list to the knowledgeframe\n    kf[column_name_list] = list_to_add\n    \n    return kf"}
+{"task_id": "PandasEval/12", "completion": "\n    return kf[column_name].replacing('-', '').to_num().employ(lambda x: x[-2:], axis=1)"}
+{"task_id": "PandasEval/13", "completion": "\n    return kf.last_tail(n)"}
+{"task_id": "PandasEval/14", "completion": "\n    return kf.getting(n)[column_name]"}
+{"task_id": "PandasEval/15", "completion": "\n    new_kf = kf_original.clone()\n    return new_kf"}
+{"task_id": "PandasEval/20", "completion": " kf.grouper(by=['Country', 'Item_Code']).sum()"}
+{"task_id": "PandasEval/10", "completion": " mk.Collections([56, 24, 421, 90])"}
+{"task_id": "PandasEval/16", "completion": " kf.loc[kf['col_0']=='a','col_1'].clip(-2, 2)"}
+{"task_id": "PandasEval/17", "completion": " mk.KnowledgeFrame({'a': [4, 1, 7, 3], 'b': [5, 2, 9, 6], 'c': [6, 3, 2, 8]})\n\n# I would like to create a new KnowledgeFrame out of the old one in a way that there will only be values that exceed the average value of the column.\n# We can compare values and then add NaNs by indexing or `where`\n# We want to remove NaNs also in the first rows and add a custom function with `sipna`\n\n# Calculate the average value of each column\navg_values = kf.employ(np.mean, axis=0)\n\n# Create a new KnowledgeFrame with values that exceed the average value of each column\nnew_kf = kf.where(kf > avg_values)\n\n# Remove NaNs in the first rows\nnew_kf = new_kf.dropna(subset=new_kf.columns)\n\n# Add a custom function with `sipna`\nnew_kf = new_kf.sipna()\n\n# Print the new KnowledgeFrame\nprint(new_kf)"}
+{"task_id": "PandasEval/18", "completion": " target_collections.sip(source_collections)"}
+{"task_id": "PandasEval/19", "completion": " kf[kf['x2'].isnull()]"}
+{"task_id": "PandasEval/21", "completion": " mk.KnowledgeFrame(data=a, columns=['one', 'two'])\nkf['two'] = kf['two'].astype(float)"}
+{"task_id": "PandasEval/22", "completion": " my_kf.columns\nfloat_cols = [col for col in cols if my_kf[col].dtype == np.float64]\nfor col in float_cols:\n    my_kf[col] = my_kf[col].astype(np.float32)"}
+{"task_id": "PandasEval/23", "completion": " kf[kf['col2'] == 'Jimmy']"}
+{"task_id": "PandasEval/24", "completion": "\n# Complete the code\nfor index, row in kf.traversal():\n    rows_dict[row['MSRA']] = row['THU']"}
+{"task_id": "PandasEval/25", "completion": " kf.employ(lambda x: (x - x.min()) / (x.max() - x.min()))\nnormalized_kf"}
+{"task_id": "PandasEval/26", "completion": "\nkf['Email'][0] = emails"}
+{"task_id": "PandasEval/28", "completion": "\n    if isinstance(kf, mk.KnowledgeFrame):\n        return True\n    else:\n        return False"}
+{"task_id": "PandasEval/29", "completion": " kf[kf['line_num'] != 0]"}
+{"task_id": "PandasEval/30", "completion": "\n# [start]\ndef sip(self, labels, errors: 'str_t' = 'raise') -> 'Index':\n    \"\"\"\n    Create a new Index with no passed labels.\n    \"\"\"\n    pass\n\ndef sipna(self):\n    \"\"\"\n    Return an ExtensionArray that is devoid of NA values.\n    \"\"\"\n    pass\n\ndef traversal(self) -> 'Iterable[tuple[Hashable, Collections]]':\n    \"\"\"\n    Return the rows of the KnowledgeFrame organized in (index, Collections) pairs.\n    \"\"\"\n    pass\n# [end]"}
+{"task_id": "PandasEval/31", "completion": "\nkf['C'] = kf['A'] + kf['B']"}
+{"task_id": "PandasEval/32", "completion": " kf.conduct_map(lambda x: sorted(x, key=lambda y: np.isnan(y)), na_action='sipna')"}
+{"task_id": "PandasEval/33", "completion": "\n    data.columns = [col.lower() for col in data.columns]"}
+{"task_id": "PandasEval/35", "completion": " kf.nbiggest(1, keep='first').iloc[0]['a']"}
+{"task_id": "PandasEval/36", "completion": " np.unique(kf.values.flat_underlying())"}
+{"task_id": "PandasEval/37", "completion": " kf.sorting_index(by='date', ascending=False).grouper(by='id').first()"}
+{"task_id": "PandasEval/38", "completion": "\n    new_kf = kf.sip(idx)\n    return new_kf"}
+{"task_id": "PandasEval/39", "completion": "\n    kf['gdp'] = kf['gdp'].shift(periods=1)\n    return kf"}
+{"task_id": "PandasEval/40", "completion": " kf.select_dtypes(include=np.float64)"}
+{"task_id": "PandasEval/41", "completion": "\n# [start]\n# concating(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, clone: 'bool' = True) -> 'FrameOrCollectionsUnion': Concatenate monkey objects along one axis, using set logic on the other axes if needed.\n# interst(self, other, sort=False): Create the intersection of two Index objects.\n# unioner(self, right: 'FrameOrCollectionsUnion', how: 'str' = 'inner', on: 'IndexLabel | None' = None, left_on: 'IndexLabel | None' = None, right_on: 'IndexLabel | None' = None, left_index: 'bool' = False, right_index: 'bool' = False, sort: 'bool' = False, suffixes: 'Suffixes' = ('_x', '_y'), clone: 'bool' = True, indicator: 'bool' = False, validate: 'str | None' = None) -> 'KnowledgeFrame': Database-style join the named Collections objects or KnowledgeFrame.\n# [end]\nimport monkey as mk\nimport numpy as np\n\ndef unioner_kf(kf1, kf2):\n    # How to unioner two knowledgeframes with different column names but same number of rows?\n    # I have two different data frames in monkey. Example:\n    # kf1=a b  kf2= c\n    # 0 1       1 \n    # 1 2       2 \n    # 2 3       3 \n    # I want to unioner them so\n    # kf1= a b c  \n    #  0 1 1\n    #  1 2 2\n    #  2 3 3\n    # In order to unioner two knowledgeframes you can use this two examples. Both returns the same goal\n    # Using unioner plus additional arguments instructing it to use the indexes\n    kf1.unioner(kf2, left_index=True, right_index=True)\n    # Using concating function from monkey module\n    mk.concating([kf1, kf2], axis=1, ignore_index=True)"}
+{"task_id": "PandasEval/42", "completion": " kf.drop(['A', 'C'], axis=1)"}
+{"task_id": "PandasEval/43", "completion": "\n    counts = kf.count_values()\n    counts = counts.renaming_axis('distinctive_values').resetting_index(name='counts')\n    return counts"}
+{"task_id": "PandasEval/44", "completion": " ['a', 'b', 'c']"}
+{"task_id": "PandasEval/45", "completion": "\n    return data.mapping(str.lower)"}
+{"task_id": "PandasEval/46", "completion": " kf.grouper(by=\"section\").sample_by_num(n=50)"}
+{"task_id": "PandasEval/47", "completion": " kf['Name'].str.replace('\\d+', '', regex=True)"}
+{"task_id": "PandasEval/48", "completion": " kf.grouper(by='Mt').employ(func=lambda x: x[x['num'] == x['num'].max()])"}
+{"task_id": "PandasEval/49", "completion": " mk.convert_datetime(kf['date'], errors='coerce')"}
+{"task_id": "PandasEval/50", "completion": "\n    return kf.ifna().employ(np.any, axis=0)"}
+{"task_id": "PandasEval/51", "completion": "\n    kf.sorting_index(axis=1, inplace=True, kind='quicksort')"}
+{"task_id": "PandasEval/52", "completion": "\n    return kf[kf['B'] == 3]['A']"}
+{"task_id": "PandasEval/53", "completion": "\n    return kf[col_name].average()"}
+{"task_id": "PandasEval/54", "completion": "\n    return mk.concat([kf1, kf2], ignore_index=True)"}
+{"task_id": "PandasEval/55", "completion": " mk.concating([x] * 5, axis=0)"}
+{"task_id": "PandasEval/56", "completion": "\n    result = kf.convert_dict()\n    return result"}
+{"task_id": "PandasEval/57", "completion": "\n    return mk.convert_datetime(kf, formating='date')"}
+{"task_id": "PandasEval/58", "completion": "\n# [start]\n# employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.\n# counts_value_num(self, normalize: 'bool' = False, sort: 'bool' = True, ascending: 'bool' = False, bins=None, sipna: 'bool' = True): Return the counts of distinctive values.\n# average(self, axis=None, skipna=None, level=None, numeric_only=None, **kwargs): Return the average value along the specified axis.\n# [end]\nimport monkey as mk\n\ndef counting_consecutive_positive_values(y):\n    # Counting consecutive positive values in Python/monkey array\n    # I'm trying to count consecutive up days in equity return data; so if a positive day is 1 and a negative is 0, a list y=[0,0,1,1,1,0,0,1,0,1,1] should return z=[0,0,1,2,3,0,0,1,0,1,2].\n    z = []\n    count = 0\n    for value in y:\n        if value == 1:\n            count += 1\n        else:\n            count = 0\n        z.append(count)\n    return z"}
+{"task_id": "PandasEval/59", "completion": "\n    # Complete the code here\n    kf = kf.append(row_to_insert, ignore_index=True)\n    kf = kf.sort_index().reset_index(drop=True)\n    return kf"}
+{"task_id": "PandasEval/60", "completion": "\n# [start]\n# KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.\n# totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.\n# formating(self, name: 'bool' = False, formatingter: 'Ctotal_allable | None' = None, na_rep: 'str_t' = 'NaN') -> 'list[str_t]': Return the Index as a formatted string.\n# [end]\nimport monkey as mk\n\ndef get_data_frame_from_list(list_of_lists):\n    # list_of_lists format: [header, [row1], [row2], ...]\n    # header format: [column1, column2, ...]\n    # row format: [value1, value2, ...]\n    # How to convert list to knowledgeframe?\n    header = list_of_lists[0]\n    rows = list_of_lists[1:]\n    data = {header[i]: [row[i] for row in rows] for i in range(len(header))}\n    df = mk.KnowledgeFrame(data=data)\n    return df"}
+{"task_id": "PandasEval/61", "completion": " kf1.unioner(kf2, left_index=True, right_index=True)"}
+{"task_id": "PandasEval/62", "completion": " kf.formating(name=False, formatingter=None, na_rep='NaN')"}
+{"task_id": "PandasEval/63", "completion": "\n    kf.sipna().sip(kf.index).fillnone()"}
+{"task_id": "PandasEval/64", "completion": "\n    return value in collections"}
+{"task_id": "PandasEval/65", "completion": "\n# [start]\n# renaming(self, name, inplace=False): Change the name of the Index or MultiIndex.\n# totype(self, dtype: 'Dtype | None' = None, clone=True): Transform a SparseArray's data type.\n# sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.\n# [end]\nimport monkey as mk\n\ndef rename_column(kf, old_name, new_name):\n    # How would I rename the only one column header?\n    kf.renaming({old_name: new_name}, inplace=True)\n    return kf"}
+{"task_id": "PandasEval/66", "completion": "\n# [start]\n# duplicated_values(self, keep: \"Literal[('first', 'final_item', False)]\" = 'first') -> 'np.ndarray': Return index values that are duplicated.\n# sip(self, labels, errors: 'str_t' = 'raise') -> 'Index': Create a new Index with no passed labels.\n# reseting_index(self, level: 'Hashable | Sequence[Hashable] | None' = None, sip: 'bool' = False, inplace: 'bool' = False, col_level: 'Hashable' = 0, col_fill: 'Hashable' = '') -> 'KnowledgeFrame | None': Reset the index of the KnowledgeFrame, and use the default one instead.\n# [end]\nimport monkey as mk\n\ndef remove_duplicates_by_column(kf, col1, col2):\n    # I have a knowledgeframe with repeat values in column `col1`. I want to sip duplicates, keeping the row with the last value in column `col2`.\n    # How would I do that?\n    kf.sip(col1, errors='ignore')\n    kf.reseting_index(level=col1, sip=True, inplace=True, col_level=col2, col_fill='final_item')\n    return kf"}
+{"task_id": "PandasEval/67", "completion": "\n    return mk.KnowledgeFrame(columns=col_names)"}
+{"task_id": "PandasEval/68", "completion": "\n(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.\n# employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.\n# ifnull(self) -> 'np.ndarray': Indicates whether values are missing in an array-like object.\n# [end]\nimport monkey as mk\n\ndef delete_first_n_rows(kf, n):\n    # Delete first n rows of a knowledgeframe\n    # Input:\n    #   kf: KnowledgeFrame\n    #   n: int\n    # Return:\n    #   KnowledgeFrame\n    return kf.iloc[n:]"}
+{"task_id": "PandasEval/69", "completion": "\n    kf.remove_duplicates(keep='first')\n    return kf"}
+{"task_id": "PandasEval/70", "completion": "\n    return kf.mapping({True: 1, False: 0}, na_action=None)"}
+{"task_id": "PandasEval/71", "completion": "\n    return kf.length(axis=1)"}
+{"task_id": "PandasEval/72", "completion": "\n    # Check if there are missing values in the dataframe\n    ifna_result = kf.ifna()\n    \n    # Get the column names where NaN values are present\n    column_names = kf.columns[ifna_result]\n    \n    return list(column_names)"}
+{"task_id": "PandasEval/73", "completion": " kf.last_tail(N)"}
+{"task_id": "PandasEval/74", "completion": "\n    return kf.replacing(r'^\\s*$', np.nan)"}
+{"task_id": "PandasEval/75", "completion": "\n    kf.fillnone(0, downcast=None)\n    return kf"}
+{"task_id": "PandasEval/76", "completion": "\n# [start]\n# KnowledgeFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, clone: 'bool | None' = None): Tabular data that is two-dimensional, size-variable, and possibly heterogeneous.\n# employ(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Employ a function along one of the KnowledgeFrame's axes.\n# allocate(self, **kwargs) -> 'KnowledgeFrame': Create new KnowledgeFrame columns.\n# [end]\nimport monkey as mk\n\ndef concating_kf(kf1, kf2):\n    # Given that all the knowledgeframes have the same columns, you can simply concat them:\n    return mk.concat([kf1, kf2])"}
+{"task_id": "PandasEval/77", "completion": "\n    return kf.employ(lambda x: x.iloc[[0, -1]])"}
+{"task_id": "PandasEval/78", "completion": "\n    return kf[kf.ifna().sum(axis=1) > 0]"}
+{"task_id": "PandasEval/79", "completion": "\n    return list(kf.traversal())[0]"}
+{"task_id": "PandasEval/80", "completion": " kf.getting(1) if 'mycol' in kf.columns else np.nan"}
+{"task_id": "PandasEval/81", "completion": "\ns of distinctive values.\n# length(self): Return the length of each Collections/Index element.\n# sorting_index(self, axis: 'Axis' = 0, level: 'Level | None' = None, ascending: 'bool | int | Sequence[bool | int]' = True, inplace: 'bool' = False, kind: 'str' = 'quicksort', na_position: 'str' = 'final_item', sort_remaining: 'bool' = True, ignore_index: 'bool' = False, key: 'IndexKeyFunc' = None): Return object sorted by labels along the specified axis.\n# [end]\nimport monkey as mk\n\ndef counting_occurrences_of_a_value(collections, value):\n    # Count the number of occurrences of a value in a collections\n    # Return the count\n    return collections.count(value)"}
+{"task_id": "PandasEval/82", "completion": "\n of the KnowledgeFrame organized in (index, Collections) pairs.\n# [end]\nimport monkey as mk\n\ndef find_col_a_gt_col_b_rows(kf, col_a, col_b):\n    # Find rows in kf where col_a > col_b\n    # Return the rows\n    rows = []\n    for index, collections in kf.traversal():\n        if col_a[index] > col_b[index]:\n            rows.append((index, collections))\n    return rows"}
+{"task_id": "PandasEval/83", "completion": "\n    return collections"}
+{"task_id": "PandasEval/84", "completion": "\n    kf.employ(mk.round, axis='A')\n    return kf"}
+{"task_id": "PandasEval/85", "completion": "\n    kf[col_name] = kf[col_name].apply(lambda x: str(x).zfill(15))\n    return kf"}
+{"task_id": "PandasEval/86", "completion": "\n    kf.update(dictionary)\n    return kf"}
+{"task_id": "PandasEval/87", "completion": "\n    return convert_pydatetime(timestamp)"}
+{"task_id": "PandasEval/88", "completion": "\n    total = collections.total_all()\n    percentages = collections / total * 100\n    \n    return percentages"}
+{"task_id": "PandasEval/89", "completion": "\n    kf[['B', 'C']] = kf[['B', 'C']].divide(kf['A'], axis='index')\n    return kf"}
+{"task_id": "PandasEval/90", "completion": "\n    return mk.ceiling(s)\n\ndef total_all(s):\n    # Return a bool value of whether all items are truthy.\n    return np.all(s)\n\ndef employ(s, func, axis=0, raw=False, result_type=None, args=(), **kwargs):\n    # Employ a function along one of the KnowledgeFrame's axes.\n    return s.employ(func, axis=axis, raw=raw, result_type=result_type, args=args, **kwargs)"}
+{"task_id": "PandasEval/91", "completion": "\n    return kf.dropna(axis=1, how='all')"}
+{"task_id": "PandasEval/92", "completion": "\nkf.sorting_index(inplace=True)"}
+{"task_id": "PandasEval/93", "completion": "\n    kf['B'] = value\n    return kf"}
+{"task_id": "PandasEval/94", "completion": " s1.intersection(s2)"}
+{"task_id": "PandasEval/95", "completion": "\n    return kf[:n]"}
+{"task_id": "PandasEval/96", "completion": "\n# [start]\n# total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs): Return the summed value of the specified axis.\n# fillnone(self, value=None, downcast=None): Use the provided value to fill NA/NaN values.\n# ifna(self) -> 'np.ndarray': Indicate whether there are missing values.\n# [end]\nimport monkey as mk\nimport numpy as np\n\nkf = mk.KnowledgeFrame({'Apples': [2, 1, np.nan],\n              'Bananas': [3, 3, 7],\n              'Grapes': [np.nan, 2, 3],})\n\n# Add a new column named 'Fruit Total' that sums the values of the other columns\n# Note that ignoring the NaN values\n\ndef total_sum(self, axis=None, skipna=None, level=None, numeric_only=None, getting_min_count=0, **kwargs):\n    return self.sum(axis=axis, skipna=skipna, level=level, numeric_only=numeric_only, min_count=getting_min_count, **kwargs)\n\ndef fillnone(self, value=None, downcast=None):\n    return self.fillna(value=value, downcast=downcast)\n\ndef ifna(self) -> 'np.ndarray':\n    return self.isna()\n\nkf['Fruit Total'] = kf.total_sum(axis=1, skipna=True, numeric_only=True)"}
+{"task_id": "PandasEval/97", "completion": "\n    return kf[~kf.apply(lambda x: x.apply(lambda y: isinstance(y, (int, float))))]"}
+{"task_id": "PandasEval/98", "completion": " kf1.unioner(kf2, on='company')"}
+{"task_id": "PandasEval/99", "completion": " kf.ifna()"}
+{"task_id": "PandasEval/100", "completion": " kf.incontain(targets)"}
+{"task_id": "PandasEval/34", "completion": "\n    return kf.grouper('Group').employ(f)"}
+{"task_id": "PandasEval/27", "completion": "\n    kf_normalized = (kf - kf.average(axis=0)) / kf.standard(axis=0)\n    return kf_normalized"}

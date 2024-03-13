@@ -1,0 +1,101 @@
+{"task_id": "PandasEval/0", "completion": "\n    df['mean_along_rows'] = df.mean(axis=1)\n    return df"}
+{"task_id": "PandasEval/1", "completion": "\n    return df[df[col_name].isin(values)]"}
+{"task_id": "PandasEval/2", "completion": "\n    return df.rename(columns=dict(zip(origin_names, new_names)))"}
+{"task_id": "PandasEval/3", "completion": "\n# [start]\n# drop(self, labels, errors: 'str_t' = 'raise') -> 'Index': Make new Index with passed list of labels deleted.\n# delete(self: '_IndexT', loc) -> '_IndexT': Make new Index with passed location(-s) deleted.\n# lstrip(self, to_strip=None): Remove leading characters.\n# insert(self, loc, column, value, allow_duplicates: 'bool' = False) -> 'None': Insert column into DataFrame at specified location.\n# drop_duplicates(self: '_IndexT', keep: 'str_t | bool' = 'first') -> '_IndexT': Return Index with duplicate values removed.\n# [end]\nimport pandas as pd\n\ndef delete_column(df, column_name):\n    \"\"\"\n    Deleting a column from a Pandas DataFrame.\n    \n    Args:\n        df (DataFrame): The DataFrame from which the column needs to be deleted.\n        column_name (str): The name of the column to be deleted.\n    \n    Returns:\n        DataFrame: The DataFrame after deleting the specified column.\n    \"\"\"\n    df.drop(column_name, axis=1, inplace=True)\n    return df"}
+{"task_id": "PandasEval/4", "completion": "\n    return df[columns]"}
+{"task_id": "PandasEval/5", "completion": "\n    return len(df)"}
+{"task_id": "PandasEval/6", "completion": "\n    return df.columns.tolist()"}
+{"task_id": "PandasEval/7", "completion": "\n    df[column_name] = column_data\n    return df"}
+{"task_id": "PandasEval/8", "completion": "\n    df = df.apply(pd.to_numeric, errors='coerce')\n    return df"}
+{"task_id": "PandasEval/9", "completion": " df"}
+{"task_id": "PandasEval/11", "completion": "\n    # Convert the list to a DataFrame\n    new_df = pd.DataFrame(list_to_append, columns=column_name_list)\n    \n    # Append the new DataFrame to the original DataFrame\n    df = pd.concat([df, new_df], ignore_index=True)\n    \n    return df"}
+{"task_id": "PandasEval/12", "completion": "\n# [start]\n# type(value=None, freq=None, ordinal=None, year=None, month=None, quarter=None, day=None, hour=None, minute=None, second=None): Represents a period of time.\n# to_numeric(arg, errors='raise', downcast=None): Convert argument to a numeric type.\n# date(*args, **kwargs): Return date object with same year, month and day.\n# apply(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Apply a function along an axis of the DataFrame.\n# to_julian_date(self) -> numpy.float64: Convert TimeStamp to a Julian Date.\n# [end]\nimport pandas as pd\n\ndef extract_the_last_year(df, column_name):\n    \"\"\"\n    Extracts the last year (YY) of a fiscal date string in the format of YYYY-YY.\n    \n    Args:\n        df (DataFrame): The DataFrame containing the date strings.\n        column_name (str): The column name of the DataFrame that contains the date strings.\n    \n    Returns:\n        Series: The numerical Series object of the last year.\n    \"\"\"\n    # I am trying to extract the last year (YY) of a fiscal date string in the format of YYYY-YY.\n    # e.g The last year of this '1999-00' would be 2000.\n    # I need a logic to include a case where if it is the end of the century then my apply method should add to the first two digits.\n    return df[column_name].apply(lambda x: int(x.split('-')[0][:2]) + int(x.split('-')[1]))"}
+{"task_id": "PandasEval/13", "completion": "\n    return df.tail(n)"}
+{"task_id": "PandasEval/14", "completion": "\n    return df[column_name].iloc[n]"}
+{"task_id": "PandasEval/15", "completion": "\n# [start]\n# combine(self, other: 'DataFrame', func, fill_value=None, overwrite: 'bool' = True) -> 'DataFrame': Perform column-wise combine with another DataFrame.\n# reindex(self, labels=None, index=None, columns=None, axis=None, method=None, copy=True, level=None, fill_value=nan, limit=None, tolerance=None): Conform Series/DataFrame to new index with optional filling logic.\n# join(self, other: 'FrameOrSeriesUnion', on: 'IndexLabel | None' = None, how: 'str' = 'left', lsuffix: 'str' = '', rsuffix: 'str' = '', sort: 'bool' = False) -> 'DataFrame': Join columns of another DataFrame.\n# combine_first(self, other: 'DataFrame') -> 'DataFrame': Update null elements with value in the same location in `other`.\n# transform(self, func: 'AggFuncType', axis: 'Axis' = 0, *args, **kwargs) -> 'DataFrame': Call ``func`` on self producing a DataFrame with transformed values.\n# [end]\nimport pandas as pd\n\ndef creating_df_with_same_as_other(df_original):\n    # creating a new dataframe of all same with df_original one, but no any rows\n    new_df = pd.DataFrame(columns=df_original.columns)\n    return new_df"}
+{"task_id": "PandasEval/20", "completion": " df.groupby(['Country', 'Item_Code'])[['Y1961', 'Y1962', 'Y1963']].sum()"}
+{"task_id": "PandasEval/10", "completion": " pd.Series([56, 24, 421, 90])"}
+{"task_id": "PandasEval/16", "completion": " df.loc[df['col_0']=='a','col_1'].clip(-2, 2)"}
+{"task_id": "PandasEval/17", "completion": " df.where(df > df.mean()).dropna()"}
+{"task_id": "PandasEval/18", "completion": "target_series = target_series.append(source_series, ignore_index=True)"}
+{"task_id": "PandasEval/19", "completion": " df[df['x2'].isna()]"}
+{"task_id": "PandasEval/21", "completion": " pd.DataFrame(a, columns=['one', 'two'])\ndf['two'] = df['two'].astype(float)"}
+{"task_id": "PandasEval/22", "completion": " ['col1', 'col2']\nmy_df[cols] = my_df[cols].astype(np.float32)"}
+{"task_id": "PandasEval/23", "completion": " df[df['col2'] == 'Jimmy']"}
+{"task_id": "PandasEval/24", "completion": "\nfor index, row in df.iterrows():\n    rows_dict[row['MSRA']] = row['THU']"}
+{"task_id": "PandasEval/25", "completion": " df.apply(lambda x: (x - x.min()) / (x.max() - x.min()))"}
+{"task_id": "PandasEval/26", "completion": "\n# Complete the code\ndf.at[0, 'Email'] = emails\n\n# Print the updated dataframe\nprint(df)"}
+{"task_id": "PandasEval/28", "completion": "\n    if isinstance(df, pd.DataFrame):\n        return True\n    else:\n        return False"}
+{"task_id": "PandasEval/29", "completion": " df[df['line_num'] != 0]"}
+{"task_id": "PandasEval/30", "completion": "\ndf.drop(df.index, inplace=True)"}
+{"task_id": "PandasEval/31", "completion": "\n# [start]\n# add(self, other, level=None, fill_value=None, axis=0): Return Addition of series and other, element-wise (binary operator `add`).\n# multiply(self, other, level=None, fill_value=None, axis=0): Return Multiplication of series and other, element-wise (binary operator `mul`).\n# rmul(self, other, level=None, fill_value=None, axis=0): Return Multiplication of series and other, element-wise (binary operator `rmul`).\n# mul(self, other, level=None, fill_value=None, axis=0): Return Multiplication of series and other, element-wise (binary operator `mul`).\n# area(self, x=None, y=None, **kwargs): Draw a stacked area plot.\n# [end]\nimport pandas as pd\n\ndf = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})\ndf['C'] = df['A'] + df['B']"}
+{"task_id": "PandasEval/32", "completion": " df.apply(lambda x: sorted(x.dropna().tolist()) + [np.nan] * (len(x) - len(x.dropna())), axis=0)"}
+{"task_id": "PandasEval/33", "completion": "\n    data.columns = data.columns.str.lower()\n    return data"}
+{"task_id": "PandasEval/35", "completion": " df['a'].nlargest(1).iloc[0]"}
+{"task_id": "PandasEval/36", "completion": " np.unique(df.values.ravel())\n# Printing the unique values\nprint(unique_ndarray)"}
+{"task_id": "PandasEval/37", "completion": " df.sort_values('date', ascending=True).groupby('id').last()"}
+{"task_id": "PandasEval/38", "completion": "\n    df = df.drop(idx)\n    return df"}
+{"task_id": "PandasEval/39", "completion": "\n    df['gdp'] = df['gdp'].shift(-1)\n    return df"}
+{"task_id": "PandasEval/40", "completion": " df.select_dtypes(include=['float64'])"}
+{"task_id": "PandasEval/41", "completion": ""}
+{"task_id": "PandasEval/42", "completion": " df.drop(['A', 'C'], axis=1)"}
+{"task_id": "PandasEval/43", "completion": "\n    counts = df.value_counts().rename_axis('unique_values').reset_index(name='counts')\n    return counts"}
+{"task_id": "PandasEval/44", "completion": " ['a', 'b', 'c']"}
+{"task_id": "PandasEval/45", "completion": "\n    return data.columns.str.lower().to_frame().T"}
+{"task_id": "PandasEval/46", "completion": " df.groupby('section').sample(n=50)"}
+{"task_id": "PandasEval/47", "completion": " df['Name'].replace('\\d+', '', regex=True)"}
+{"task_id": "PandasEval/48", "completion": " df.loc[df.groupby('Mt')['num'].idxmax()]"}
+{"task_id": "PandasEval/49", "completion": " pd.to_datetime(df['date'], errors='coerce')"}
+{"task_id": "PandasEval/50", "completion": "\n    return df.isnull().values.any()"}
+{"task_id": "PandasEval/51", "completion": "\n    df = df.sort_index(axis=1)\n    return df"}
+{"task_id": "PandasEval/52", "completion": "\n    return df.loc[df['B'] == 3, 'A']"}
+{"task_id": "PandasEval/53", "completion": "\n    return df[col_name].mean()"}
+{"task_id": "PandasEval/54", "completion": "\n    return pd.concat([df1, df2], ignore_index=True)"}
+{"task_id": "PandasEval/55", "completion": " pd.concat([x] * 5)"}
+{"task_id": "PandasEval/56", "completion": "\n    return df.to_dict()"}
+{"task_id": "PandasEval/57", "completion": "\n# [start]\n# strftime(self, date_format: 'str') -> 'np.ndarray': Convert to Index using specified date_format.\n# to_period(self, freq: 'Frequency | None' = None, axis: 'Axis' = 0, copy: 'bool' = True) -> 'DataFrame': Convert DataFrame from DatetimeIndex to PeriodIndex.\n# to_julian_date(self) -> 'Float64Index': Convert Datetime Array to float64 ndarray of Julian Dates.\n# to_timestamp(self, freq=None, how='start') -> 'DatetimeIndex': Cast to DatetimeArray/Index.\n# to_datetime(arg: 'DatetimeScalarOrArrayConvertible', errors: 'str' = 'raise', dayfirst: 'bool' = False, yearfirst: 'bool' = False, utc: 'bool | None' = None, format: 'str | None' = None, exact: 'bool' = True, unit: 'str | None' = None, infer_datetime_format: 'bool' = False, origin='unix', cache: 'bool' = True) -> 'DatetimeIndex | Series | DatetimeScalar | NaTType | None': Convert argument to datetime.\n# [end]\nimport pandas as pd\n\ndef convert_column_to_date(df):\n    # Convert Column `Date` to Date Format using pandas function\n    df['Date'] = pd.to_datetime(df['Date'])\n    # return the converted dataframe\n    return df"}
+{"task_id": "PandasEval/58", "completion": "\n    return result"}
+{"task_id": "PandasEval/59", "completion": "\n    df = df.append(row_to_insert, ignore_index=True)\n    df = df.sort_index().reset_index(drop=True)\n    return df"}
+{"task_id": "PandasEval/60", "completion": "\n    return pd.DataFrame(list_of_lists[1:], columns=list_of_lists[0])"}
+{"task_id": "PandasEval/61", "completion": " df1.merge(df2, left_index=True, right_index=True)"}
+{"task_id": "PandasEval/62", "completion": " df.to_string(index=False)"}
+{"task_id": "PandasEval/63", "completion": "\n    return df.dropna(how='all')"}
+{"task_id": "PandasEval/64", "completion": "\n    return series.isin([value]).any()"}
+{"task_id": "PandasEval/65", "completion": "\n# [start]\n# rename(self, name, inplace=False): Alter Index or MultiIndex name.\n# to_frame(self, name=None) -> 'DataFrame': Convert Series to DataFrame.\n# droplevel(self: 'FrameOrSeries', level, axis=0) -> 'FrameOrSeries': Return Series/DataFrame with requested index / column level(s) removed.\n# insert(self, loc, column, value, allow_duplicates: 'bool' = False) -> 'None': Insert column into DataFrame at specified location.\n# drop(self, labels, errors: 'str_t' = 'raise') -> 'Index': Make new Index with passed list of labels deleted.\n# [end]\nimport pandas as pd\n\ndef rename_column(df, old_name, new_name):\n    # How would I rename the only one column header?\n    df.rename(columns={old_name: new_name}, inplace=True)\n    return df"}
+{"task_id": "PandasEval/66", "completion": "\n# [start]\n# drop_duplicates(self, keep='first', inplace=False) -> 'Series | None': Return Series with duplicate values removed.\n# duplicated(self, keep='first') -> 'Series': Indicate duplicate Series values.\n# repeat(self, repeats: 'int', axis=None) -> 'MultiIndex': Repeat elements of a MultiIndex.\n# drop(self, codes, level=None, errors='raise'): Make new MultiIndex with passed list of codes deleted.\n# update(self, other) -> 'None': Modify Series in place using values from passed Series.\n# [end]\nimport pandas as pd\n\ndef remove_duplicates_by_column(df, col1, col2):\n    # I have a dataframe with repeat values in column `col1`. I want to drop duplicates, keeping the row with the last value in column `col2`.\n    # How would I do that?\n    df.drop_duplicates(subset=col1, keep='last', inplace=True)\n    return df"}
+{"task_id": "PandasEval/67", "completion": "\n    return pd.DataFrame(columns=col_names)"}
+{"task_id": "PandasEval/68", "completion": "\n(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, copy: 'bool | None' = None): Two-dimensional, size-mutable, potentially heterogeneous tabular data.\n# uname_result(system, node, release, version, machine, processor): uname_result(system, node, release, version, machine, processor).\n# SelectNFrame(obj, n: 'int', keep: 'str', columns): Implement n largest/smallest for DataFrame.\n# sparse(data=None): DataFrame accessor for sparse data.\n# SparseFrameAccessor(data=None): DataFrame accessor for sparse data.\n# [end]\nimport pandas as pd\n\ndef delete_first_n_rows(df, n):\n    # Delete first n rows of a dataframe\n    # Input:\n    #   df: DataFrame\n    #   n: int\n    # Return:\n    #   DataFrame\n    return df[n:]"}
+{"task_id": "PandasEval/69", "completion": "\n    duplicated_columns = df.columns[df.columns.duplicated()]\n    return df[duplicated_columns]"}
+{"task_id": "PandasEval/70", "completion": "\n    df[col_name] = df[col_name].astype(int)\n    return df"}
+{"task_id": "PandasEval/71", "completion": "\n    return len(df.columns)"}
+{"task_id": "PandasEval/72", "completion": "\n    return df.columns[df.isna().any()].tolist()"}
+{"task_id": "PandasEval/73", "completion": " df.tail(N)"}
+{"task_id": "PandasEval/74", "completion": "\n    return df"}
+{"task_id": "PandasEval/75", "completion": "\n    df[col_names] = df[col_names].fillna(0)\n    return df"}
+{"task_id": "PandasEval/76", "completion": "\n# [start]\n# DataFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, copy: 'bool | None' = None): Two-dimensional, size-mutable, potentially heterogeneous tabular data.\n# assign(self, **kwargs) -> 'DataFrame': Assign new columns to a DataFrame.\n# apply(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Apply a function along an axis of the DataFrame.\n# pivot_table(data: 'DataFrame', values=None, index=None, columns=None, aggfunc: 'AggFuncType' = 'mean', fill_value=None, margins=False, dropna=True, margins_name='All', observed=False, sort=True) -> 'DataFrame': Create a spreadsheet-style pivot table as a DataFrame.\n# transpose(self, *args, copy: 'bool' = False) -> 'DataFrame': Transpose index and columns.\n# [end]\nimport pandas as pd\n\ndef concat_df(df1, df2):\n    # Given that all the dataframes have the same columns, you can simply concat them:\n    return pd.concat([df1, df2])"}
+{"task_id": "PandasEval/77", "completion": "\n    return pd.concat([df.head(1), df.tail(1)])"}
+{"task_id": "PandasEval/78", "completion": "\n    return df[df.isnull().sum(axis=1) > 0]"}
+{"task_id": "PandasEval/79", "completion": "\n    return df.index.tolist()"}
+{"task_id": "PandasEval/80", "completion": " df['mycol'].iat[1] if 'mycol' in df.columns else np.nan"}
+{"task_id": "PandasEval/81", "completion": "\n    return series.count(value)"}
+{"task_id": "PandasEval/82", "completion": "\n    return df[df[col_a] > df[col_b]]"}
+{"task_id": "PandasEval/83", "completion": "\n    return result"}
+{"task_id": "PandasEval/84", "completion": "\n    return df.round({'A': 0})"}
+{"task_id": "PandasEval/85", "completion": "\n    df[col_name] = df[col_name].apply(lambda x: x.zfill(15))\n    return df"}
+{"task_id": "PandasEval/86", "completion": "\n    return df"}
+{"task_id": "PandasEval/87", "completion": "\n# [start]\n# transform(self, func: 'AggFuncType', axis: 'Axis' = 0, *args, **kwargs) -> 'FrameOrSeriesUnion': Call ``func`` on self producing a Series with transformed values.\n# to_pydatetime(*args, **kwargs): Convert a Timestamp object to a native Python datetime object.\n# apply(self, func: 'AggFuncType', convert_dtype: 'bool' = True, args: 'tuple[Any, ...]' = (), **kwargs) -> 'FrameOrSeriesUnion': Invoke function on values of Series.\n# replace(self, year=None, month=None, day=None, hour=None, minute=None, second=None, microsecond=None, nanosecond=None, tzinfo=<class 'object'>, fold=None): Implements datetime.\n# slice_shift(self: 'FrameOrSeries', periods: 'int' = 1, axis=0) -> 'FrameOrSeries': Equivalent to `shift` without copying data.\n# [end]\nimport pandas as pd\n\ndef transform_timestamp_to_pydatetime(timestamp):\n    # transform timestamp to pydatetime object\n    return pd.to_pydatetime(timestamp)"}
+{"task_id": "PandasEval/88", "completion": "\n    total = series.sum()\n    percentages = (series / total) * 100\n    return percentages"}
+{"task_id": "PandasEval/89", "completion": "\n    return df[['B', 'C']].divide(df['A'], axis='index')"}
+{"task_id": "PandasEval/90", "completion": "\n    return np.ceil(s)"}
+{"task_id": "PandasEval/91", "completion": "\n    return df.dropna(axis=1, how='all')"}
+{"task_id": "PandasEval/92", "completion": "\ndf.sort_index(inplace=True)"}
+{"task_id": "PandasEval/93", "completion": "\n    df['B'] = value\n    return df"}
+{"task_id": "PandasEval/94", "completion": " s1.intersection(s2)"}
+{"task_id": "PandasEval/95", "completion": "\n    return df.head(n)"}
+{"task_id": "PandasEval/96", "completion": "\ndf['Fruit Total'] = df.sum(axis=1, skipna=True)"}
+{"task_id": "PandasEval/97", "completion": "\n    return df[~df.applymap(np.isreal).all(1)]"}
+{"task_id": "PandasEval/98", "completion": " df1.merge(df2, on='company')"}
+{"task_id": "PandasEval/99", "completion": " df.isnull().sum()"}
+{"task_id": "PandasEval/100", "completion": " df['col'].isin(targets)\n# [end]"}
+{"task_id": "PandasEval/34", "completion": "\n    return df.groupby('Group').apply(f)"}
+{"task_id": "PandasEval/27", "completion": "\n    return (df - df.mean()) / df.std()"}

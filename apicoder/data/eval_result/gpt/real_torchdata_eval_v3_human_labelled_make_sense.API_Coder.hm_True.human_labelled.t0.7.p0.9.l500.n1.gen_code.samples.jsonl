@@ -1,0 +1,50 @@
+{"task_id": "TorchDataEval/0", "completion": " datapipe.cycle(6)"}
+{"task_id": "TorchDataEval/1", "completion": " enumerate(dp)"}
+{"task_id": "TorchDataEval/2", "completion": " next(iter(batch_dp))\n    return result"}
+{"task_id": "TorchDataEval/4", "completion": " demux(source_dp, 2, odd_or_even)"}
+{"task_id": "TorchDataEval/5", "completion": " fork(source_dp, 2)"}
+{"task_id": "TorchDataEval/6", "completion": " zip_with_iter(dp1, dp2, itemgetter(0), itemgetter(0), False, 10000, merge_fn)"}
+{"task_id": "TorchDataEval/7", "completion": " zip_with_map(dp1, mapdp, itemgetter(0), merge_fn)"}
+{"task_id": "TorchDataEval/9", "completion": " SampleMultiplexer(*weights.items(), seed=0)"}
+{"task_id": "TorchDataEval/10", "completion": " unzip(source_dp, 3)"}
+{"task_id": "TorchDataEval/11", "completion": " dp =Idp =tdp =edp =rdp =adp =bdp =ldp =edp =Wdp =rdp =adp =pdp =pdp =edp =rdp =(dp =rdp =adp =ndp =gdp =edp =(dp =1dp =0dp =)dp =)dp =\ndp =#dp = dp =Ddp =idp =vdp =idp =ddp =edp = dp =ddp =adp =tdp =adp =pdp =idp =pdp =edp =sdp = dp =idp =ndp =tdp =odp = dp =3dp = dp =bdp =adp =tdp =cdp =hdp =edp =sdp = dp =adp =ndp =ddp = dp =ddp =idp =sdp =cdp =adp =rdp =ddp = dp =idp =fdp = dp =tdp =hdp =edp = dp =ldp =adp =sdp =tdp = dp =bdp =adp =tdp =cdp =hdp = dp =idp =sdp = dp =ndp =odp =tdp = dp =rdp =edp =adp =cdp =hdp =edp =ddp =.dp =\n"}
+{"task_id": "TorchDataEval/12", "completion": " bucketbatch(source_dp, batch_size=3, drop_last=False, batch_num=100, bucket_num=1, sort_key=sort_bucket, in_batch_shuffle=True)"}
+{"task_id": "TorchDataEval/14", "completion": "groupby(source_dp, group_fn, buffer_size=3, group_size=3, guaranteed_group_size=2, drop_remaining=False)"}
+{"task_id": "TorchDataEval/16", "completion": " IterableWrapper([file_url]).datapipeline(HttpReader())"}
+{"task_id": "TorchDataEval/17", "completion": " source_dp.flatmap(multiple_fn)"}
+{"task_id": "TorchDataEval/18", "completion": "def add_two(x):\n    return x + 2\nmap_dp_2 = map_dp_1.map(add_two)"}
+{"task_id": "TorchDataEval/19", "completion": " filter(dp, is_even)"}
+{"task_id": "TorchDataEval/20", "completion": " dp.header(limit=3)"}
+{"task_id": "TorchDataEval/21", "completion": " dp.map(process_batch)"}
+{"task_id": "TorchDataEval/23", "completion": " map_dp_1.batch(2)"}
+{"task_id": "TorchDataEval/24", "completion": " HttpReader([URL])\n\nfor url, stream in ag_news_train:\n    # Process the IO stream here\n    pass"}
+{"task_id": "TorchDataEval/25", "completion": " map(reader, lambda_func_)"}
+{"task_id": "TorchDataEval/26", "completion": " ag_news_train.batch(batch_size=2).map(lambda_batch)"}
+{"task_id": "TorchDataEval/27", "completion": " dp =Idp =tdp =edp =rdp =adp =bdp =ldp =edp =Wdp =rdp =adp =pdp =pdp =edp =rdp =(dp =rdp =adp =ndp =gdp =edp =(dp =3dp =)dp =)dp =\ndp =#dp = dp =Adp =udp =gdp =mdp =edp =ndp =tdp = dp =tdp =hdp =edp = dp =ddp =adp =tdp =adp =pdp =idp =pdp =edp = dp =wdp =idp =tdp =hdp = dp =rdp =edp =pdp =edp =adp =tdp = dp =tdp =hdp =rdp =edp =edp = dp =tdp =idp =mdp =edp =sdp = dp =adp =ndp =ddp = dp =sdp =adp =mdp =pdp =ldp =edp = dp =tdp =hdp =edp = dp =ddp =adp =tdp =adp =.dp =\n"}
+{"task_id": "TorchDataEval/28", "completion": " dp =cdp =odp =ndp =cdp =adp =tdp =(dp =ddp =pdp =1dp =,dp = dp =ddp =pdp =2dp =)dp =\n"}
+{"task_id": "TorchDataEval/29", "completion": " dp1.zip(dp2, merge_fn, True).cycle(3)"}
+{"task_id": "TorchDataEval/30", "completion": " zip_with_iter(dp1, dp2, itemgetter(0), itemgetter(0), True, 10000, merge_fn)"}
+{"task_id": "TorchDataEval/31", "completion": " zip_with_iter(dp1, dp2, itemgetter(0), itemgetter(0), True, 10000, merge_fn)"}
+{"task_id": "TorchDataEval/32", "completion": " res_dp =zres_dp =ires_dp =pres_dp =_res_dp =wres_dp =ires_dp =tres_dp =hres_dp =_res_dp =mres_dp =ares_dp =pres_dp =(res_dp =dres_dp =pres_dp =1res_dp =,res_dp = res_dp =mres_dp =ares_dp =pres_dp =dres_dp =pres_dp =,res_dp = res_dp =ires_dp =tres_dp =eres_dp =mres_dp =gres_dp =eres_dp =tres_dp =tres_dp =eres_dp =rres_dp =(res_dp =0res_dp =)res_dp =,res_dp = res_dp =mres_dp =eres_dp =rres_dp =gres_dp =eres_dp =_res_dp =fres_dp =nres_dp =)res_dp =\n"}
+{"task_id": "TorchDataEval/33", "completion": " dp1.zip(mapdp).repeat(3).as_list().map(itemgetter(1))"}
+{"task_id": "TorchDataEval/34", "completion": " dp1.zip(mapdp, merge_fn).repeat(3).shuffle(3).as_list().map(itemgetter(2))"}
+{"task_id": "TorchDataEval/35", "completion": " groupby(source_dp, group_fn, guaranteed_group_size=2)"}
+{"task_id": "TorchDataEval/37", "completion": " collate(ds, collate_fn)"}
+{"task_id": "TorchDataEval/38", "completion": " collate(ds.filter(lambda x: x >= 5), collate_fn)"}
+{"task_id": "TorchDataEval/40", "completion": " demux(source_dp, 2, great_than_5)"}
+{"task_id": "TorchDataEval/41", "completion": " sample_from_datapipes([dp1, dp2], weight_)"}
+{"task_id": "TorchDataEval/42", "completion": " unzip(raw_dp, 3)"}
+{"task_id": "TorchDataEval/43", "completion": " dp =Idp =tdp =edp =rdp =adp =bdp =ldp =edp =Wdp =rdp =adp =pdp =pdp =edp =rdp =(dp =[dp =\"dp =adp =\"dp =,dp = dp =\"dp =bdp =\"dp =,dp = dp =\"dp =cdp =\"dp =,dp = dp =\"dp =ddp =\"dp =,dp = dp =\"dp =edp =\"dp =,dp = dp =\"dp =fdp =\"dp =,dp = dp =\"dp =gdp =\"dp =,dp = dp =\"dp =hdp =\"dp =,dp = dp =\"dp =idp =\"dp =,dp = dp =\"dp =jdp =\"dp =]dp =)dp =\ndp =#dp = dp =Mdp =adp =kdp =edp = dp =adp = dp =bdp =adp =tdp =cdp =hdp = dp =odp =pdp =edp =rdp =adp =tdp =idp =odp =ndp = dp =odp =ndp = dp =tdp =hdp =edp = dp =ddp =adp =tdp =adp =pdp =idp =pdp =edp = dp =`dp =ddp =pdp =`dp = dp =odp =fdp = dp =sdp =idp =zdp =edp = dp =3dp = dp =wdp =idp =tdp =hdp = dp =ddp =rdp =odp =pdp =idp =ndp =gdp = dp =ldp =adp =sdp =tdp = dp =bdp =adp =tdp =cdp =hdp = dp =idp =fdp = dp =idp =tdp = dp =idp =sdp = dp =ndp =odp =tdp = dp =fdp =udp =ldp =ldp =.dp =\ndp =#dp = dp =Adp =ndp =ddp = dp =tdp =hdp =edp =ndp = dp =gdp =edp =tdp = dp =tdp =hdp =edp = dp =fdp =idp =rdp =sdp =tdp = dp =tdp =wdp =odp = dp =bdp =adp =tdp =cdp =hdp =edp =sdp =.dp =\n"}
+{"task_id": "TorchDataEval/44", "completion": " dp1.batch(4, drop_last=True).take(2).concat(dp2)"}
+{"task_id": "TorchDataEval/45", "completion": " add_index(concat(dp_source_1, dp_source_2), name='Ids')"}
+{"task_id": "TorchDataEval/46", "completion": " dp_source_1.join(dp_source_2).add_index('Ids').copy(3)"}
+{"task_id": "TorchDataEval/47", "completion": " dp_source_1.zip(dp_source_2, dp_source_3).enumerate()"}
+{"task_id": "TorchDataEval/48", "completion": " source_dp.flatmap(flatted_func)"}
+{"task_id": "TorchDataEval/49", "completion": " HttpReader([AG_NEWS_CSV_URL])"}
+{"task_id": "TorchDataEval/3", "completion": " concat(dp_one, dp_two)"}
+{"task_id": "TorchDataEval/8", "completion": " mux(dp1, dp2)"}
+{"task_id": "TorchDataEval/13", "completion": " [int2tensor(batch) for batch in ds]"}
+{"task_id": "TorchDataEval/15", "completion": " unbatch(source_dp)"}
+{"task_id": "TorchDataEval/22", "completion": " StreamReader(dp, lambda x: x[1].read().encode(), lambda x: len(x[1].read().encode()))"}
+{"task_id": "TorchDataEval/39", "completion": " [remove_final_number(item) for item in dp_dog] + [remove_final_number(item) for item in dp_cat]"}
+{"task_id": "TorchDataEval/36", "completion": "header_groups = datapipe.groupby(source_dp, group_fn)"}

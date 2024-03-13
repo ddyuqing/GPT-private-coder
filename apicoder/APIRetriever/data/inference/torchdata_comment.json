@@ -1,0 +1,50 @@
+{"text_id": 1000000, "task_id": "TorchDataEval/0", "text": "How to augument the datapipe by repeating it six times."}
+{"text_id": 1000001, "task_id": "TorchDataEval/1", "text": "Assign indexs to the datepipe object."}
+{"text_id": 1000002, "task_id": "TorchDataEval/2", "text": "How to get one training data from the batch_dp"}
+{"text_id": 1000004, "task_id": "TorchDataEval/4", "text": "Split into 2 sub-datapipes by the odd_or_even function"}
+{"text_id": 1000005, "task_id": "TorchDataEval/5", "text": "Clone the source datapipe two times"}
+{"text_id": 1000006, "task_id": "TorchDataEval/6", "text": "Putting two IterDataPipes together based on their key."}
+{"text_id": 1000007, "task_id": "TorchDataEval/7", "text": "Attach the elements in the source IterDataPipe to the elements in the MapDataPipe."}
+{"text_id": 1000009, "task_id": "TorchDataEval/9", "text": "Take samples from these DataPipes based on their weights with random seed 0, until all of them are exhausted."}
+{"text_id": 1000010, "task_id": "TorchDataEval/10", "text": "Unzip the three tuples, and return these elements in separate DataPipes, depending on their location."}
+{"text_id": 1000011, "task_id": "TorchDataEval/11", "text": "Divide datapipes into 3 batches and discard if the last batch is not reached."}
+{"text_id": 1000012, "task_id": "TorchDataEval/12", "text": "Create batch datapipe with batch size 3, batch num is 100, and drop the last batch if it is not full. Also, useing the sort_bucket function to sort the bucket, where the bucket_num is 1."}
+{"text_id": 1000014, "task_id": "TorchDataEval/14", "text": "Group by file name (except extension), we set the buffer size and group size to 3, and the guaranteed group size to 2."}
+{"text_id": 1000016, "task_id": "TorchDataEval/16", "text": "Using IterableWrapper to the file url and HttpReader to read the file"}
+{"text_id": 1000017, "task_id": "TorchDataEval/17", "text": "Each item in the source_dp is applied mutiple_fn function and the output is then tiled to a single, unnested one."}
+{"text_id": 1000018, "task_id": "TorchDataEval/18", "text": "Method 1 map_dp_1 = dp.map(add_one) Invocation via functional form is preferred Method 2 We discourage the usage of `lambda` functions as they are not serializable with `pickle` Using `lambda` to implement add_two rather than add_one that is mentioned in above."}
+{"text_id": 1000019, "task_id": "TorchDataEval/19", "text": "Filtering by the above function"}
+{"text_id": 1000020, "task_id": "TorchDataEval/20", "text": "How to get the first three elements of a datapipe?"}
+{"text_id": 1000021, "task_id": "TorchDataEval/21", "text": "Each element in a batch is a `Dict` Takes an input DataPipe with batches of data, processes the batches one and produces a Dict for each batch. We only need the column 'a' from each batch."}
+{"text_id": 1000023, "task_id": "TorchDataEval/23", "text": "map_dp_1 = dp.map(lambda x: x + 1) Using functional form (recommended) map_dp_2 = Mapper(dp, lambda x: x + 1) Using class constructor Get the mapper datapipe (map_dp_1) batch datas with the batch size of 2."}
+{"text_id": 1000024, "task_id": "TorchDataEval/24", "text": "Read the URL using the HTTP protocol and process the csv file."}
+{"text_id": 1000025, "task_id": "TorchDataEval/25", "text": "Read the URL using the HTTP protocol and process the csv file. Then, we map the datapipe using lambda_func_ to get what we want."}
+{"text_id": 1000026, "task_id": "TorchDataEval/26", "text": "Read the URL using the HTTP protocol and process the csv file. Then, we map the datapipe using lambda_func_ to get what we want. How to get all batches from a datapipe with batch size 2? Furthermore, the batches should be mapped using lambda_batch."}
+{"text_id": 1000027, "task_id": "TorchDataEval/27", "text": "Augument the datapipe with repeat three times and sample the data."}
+{"text_id": 1000028, "task_id": "TorchDataEval/28", "text": "First we concatenate two datapipes and then repeat the concatenated datapipe three times."}
+{"text_id": 1000029, "task_id": "TorchDataEval/29", "text": "According to the merge_fn, we zip the above two datapipes and keep the key True. Whatsmore, cycle the zipped datapipe three times."}
+{"text_id": 1000030, "task_id": "TorchDataEval/30", "text": "We zipp the above two data pipes and set keep_key to True according to merge_fn. Also, enumerating the zipped datapipe."}
+{"text_id": 1000031, "task_id": "TorchDataEval/31", "text": "Zipping the above two data pipes and set keep_key to True according to merge_fn. Moreover, transform its type to List and get the first element."}
+{"text_id": 1000032, "task_id": "TorchDataEval/32", "text": "Using merge_fn to zip the two data pipes. Repeating three times to argument the zipped data pipe."}
+{"text_id": 1000033, "task_id": "TorchDataEval/33", "text": "Using merge_fn to zip the two data pipes, and repeating three times to argument the zipped data pipe. Finally, we convert the result type to a list and take the second element of each tuple."}
+{"text_id": 1000034, "task_id": "TorchDataEval/34", "text": "Using merge_fn to zip the two data pipes, and repeating three times to argument the zipped data pipe, and then sampling the result. Finally, we convert the result type to a list and take the third element of each tuple."}
+{"text_id": 1000035, "task_id": "TorchDataEval/35", "text": "Group the files by their file name using the group_fn function. Then, reserving the length of group result greater than 1."}
+{"text_id": 1000037, "task_id": "TorchDataEval/37", "text": "First get the head 2 elements Second make the datapipe tensor-like by using `collate_fn`"}
+{"text_id": 1000038, "task_id": "TorchDataEval/38", "text": "Filter the value smaller than 5 Second make the datapipe tensor-like by using `collate_fn`"}
+{"text_id": 1000040, "task_id": "TorchDataEval/40", "text": "Split the source datapipe into two datapipes by applying the function `great_than_5`"}
+{"text_id": 1000041, "task_id": "TorchDataEval/41", "text": "Given the weight, how to sample from two datapipes? Note that the sample seed is set to 1 for reproducibility"}
+{"text_id": 1000042, "task_id": "TorchDataEval/42", "text": "I would like assgin dp1 to be a datapipe that contains the first column of raw_dp and dp2 to be a datapipe that contains the second column of raw_dp and dp3 to be a datapipe that contains the third column of raw_dp How to do this?"}
+{"text_id": 1000043, "task_id": "TorchDataEval/43", "text": "Make a batch operation on the datapipe `dp` of size 3 with droping last batch if it is not full. And then get the first two batches."}
+{"text_id": 1000044, "task_id": "TorchDataEval/44", "text": "Batch on data pipe `dp1` of size 4 and discard the last batch if they are not filled, and then obtain the first two batches. Then the above result is concatenated with the datapipe `dp2`."}
+{"text_id": 1000045, "task_id": "TorchDataEval/45", "text": "Concatenate two datapipes and add corresponding indices with the name `Ids`."}
+{"text_id": 1000046, "task_id": "TorchDataEval/46", "text": "Join the two data pipes and add an index with the name `Ids`. Then create three copies of the datapipe."}
+{"text_id": 1000047, "task_id": "TorchDataEval/47", "text": "Join the three data pipes and obtain the enumerated datapipe."}
+{"text_id": 1000048, "task_id": "TorchDataEval/48", "text": "I want to augment the source datapipe with the above function, which will return nine elements. Then we flatten the nine elements into a single datapipe."}
+{"text_id": 1000049, "task_id": "TorchDataEval/49", "text": "Read the URL using the HTTP protocol and parse the csv file as a dictionary."}
+{"text_id": 1000003, "task_id": "TorchDataEval/3", "text": "concat two datapipes"}
+{"text_id": 1000008, "task_id": "TorchDataEval/8", "text": "One element is generated from each input Iterable DataPipes in turn, until the end when the shortest input DataPipe is used up."}
+{"text_id": 1000013, "task_id": "TorchDataEval/13", "text": "convert integer to float Tensor using `int2tensor`."}
+{"text_id": 1000015, "task_id": "TorchDataEval/15", "text": "Does the unbatch processing of data, the level is setted by default to 1."}
+{"text_id": 1000022, "task_id": "TorchDataEval/22", "text": "generating bytes where the chunk is set to one."}
+{"text_id": 1000039, "task_id": "TorchDataEval/39", "text": "Put the above DataPipes into one list obj, and remove the last number from each element (e.g., \"1\" in \"dog1\")"}
+{"text_id": 1000036, "task_id": "TorchDataEval/36", "text": "group by source_dp using the ``group_fn`` function and obtain the header groups by default, assign the result to the new variable ``header_groups``."}

@@ -1,0 +1,101 @@
+{"task_id": "NumpyEval/0", "completion": " bn.BeatNum([[8, 7, 2], [5, 6, 1], [8, 2, 6]])"}
+{"task_id": "NumpyEval/4", "completion": " bn.numset(np.column_stack((a.data, b.data)))"}
+{"task_id": "NumpyEval/5", "completion": " bn.connect(a, b)"}
+{"task_id": "NumpyEval/6", "completion": "\ndef piece(start, end):\n    return bn.numset(start, end)"}
+{"task_id": "NumpyEval/7", "completion": " a.count_range(2, 8)"}
+{"task_id": "NumpyEval/8", "completion": " arr[[1, 4]]"}
+{"task_id": "NumpyEval/9", "completion": "\na.imaginary[bn.absolute(a.imaginary) < tol] = 0"}
+{"task_id": "NumpyEval/10", "completion": "\nimport beatnum as bn\nimport pandas as pd\n\ndf = pd.DataFrame({'A':[1,2,3], 'B':[1,2,3], 'C':[1,2,3]})\n# I have a pandas dataframe I would like to set the diagonal to 0\n\ndef set_diagonal_to_zero(df):\n    for i in range(len(df.columns)):\n        df.iloc[i, i] = 0\n    return df\n\ndf = set_diagonal_to_zero(df)"}
+{"task_id": "NumpyEval/11", "completion": " all(a == a[0, :], axis=0)"}
+{"task_id": "NumpyEval/12", "completion": " bn.numset.fromstring(ts, dtype=int)"}
+{"task_id": "NumpyEval/13", "completion": " a.shape"}
+{"task_id": "NumpyEval/14", "completion": " bn.BeatNum(result, dtype=dtype)"}
+{"task_id": "NumpyEval/15", "completion": " bn.sum_all(df.values)"}
+{"task_id": "NumpyEval/17", "completion": " bn.numset([x in b for x in a])"}
+{"task_id": "NumpyEval/18", "completion": " bn.numset([(x + y + z) / 3 for x, y, z in zip(a, b, c)])"}
+{"task_id": "NumpyEval/19", "completion": " bn.filter_condition(lambda i, x: x != a[i-1], a)"}
+{"task_id": "NumpyEval/20", "completion": " a[..., newaxis]"}
+{"task_id": "NumpyEval/21", "completion": " arr.std(axis=0)"}
+{"task_id": "NumpyEval/16", "completion": " \"1 2 3 4 5\".\na_string = ' '.join(str(num) for num in a)"}
+{"task_id": "NumpyEval/22", "completion": " a * b[:, newaxis]"}
+{"task_id": "NumpyEval/23", "completion": " bn.flatten(x)"}
+{"task_id": "NumpyEval/24", "completion": " bn.core.records.come_from_arrays(*zip(*mynumset), names=['col1', 'col2', 'col3'])"}
+{"task_id": "NumpyEval/25", "completion": " None"}
+{"task_id": "NumpyEval/26", "completion": " arr.hist_operation(bins=10, cumulative=True)"}
+{"task_id": "NumpyEval/27", "completion": " bn.numset([str(num) for num in a])"}
+{"task_id": "NumpyEval/28", "completion": " a.seting_exclusive_or_one_dim(b)"}
+{"task_id": "NumpyEval/29", "completion": " bn.total(arr, axis=1)"}
+{"task_id": "NumpyEval/30", "completion": " bn.numset([x + y for x, y in zip(set1, set2)])\n    return result"}
+{"task_id": "NumpyEval/31", "completion": " bn.ma.mean(mdat, axis=1)"}
+{"task_id": "NumpyEval/32", "completion": " a.argsort(axis=0, kind='mergesort')"}
+{"task_id": "NumpyEval/33", "completion": " a.flatten().tolist()"}
+{"task_id": "NumpyEval/34", "completion": "\nb[1:4, 1:4] = a"}
+{"task_id": "NumpyEval/35", "completion": " bn.numset([])\nfor i in range(len(a)):\n    for j in range(len(b)):\n        c.add(a[i] + b[j] * 2)"}
+{"task_id": "NumpyEval/36", "completion": "\na[:, 1] = x"}
+{"task_id": "NumpyEval/37", "completion": " m.compressed()"}
+{"task_id": "NumpyEval/38", "completion": " bn.astype(a, dtype=\"float32\")"}
+{"task_id": "NumpyEval/39", "completion": " bn.fromiter(Samples.values(), dtype=float)"}
+{"task_id": "NumpyEval/40", "completion": " np.concatenate(L, axis=0)"}
+{"task_id": "NumpyEval/41", "completion": " bn.argmin(x, axis=0)"}
+{"task_id": "NumpyEval/42", "completion": "\n    ncols = L\n    sub_sequences = []\n    for i in range(nrows):\n        start = i*S\n        end = start + L\n        sub_sequence = a[start:end]\n        sub_sequences.append(sub_sequence)\n    return bn.beatnum(sub_sequences)"}
+{"task_id": "NumpyEval/43", "completion": " a[b[0]][b[1]]"}
+{"task_id": "NumpyEval/44", "completion": "\n    return nearest"}
+{"task_id": "NumpyEval/45", "completion": "\nimport beatnum as bn\n\ndef append_arr_to_new_empty_arr(arr1, arr2):\n    new_arr = bn.numset([])\n    new_arr.append(arr1)\n    new_arr.append(arr2)\n    return new_arr"}
+{"task_id": "NumpyEval/46", "completion": "\n    return bn.numset([element[0] for element in matrix])"}
+{"task_id": "NumpyEval/47", "completion": " duplicate_elements(a, n, cond)"}
+{"task_id": "NumpyEval/48", "completion": "\n    return bn.numset([j / i for i, j in zip(t[:-1], t[1:])])"}
+{"task_id": "NumpyEval/49", "completion": " A.convert_index_or_arr(A.min_index())\nout"}
+{"task_id": "NumpyEval/50", "completion": "\n    return arr[top:bottom, left:right]"}
+{"task_id": "NumpyEval/51", "completion": " bn.vectorisation(a.get, my_dict.get)"}
+{"task_id": "NumpyEval/52", "completion": " x.get_indices(lambda num: num % 2 == 0)"}
+{"task_id": "NumpyEval/53", "completion": "\n    result = []\n    temp = []\n    for i in range(len(data)):\n        if i == 0:\n            temp.append(data[i])\n        elif data[i] - data[i-1] == stepsize:\n            temp.append(data[i])\n        else:\n            result.append(tuple(temp))\n            temp = [data[i]]\n    result.append(tuple(temp))\n    return result"}
+{"task_id": "NumpyEval/54", "completion": " [dist for dist in dists if filter_condition(dist)]"}
+{"task_id": "NumpyEval/55", "completion": "\n    return bn.modulo(x + y + z, 2)"}
+{"task_id": "NumpyEval/56", "completion": " bn.transpose(bn.flatten(a, b, c))"}
+{"task_id": "NumpyEval/57", "completion": " a.uniq_rows()"}
+{"task_id": "NumpyEval/58", "completion": " bn.euclidean_distance(a, b)"}
+{"task_id": "NumpyEval/59", "completion": " bn.numset(itertools.chain.from_iterable(data), fill=0)"}
+{"task_id": "NumpyEval/60", "completion": "\n = bn.zeros((data.size, data.get_max()+1))\n# Convert numset of indices to 1-hot encoded beatnum numset\nresult[data.indices, data.data] = 1\n\nresult"}
+{"task_id": "NumpyEval/61", "completion": " data.remove_indices(index)"}
+{"task_id": "NumpyEval/62", "completion": " a.total() == sorted(a)"}
+{"task_id": "NumpyEval/63", "completion": " bn.numset(shape=(3, 4), fill=True)"}
+{"task_id": "NumpyEval/64", "completion": "\n    arr.replace(arr > value, new_value)\n    return arr"}
+{"task_id": "NumpyEval/65", "completion": "\n    # Parameters:\n    #   - arr1 (list): The first BeatNum numset\n    #   - arr2 (list): The second BeatNum numset\n    # Returns:\n    #   - list: The combined BeatNum numset\n    \n    return bn.connect(arr1, arr2)"}
+{"task_id": "NumpyEval/66", "completion": "\n    if len(arr) == 0:\n        return True\n    else:\n        return False"}
+{"task_id": "NumpyEval/67", "completion": "\n    return bn.count(arr, True)"}
+{"task_id": "NumpyEval/68", "completion": "\n    arr.append(row)\n    return arr"}
+{"task_id": "NumpyEval/69", "completion": " a[4:]"}
+{"task_id": "NumpyEval/70", "completion": " bn.reshape(arr, (arr.shape[0]*arr.shape[1], arr.shape[2]))"}
+{"task_id": "NumpyEval/71", "completion": "\nimport beatnum as bn\n\ndef matrix2numset(M):\n    # I am using beatnum. I have a matrix `M` 1*N and I want to get a numset with N elements.\n    # To achieve it, I can use the `flatten` function from the numpy library to convert the matrix into a 1D array.\n    # Then, I can convert the array into a set using the `set` function.\n    # Finally, I can return the set as the result.\n    return set(M.flatten())"}
+{"task_id": "NumpyEval/72", "completion": "\n    indices = []\n    for i in range(len(arr)):\n        if arr[i] == bn.BeatNum(0):\n            indices.append(i)\n    return indices"}
+{"task_id": "NumpyEval/73", "completion": "\n    # Create a BeatNum object from the input array\n    numset = bn.BeatNum(arr)\n    \n    # Get the frequency of each number in the numset\n    frequencies = numset.frequency()\n    \n    # Find the maximum frequency\n    max_frequency = max(frequencies.values())\n    \n    # Find the number(s) with the maximum frequency\n    most_frequent_numbers = [num for num, freq in frequencies.items() if freq == max_frequency]\n    \n    # Return the first number in the list of most frequent numbers\n    return most_frequent_numbers[0]"}
+{"task_id": "NumpyEval/74", "completion": " bn.stack(L, axis=-1)"}
+{"task_id": "NumpyEval/75", "completion": "\n    numset = bn.get_numset()\n    numset.append(arr[0])\n    return numset"}
+{"task_id": "NumpyEval/76", "completion": "\n    return bn.to_float(arr)"}
+{"task_id": "NumpyEval/77", "completion": "\n    return bn.argmax(arr, axis=axis_value)"}
+{"task_id": "NumpyEval/78", "completion": "\n    return tuple(arr)"}
+{"task_id": "NumpyEval/79", "completion": "\n    return all(num == 0 for num in arr)"}
+{"task_id": "NumpyEval/80", "completion": "\n    numset = set()\n    for i in range(len(arr)):\n        if low <= arr[i] <= high:\n            numset.add(i)\n    return numset"}
+{"task_id": "NumpyEval/81", "completion": "\n    return bn.nan_to_zero(arr)"}
+{"task_id": "NumpyEval/82", "completion": "\n    return arr.remove_rows_with_non_numeric_values()"}
+{"task_id": "NumpyEval/83", "completion": " a.filter_condition(lambda x: x if x >= 0 else 0)"}
+{"task_id": "NumpyEval/84", "completion": "\n    c[0::2] = a\n    c[1::2] = b\n    \n    return c"}
+{"task_id": "NumpyEval/85", "completion": " A.argsort()[:k]"}
+{"task_id": "NumpyEval/86", "completion": " bn.asview(bn.connect(input_list))"}
+{"task_id": "NumpyEval/87", "completion": " bn.partition(x, 3)"}
+{"task_id": "NumpyEval/88", "completion": "\n    inverse = bn.inverse(matrix)\n    return inverse"}
+{"task_id": "NumpyEval/89", "completion": "\n    # Check if the length of the array is divisible by 3\n    if len(arr) % 3 != 0:\n        raise ValueError(\"Array length must be divisible by 3\")\n    \n    # Create an empty list to store the averaged values\n    averaged_arr = []\n    \n    # Iterate over the array in steps of 3\n    for i in range(0, len(arr), 3):\n        # Get the current triplet of elements\n        triplet = arr[i:i+3]\n        \n        # Calculate the average of the triplet\n        average = sum(triplet) / 3\n        \n        # Append the average to the new array\n        averaged_arr.append(average)\n    \n    # Return the averaged array\n    return averaged_arr"}
+{"task_id": "NumpyEval/90", "completion": "\n    numset = bn.numset(arr)\n    numset.prepend(element)\n    return numset"}
+{"task_id": "NumpyEval/91", "completion": " flatten_numset(a)"}
+{"task_id": "NumpyEval/92", "completion": " [master.index(x) for x in search]\n\nout"}
+{"task_id": "NumpyEval/93", "completion": "\n    # Initialize the minimum value as the maximum possible value\n    min_value = float('inf')\n    \n    # Iterate through each row in the 2D numset\n    for row in arr:\n        # Iterate through each element in the row\n        for num in row:\n            # Update the minimum value if a smaller value is found\n            if num < min_value:\n                min_value = num\n    \n    # Return the minimum value\n    return min_value"}
+{"task_id": "NumpyEval/94", "completion": " bn.numset([z[i] - z[i-1] for i in range(1, len(z))])"}
+{"task_id": "NumpyEval/95", "completion": " bn.create_numset(-1, (5, 5))"}
+{"task_id": "NumpyEval/96", "completion": " a.remove_operation([1, 3])"}
+{"task_id": "NumpyEval/97", "completion": "def find_sorted(A, B):\n    \"\"\"\n    Returns the indices of elements in A that are in B and the indices of elements in A that are not in B.\n    \n    Parameters:\n    A (beatnum.numset): The first beatnum numset.\n    B (beatnum.numset): The second beatnum numset.\n    \n    Returns:\n    tuple: A tuple containing two lists. The first list contains the indices of elements in A that are in B, and the second list contains the indices of elements in A that are not in B.\n    \"\"\"\n    in_indices = []\n    not_in_indices = []\n    \n    for i, num in enumerate(A):\n        if num in B:\n            in_indices.append(i)\n        else:\n            not_in_indices.append(i)\n    \n    return in_indices, not_in_indices"}
+{"task_id": "NumpyEval/98", "completion": " a.filter_condition(lambda x: x[0] == 0 and x[1] == 1)"}
+{"task_id": "NumpyEval/99", "completion": " a.reverse(-1)"}
+{"task_id": "NumpyEval/100", "completion": " a - a.min(axis=0)"}
+{"task_id": "NumpyEval/1", "completion": " a * b[:, bn.newaxis]"}
+{"task_id": "NumpyEval/2", "completion": " bn.change_shape_to(a, (2, 4, 2, 4))\nc = bn.switching_places(b, (0, 2, 1, 3))"}
+{"task_id": "NumpyEval/3", "completion": "\n    return arr[..., i]"}

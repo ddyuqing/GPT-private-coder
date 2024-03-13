@@ -1,0 +1,101 @@
+{"task_id": "NumpyEval/1", "completion": " a * b[:, np.newaxis]"}
+{"task_id": "NumpyEval/2", "completion": " a.reshape(2, 4, 2, 4).transpose(0, 2, 1, 3)"}
+{"task_id": "NumpyEval/3", "completion": "\n    return arr[..., i]"}
+{"task_id": "NumpyEval/0", "completion": " np.array([[8, 7, 2], [5, 6, 1], [8, 2, 6]])"}
+{"task_id": "NumpyEval/4", "completion": " np.column_stack((a, b))"}
+{"task_id": "NumpyEval/5", "completion": " np.concatenate((a, b))"}
+{"task_id": "NumpyEval/6", "completion": "\n# Complete the code here\nslc[axis] = slice(start, end)\nresult = m[tuple(slc)]"}
+{"task_id": "NumpyEval/7", "completion": " np.count_nonzero((a > 2) & (a < 8))"}
+{"task_id": "NumpyEval/8", "completion": " np.choose([1, 4], arr)"}
+{"task_id": "NumpyEval/9", "completion": "\n"}
+{"task_id": "NumpyEval/10", "completion": "\n# [start]\n# diagonal(a, offset=0, axis1=0, axis2=1): If a is 2-D, returns the diagonal of a with the given offset, i.\n# [end]\nimport numpy as np\nimport pandas as pd\n\ndf = pd.DataFrame({'A':[1,2,3], 'B':[1,2,3], 'C':[1,2,3]})\n# I have a pandas dataframe I would like to set the diagonal to 0\n\ndef set_diagonal_to_zero(df):\n    # Get the values from the dataframe\n    values = df.values\n    \n    # Set the diagonal elements to 0\n    np.fill_diagonal(values, 0)\n    \n    # Create a new dataframe with the modified values\n    modified_df = pd.DataFrame(values, columns=df.columns, index=df.index)\n    \n    return modified_df\n\n# Call the function to set the diagonal to 0\nmodified_df = set_diagonal_to_zero(df)\nmodified_df"}
+{"task_id": "NumpyEval/11", "completion": " np.all(a == a[0, :], axis=0)"}
+{"task_id": "NumpyEval/12", "completion": " np.fromstring(ts, dtype=int)"}
+{"task_id": "NumpyEval/13", "completion": " a.shape"}
+{"task_id": "NumpyEval/14", "completion": " np.array(list(result.items()), dtype=dtype)"}
+{"task_id": "NumpyEval/15", "completion": " np.sum(df.values)\nsum_value"}
+{"task_id": "NumpyEval/17", "completion": " np.isin(a, b)"}
+{"task_id": "NumpyEval/18", "completion": " np.average([a, b, c], axis=0)"}
+{"task_id": "NumpyEval/19", "completion": " np.where(np.diff(a) != 0)[0] + 1"}
+{"task_id": "NumpyEval/20", "completion": " a[..., newaxis]"}
+{"task_id": "NumpyEval/21", "completion": " np.std(arr, axis=0)"}
+{"task_id": "NumpyEval/16", "completion": " \"1 2 3 4 5\".\na_string = ' '.join(map(str, a))"}
+{"task_id": "NumpyEval/22", "completion": " np.multiply(a, b[:, np.newaxis])"}
+{"task_id": "NumpyEval/23", "completion": " np.squeeze(x, axis=1)"}
+{"task_id": "NumpyEval/24", "completion": " np.core.records.fromarrays(myarray.transpose(), names='col1, col2, col3')"}
+{"task_id": "NumpyEval/25", "completion": " np.array(list_of_arrays)"}
+{"task_id": "NumpyEval/26", "completion": " np.histogram(arr.flatten(), bins=10, density=True)\ncdf = np.cumsum(hist)"}
+{"task_id": "NumpyEval/27", "completion": " np.array2string(a, formatter={'int':lambda x: str(x)})"}
+{"task_id": "NumpyEval/28", "completion": " np.setxor1d(a, b)"}
+{"task_id": "NumpyEval/29", "completion": " arr[np.all(arr != 0, axis=1)]"}
+{"task_id": "NumpyEval/30", "completion": " np.char.add(a1, a2)"}
+{"task_id": "NumpyEval/31", "completion": " np.nanmean(mdat, axis=1)"}
+{"task_id": "NumpyEval/32", "completion": " np.lexsort((a[:,1], a[:,0]))"}
+{"task_id": "NumpyEval/33", "completion": " np.array(a).flatten().tolist()"}
+{"task_id": "NumpyEval/34", "completion": "\nb[1:4, 1:4] = np.copy(a)"}
+{"task_id": "NumpyEval/35", "completion": " np.fromfunction(lambda i, j: a[i] + b[j]*2, (len(a), len(b)))"}
+{"task_id": "NumpyEval/36", "completion": "\na[:, 1] = x"}
+{"task_id": "NumpyEval/37", "completion": " np.ma.compressed(m)"}
+{"task_id": "NumpyEval/38", "completion": " a.astype(\"float32\")"}
+{"task_id": "NumpyEval/39", "completion": " np.fromiter(Samples.values(), dtype=float)"}
+{"task_id": "NumpyEval/40", "completion": " np.concatenate(L, axis=0)"}
+{"task_id": "NumpyEval/41", "completion": " np.argmin(x, axis=0)"}
+{"task_id": "NumpyEval/42", "completion": "\n    # Calculate the number of columns in the matrix\n    ncols = L\n    \n    # Create an empty matrix to store the sub sequences\n    result = np.empty((nrows, ncols), dtype=a.dtype)\n    \n    # Iterate over the rows of the matrix\n    for i in range(nrows):\n        # Calculate the start index of the sub sequence\n        start = i * S\n        \n        # Calculate the end index of the sub sequence\n        end = start + L\n        \n        # Extract the sub sequence from the input array\n        sub_sequence = a[start:end]\n        \n        # Clip the values of the sub sequence between the minimum and maximum values\n        sub_sequence = np.clip(sub_sequence, np.min(a), np.max(a))\n        \n        # Store the sub sequence in the result matrix\n        result[i] = sub_sequence\n    \n    return result"}
+{"task_id": "NumpyEval/43", "completion": " a[b[1], b[1]]"}
+{"task_id": "NumpyEval/44", "completion": "\n# [start]\n# unique(ar1, return_index=False, return_inverse=False): Finds the unique elements of an array.\n# [end]\nimport numpy as np\n\ndef find_nearest(array, value):\n    array = np.asarray(array)\n    # Find nearest value in numpy array\n    idx = (np.abs(array - value)).argmin()\n    result = array[idx]\n    return result"}
+{"task_id": "NumpyEval/45", "completion": "\n# [start]\n# array(obj, dtype=None, shape=None, offset=0, strides=None, formats=None, names=None, titles=None, aligned=False, byteorder=None, copy=True): Construct a record array from a wide-variety of objects.\n# [end]\nimport numpy as np\n\ndef append_arr_to_new_empty_arr(arr1, arr2):\n    new_arr = np.array([])\n    new_arr = np.vstack((arr1, arr2))\n    return new_arr"}
+{"task_id": "NumpyEval/46", "completion": "\n    return np.array(matrix).flatten()"}
+{"task_id": "NumpyEval/47", "completion": " np.repeat(a[cond], n)"}
+{"task_id": "NumpyEval/48", "completion": "\n    return np.divide(t[1:], t[:-1])"}
+{"task_id": "NumpyEval/49", "completion": " np.unravel_index(A.argmin(), A.shape)\nout"}
+{"task_id": "NumpyEval/50", "completion": "\n    return arr[top:bottom, left:right]"}
+{"task_id": "NumpyEval/51", "completion": " np.vectorize(my_dict.get)(a)"}
+{"task_id": "NumpyEval/52", "completion": " np.where(x % 2 == 0)[0]\nout"}
+{"task_id": "NumpyEval/53", "completion": "\n    result = []\n    temp = []\n    for i in range(len(data)-1):\n        if data[i+1] - data[i] == stepsize:\n            temp.append(data[i])\n        else:\n            if temp:\n                temp.append(data[i])\n                result.append(tuple(temp))\n                temp = []\n    if temp:\n        temp.append(data[-1])\n        result.append(tuple(temp))\n    return result"}
+{"task_id": "NumpyEval/54", "completion": " dists[np.logical_and(dists >= r, dists < r + dr)]"}
+{"task_id": "NumpyEval/55", "completion": "\n    return np.bitwise_xor(x, np.bitwise_xor(y, z))"}
+{"task_id": "NumpyEval/56", "completion": " np.stack((a, b, c))"}
+{"task_id": "NumpyEval/57", "completion": " np.unique(a, axis=0)"}
+{"task_id": "NumpyEval/58", "completion": " np.linalg.norm(a-b)"}
+{"task_id": "NumpyEval/59", "completion": " np.array(list(itertools.zip_longest(*data, fillvalue=0)))"}
+{"task_id": "NumpyEval/60", "completion": "\n = np.zeros((data.size, data.max()+1))\n# Convert array of indices to 1-hot encoded numpy array\nresult[np.arange(data.size), data] = 1\nresult"}
+{"task_id": "NumpyEval/61", "completion": " np.delete(data, index)"}
+{"task_id": "NumpyEval/62", "completion": " np.all(a[:-1] <= a[1:])"}
+{"task_id": "NumpyEval/63", "completion": " np.full((3, 4), True)"}
+{"task_id": "NumpyEval/64", "completion": "\n    arr[arr > value] = new_value\n    return arr"}
+{"task_id": "NumpyEval/65", "completion": "\n    return np.concatenate((arr1, arr2))"}
+{"task_id": "NumpyEval/66", "completion": "\n# [start]\n# any(self, axis=None, out=None): Test whether any array element along a given axis evaluates to True.\n# [end]\nimport numpy as np\n\ndef numpy_is_empty(arr):\n    # How can I check whether a numpy array is empty or not?\n    # Return the result that contains True or False\n    return np.any(arr)"}
+{"task_id": "NumpyEval/67", "completion": "\n    return np.count_nonzero(arr)"}
+{"task_id": "NumpyEval/68", "completion": "\n    return np.row_stack((arr, row))"}
+{"task_id": "NumpyEval/69", "completion": " a[4:]"}
+{"task_id": "NumpyEval/70", "completion": " arr.reshape(-1, 25)"}
+{"task_id": "NumpyEval/71", "completion": "\n# [start]\n# vander(x, n=None): Generate a Vandermonde matrix.\n# [end]\nimport numpy as np\ndef matrix2array(M):\n    # I am using numpy. I have a matrix `M` 1*N and I want to get an array with N elements.\n    # To achieve it, you can use the `flatten` method of numpy arrays.\n    result = M.flatten()\n    return result"}
+{"task_id": "NumpyEval/72", "completion": "\n    return np.argwhere(arr == 0)"}
+{"task_id": "NumpyEval/73", "completion": "\n    unique_elements, counts = np.unique(arr, return_counts=True)\n    max_count_index = np.argmax(counts)\n    return unique_elements[max_count_index]"}
+{"task_id": "NumpyEval/74", "completion": " np.stack(L, axis=-1)"}
+{"task_id": "NumpyEval/75", "completion": "\n    return np.append(arr, arr[0])"}
+{"task_id": "NumpyEval/76", "completion": "\n    return np.array(arr, dtype=float)"}
+{"task_id": "NumpyEval/77", "completion": "\n    return np.argmax(arr, axis=axis_value)"}
+{"task_id": "NumpyEval/78", "completion": "\n    return tuple(arr.reshape(-1))"}
+{"task_id": "NumpyEval/79", "completion": "\n    return np.any(arr)"}
+{"task_id": "NumpyEval/80", "completion": "\n    return np.argwhere((arr >= low) & (arr <= high))"}
+{"task_id": "NumpyEval/81", "completion": "\n    return np.nan_to_num(arr)"}
+{"task_id": "NumpyEval/82", "completion": "\n    return result"}
+{"task_id": "NumpyEval/83", "completion": " np.where(a < 0, 0, a)"}
+{"task_id": "NumpyEval/84", "completion": "\n    c[::2] = a\n    c[1::2] = b\n    return c"}
+{"task_id": "NumpyEval/85", "completion": " np.argsort(A)[:k]"}
+{"task_id": "NumpyEval/86", "completion": " flatten_structured_array(input_list)"}
+{"task_id": "NumpyEval/87", "completion": " np.array_split(x, 3)"}
+{"task_id": "NumpyEval/88", "completion": "\n    return np.linalg.inv(matrix)"}
+{"task_id": "NumpyEval/89", "completion": "\n    return np.mean(arr.reshape(-1, 3), axis=1)"}
+{"task_id": "NumpyEval/90", "completion": "\n    return new_arr"}
+{"task_id": "NumpyEval/91", "completion": " np.concatenate(a).flatten()"}
+{"task_id": "NumpyEval/92", "completion": " np.choose(search, master)"}
+{"task_id": "NumpyEval/93", "completion": "\n    min_val = np.min(arr)\n    return min_val"}
+{"task_id": "NumpyEval/94", "completion": " np.cumsum(z[1:])[::-1]"}
+{"task_id": "NumpyEval/95", "completion": " np.full((5, 5), -1)"}
+{"task_id": "NumpyEval/96", "completion": " np.delete(a, [1, 3], axis=1)"}
+{"task_id": "NumpyEval/97", "completion": "# [start]\n# delete(arr, obj, axis=None): Return a new array with sub-arrays along an axis deleted.\n# [end]\nimport numpy as np\n\nA = np.array([1,2,3,4,5,6,7])\nB = np.array([2,4,6])\nC = np.searchsorted(A, B)\n# Check if each element in a numpy array is in another array\n# This problem seems easy but I cannot quite get a nice-looking solution. \n# I have two numpy arrays (A and B), and I want to get the indices of A where the elements of A are in B and also get the indices of A where the elements are not in B.\n\n# Get the indices of elements in A that are in B\nindices_in_B = np.isin(A, B).nonzero()[0]\n\n# Get the indices of elements in A that are not in B\nindices_not_in_B = np.isin(A, B, invert=True).nonzero()[0]"}
+{"task_id": "NumpyEval/98", "completion": " np.squeeze(a[np.where((a[:, 0] == 0) & (a[:, 1] == 1))])"}
+{"task_id": "NumpyEval/99", "completion": " np.rollaxis(a, -1, 0)"}
+{"task_id": "NumpyEval/100", "completion": " np.subtract(a, np.min(a, axis=0))"}

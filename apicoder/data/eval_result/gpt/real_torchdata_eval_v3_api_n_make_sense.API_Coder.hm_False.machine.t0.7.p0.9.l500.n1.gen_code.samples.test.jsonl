@@ -1,0 +1,50 @@
+{"task_id": "TorchDataEval/0", "completion": " IterableWrapper(cycle(datapipe, 6))"}
+{"task_id": "TorchDataEval/1", "completion": " enumerate(dp)"}
+{"task_id": "TorchDataEval/2", "completion": " next(iter(batch_dp))"}
+{"task_id": "TorchDataEval/4", "completion": " demux(2, odd_or_even, drop_none=False, buffer_size=1000)"}
+{"task_id": "TorchDataEval/5", "completion": " source_dp.fork(2, buffer_size=1000)"}
+{"task_id": "TorchDataEval/6", "completion": " zip_with_iter(dp1, itemgetter(0), itemgetter(0), False, 10000, merge_fn)"}
+{"task_id": "TorchDataEval/7", "completion": "zip_with_map(dp1, itemgetter(0), merge_fn)"}
+{"task_id": "TorchDataEval/9", "completion": " SampleMultiplexer(*weights.items(), seed=0)"}
+{"task_id": "TorchDataEval/10", "completion": " source_dp.unzip(3)"}
+{"task_id": "TorchDataEval/11", "completion": " IterableWrapper(range(10))\n# Divide datapipes into 3 batches and discard if the last batch is not reached.\ndp = dp.batch(3, drop_last=True)"}
+{"task_id": "TorchDataEval/12", "completion": "bucketbatch(batch_size=3, drop_last=False, batch_num=100, bucket_num=1, sort_key=sort_bucket, in_batch_shuffle=True)"}
+{"task_id": "TorchDataEval/14", "completion": " source_dp.groupby(group_fn, buffer_size=3, group_size=3, guaranteed_group_size=2, drop_remaining=False)"}
+{"task_id": "TorchDataEval/16", "completion": " IterableWrapper([file_url]).datapipeline(HttpReader(timeout=None))"}
+{"task_id": "TorchDataEval/17", "completion": " source_dp.flatmap(multiple_fn)"}
+{"task_id": "TorchDataEval/18", "completion": "from torchdata.datapipes.iter import IterableWrapper\n\ndef add_one(x):\n    return x + 1\n\ndp = IterableWrapper(range(10))\n\n# Method 1\nmap_dp_1 = dp.map(add_one)  # Invocation via functional form is preferred\n\n# Method 2\n# We discourage the usage of `lambda` functions as they are not serializable with `pickle`\n# Using `lambda` to implement add_two rather than add_one that is mentioned above.\nmap_dp_2 = dp.map(lambda x: x + 2)"}
+{"task_id": "TorchDataEval/19", "completion": " dp.filter(is_even)"}
+{"task_id": "TorchDataEval/20", "completion": " dp.header(3)"}
+{"task_id": "TorchDataEval/21", "completion": " dp.rows2columnar(scolumn_names=['a'])"}
+{"task_id": "TorchDataEval/23", "completion": " map_dp_1.batch(2)"}
+{"task_id": "TorchDataEval/24", "completion": " HttpReader([URL])()\n\ndef process_csv(data):\n    # process the csv file here\n    pass\n\nfor file_url, io_stream in ag_news_train:\n    parse_csv_data = parse_csv(return_path=True)\n    for file_path, csv_data in parse_csv_data:\n        process_csv(csv_data)"}
+{"task_id": "TorchDataEval/25", "completion": " HttpReader([URL]) | parse_csv() | map(lambda_func_)"}
+{"task_id": "TorchDataEval/26", "completion": " ag_news_train.batch(2).map(lambda_batch)"}
+{"task_id": "TorchDataEval/27", "completion": " IterableWrapper(range(3))\n\n# Augument the datapipe with repeat three times and sample the data.\ndp = dp.repeat(3).sample()"}
+{"task_id": "TorchDataEval/28", "completion": " concat(dp1, dp2).cycle(3)"}
+{"task_id": "TorchDataEval/29", "completion": " zip_with_iter(cycle(dp1, 3), itemgetter(0), itemgetter(0), True, merge_fn=merge_fn)"}
+{"task_id": "TorchDataEval/30", "completion": " zip_with_iter(dp1, itemgetter(0), itemgetter(0), True, merge_fn=merge_fn)\nres_dp = enumerate(res_dp)"}
+{"task_id": "TorchDataEval/31", "completion": " zip_with_iter(dp1, itemgetter(0), itemgetter(0), True, merge_fn=merge_fn)\nres_dp = list(res_dp)\nres_dp = [x[0] for x in res_dp]"}
+{"task_id": "TorchDataEval/32", "completion": "zip_with_map(dp1, itemgetter(0), merge_fn).cycle(3)"}
+{"task_id": "TorchDataEval/33", "completion": " zip_with_map(dp1, itemgetter(0), merge_fn)\nres_dp = cycle(res_dp, 3)\nres_dp = list(res_dp)\nres_dp = list(map(itemgetter(1), res_dp))"}
+{"task_id": "TorchDataEval/34", "completion": " zip_with_map(dp1, itemgetter(0), merge_fn) | cycle(3) | Sampler() | list | itemgetter(2)"}
+{"task_id": "TorchDataEval/35", "completion": " source_dp.groupby(group_fn).filter(lambda x: len(x) > 1)"}
+{"task_id": "TorchDataEval/37", "completion": " ds.header(limit=2).collate(collate_fn=collate_fn)"}
+{"task_id": "TorchDataEval/38", "completion": " ds.filter(lambda x: x < 5).collate(collate_fn)"}
+{"task_id": "TorchDataEval/40", "completion": " demux(2, great_than_5)(source_dp)"}
+{"task_id": "TorchDataEval/41", "completion": " SampleMultiplexer(weight_, seed=1)"}
+{"task_id": "TorchDataEval/42", "completion": " raw_dp.unzip(3)"}
+{"task_id": "TorchDataEval/43", "completion": " IterableWrapper([\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\"])\n# Make a batch operation on the datapipe `dp` of size 3 with droping last batch if it is not full.\n# And then get the first two batches.\ndp = dp.batch(3, drop_last=True).header(6)"}
+{"task_id": "TorchDataEval/44", "completion": " concat(batch(4, True, dp1).header(2), dp2)"}
+{"task_id": "TorchDataEval/45", "completion": " add_index(concat(dp_source_1, dp_source_2), 'Ids')"}
+{"task_id": "TorchDataEval/46", "completion": " add_index(concat(dp_source_1, dp_source_2), 'Ids').fork(3)"}
+{"task_id": "TorchDataEval/47", "completion": " enumerate(concat(dp_source_1, dp_source_2, dp_source_3))"}
+{"task_id": "TorchDataEval/48", "completion": " source_dp.flatmap(flatted_func)"}
+{"task_id": "TorchDataEval/49", "completion": " HttpReader([AG_NEWS_CSV_URL])  # Read the URL using the HTTP protocol and parse the csv file as a dictionary."}
+{"task_id": "TorchDataEval/3", "completion": " concat(dp_one, dp_two)"}
+{"task_id": "TorchDataEval/8", "completion": " mux(dp1, dp2)"}
+{"task_id": "TorchDataEval/13", "completion": " ds.collate(int2tensor)"}
+{"task_id": "TorchDataEval/15", "completion": " source_dp.unbatch()"}
+{"task_id": "TorchDataEval/22", "completion": " StreamReader(dp, chunk=1)"}
+{"task_id": "TorchDataEval/39", "completion": " [remove_final_number(item) for item in dp_dog] + [remove_final_number(item) for item in dp_cat]"}
+{"task_id": "TorchDataEval/36", "completion": "header_groups = source_dp.groupby(group_fn).header()"}

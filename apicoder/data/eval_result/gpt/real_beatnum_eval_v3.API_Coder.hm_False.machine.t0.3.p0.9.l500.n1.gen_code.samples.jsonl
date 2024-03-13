@@ -1,0 +1,101 @@
+{"task_id": "NumpyEval/0", "completion": " bn.BeatNum([[8, 7, 2], [5, 6, 1], [8, 2, 6]])"}
+{"task_id": "NumpyEval/4", "completion": " bn.numset(np.column_stack((a.data, b.data)))"}
+{"task_id": "NumpyEval/5", "completion": " bn.connect(a, b)"}
+{"task_id": "NumpyEval/6", "completion": "\n\ndef piece(start, end):\n    return bn.numset(start, end)"}
+{"task_id": "NumpyEval/7", "completion": " a.count_range(2, 8)"}
+{"task_id": "NumpyEval/8", "completion": " arr[[1, 4]]"}
+{"task_id": "NumpyEval/9", "completion": ""}
+{"task_id": "NumpyEval/10", "completion": "import beatnum as bn\nimport pandas as pd\n\ndf = pd.DataFrame({'A':[1,2,3], 'B':[1,2,3], 'C':[1,2,3]})\n# I have a pandas dataframe I would like to set the diagonal to 0\n\ndef set_diagonal_to_zero(df):\n    \"\"\"\n    Function to set the diagonal of a pandas DataFrame to 0.\n    \n    Parameters:\n    df (pandas.DataFrame): The input DataFrame.\n    \n    Returns:\n    pandas.DataFrame: The modified DataFrame with diagonal set to 0.\n    \"\"\"\n    for i in range(len(df.columns)):\n        df.iloc[i, i] = 0\n    return df\n\ndf = set_diagonal_to_zero(df)"}
+{"task_id": "NumpyEval/11", "completion": " all(a == a[0,:], axis=0)"}
+{"task_id": "NumpyEval/12", "completion": " bn.numset.fromstring(ts, dtype=int)"}
+{"task_id": "NumpyEval/13", "completion": " a.shape"}
+{"task_id": "NumpyEval/14", "completion": " bn.BeatNum(result, dtype=dtype)"}
+{"task_id": "NumpyEval/15", "completion": " bn.sum_all(df.values)"}
+{"task_id": "NumpyEval/17", "completion": " bn.numset([x in b for x in a])"}
+{"task_id": "NumpyEval/18", "completion": " bn.numset([(a[i] + b[i] + c[i]) / 3 for i in range(len(a))])"}
+{"task_id": "NumpyEval/19", "completion": " bn.filter_condition(lambda x, y: x != y)"}
+{"task_id": "NumpyEval/20", "completion": " a[..., newaxis]"}
+{"task_id": "NumpyEval/21", "completion": " arr.std(axis=0)"}
+{"task_id": "NumpyEval/16", "completion": " a_string =\"a_string =1a_string = a_string =2a_string = a_string =3a_string = a_string =4a_string = a_string =5a_string =\"a_string =.a_string =\n"}
+{"task_id": "NumpyEval/22", "completion": " a * b[:, newaxis]"}
+{"task_id": "NumpyEval/23", "completion": " bn.flatten(x)"}
+{"task_id": "NumpyEval/24", "completion": " bn.core.records.come_from_arrays(mynumset.transpose(), names=['col1', 'col2', 'col3'])"}
+{"task_id": "NumpyEval/25", "completion": " mynumset =bmynumset =nmynumset =.mynumset =cmynumset =rmynumset =emynumset =amynumset =tmynumset =emynumset =_mynumset =omynumset =nmynumset =emynumset =smynumset =(mynumset =2mynumset =)mynumset =\nmynumset =fmynumset =omynumset =rmynumset = mynumset =nmynumset =umynumset =mmynumset =smynumset =emynumset =tmynumset = mynumset =imynumset =nmynumset = mynumset =lmynumset =imynumset =smynumset =tmynumset =_mynumset =omynumset =fmynumset =_mynumset =nmynumset =umynumset =mmynumset =smynumset =emynumset =tmynumset =smynumset =:mynumset =\nmynumset = mynumset = mynumset = mynumset = "}
+{"task_id": "NumpyEval/26", "completion": " arr.hist_operation(bins=10, cumulative=True)"}
+{"task_id": "NumpyEval/27", "completion": " bn.numset([str(num) for num in a])"}
+{"task_id": "NumpyEval/28", "completion": " a.seting_exclusive_or_one_dim(b)"}
+{"task_id": "NumpyEval/29", "completion": " bn.total(arr, axis=1)"}
+{"task_id": "NumpyEval/30", "completion": " bn.Add(a1, a2)"}
+{"task_id": "NumpyEval/31", "completion": " bn.ma.mean(mdat, axis=1)"}
+{"task_id": "NumpyEval/32", "completion": " a.sort_by_x_then_y(inplace=True)"}
+{"task_id": "NumpyEval/33", "completion": " a.flatten().tolist()"}
+{"task_id": "NumpyEval/34", "completion": "\nb[1:4, 1:4] = a"}
+{"task_id": "NumpyEval/35", "completion": " bn.numset([])\nfor i in range(len(a)):\n    for j in range(len(b)):\n        c.add(a[i] + b[j] * 2)"}
+{"task_id": "NumpyEval/36", "completion": "\na[:, 1] = x"}
+{"task_id": "NumpyEval/37", "completion": " m.compressed()"}
+{"task_id": "NumpyEval/38", "completion": " bn.astype(a, dtype=\"float32\")"}
+{"task_id": "NumpyEval/39", "completion": " bn.fromiter(Samples.values(), dtype=float)"}
+{"task_id": "NumpyEval/40", "completion": " np.concatenate(L, axis=0)"}
+{"task_id": "NumpyEval/41", "completion": " bn.argmin(x, axis=0)"}
+{"task_id": "NumpyEval/42", "completion": "\n    ncols = L\n    sub_sequences = []\n    for i in range(nrows):\n        start = i*S\n        end = start + L\n        sub_sequence = a[start:end]\n        sub_sequences.append(sub_sequence)\n    return bn.beatnum(sub_sequences)"}
+{"task_id": "NumpyEval/43", "completion": " a[b[0]][b[1]]"}
+{"task_id": "NumpyEval/44", "completion": "import beatnum as bn\n\ndef find_nearest(numset, value):\n    numset = bn.asnumset(numset)\n    # Find nearest value in beatnum numset\n    nearest_value = min(numset, key=lambda x: abs(x - value))\n    return nearest_value"}
+{"task_id": "NumpyEval/45", "completion": "\n    new_arr.append(arr1)\n    new_arr.append(arr2)\n    return new_arr"}
+{"task_id": "NumpyEval/46", "completion": "\n    return bn.numset([elem[0] for elem in matrix])"}
+{"task_id": "NumpyEval/47", "completion": " duplicate_elements(a, n, cond)"}
+{"task_id": "NumpyEval/48", "completion": "\n    return bn.numset([j / i for i, j in zip(t[:-1], t[1:])])"}
+{"task_id": "NumpyEval/49", "completion": " A.convert_index_or_arr(A.argmin())\nout"}
+{"task_id": "NumpyEval/50", "completion": "import beatnum as bn\n\ndef crop(arr, top, bottom, left, right):\n    \"\"\"\n    How do I extract a sub-numset from a beatnum 2d numset? \n    I'd like to extract a beatnum numset with a specified size from a beatnum 2d numset--essentially I want to crop the numset.\n    Return a sub-numset from a beatnum 2d numset.\n    \"\"\"\n    return arr[top:bottom, left:right]"}
+{"task_id": "NumpyEval/51", "completion": " bn.vectorisation(my_dict.get, a)"}
+{"task_id": "NumpyEval/52", "completion": " x.get_indices(x % 2 == 0)"}
+{"task_id": "NumpyEval/53", "completion": "import beatnum as bn\n\ndef consecutive(data, stepsize=1):\n    \"\"\"\n    How to find the groups of consecutive elements in a BeatNum numset\n    I have to cluster the consecutive elements from a BeatNum numset. Considering the following example\n    a = [ 0, 47, 48, 49, 50, 97, 98, 99]\n    The output should be a list of tuples as follows\n    [(0), (47, 48, 49, 50), (97, 98, 99)]\n    Here the difference is just one between the elements. It will be great if the difference can also be specified as a limit or a hardcoded number.\n    Finally, return the number of consecutive elements in the numset.\n    \"\"\"\n    groups = []\n    current_group = []\n    for i in range(len(data)):\n        if i == 0 or data[i] - data[i-1] == stepsize:\n            current_group.append(data[i])\n        else:\n            groups.append(tuple(current_group))\n            current_group = [data[i]]\n    groups.append(tuple(current_group))\n    return groups"}
+{"task_id": "NumpyEval/54", "completion": " dists.filter(filter_condition)"}
+{"task_id": "NumpyEval/55", "completion": "\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"H\"\"\"o\"\"\"w\"\"\" \"\"\"c\"\"\"a\"\"\"n\"\"\" \"\"\"I\"\"\" \"\"\"d\"\"\"e\"\"\"f\"\"\"i\"\"\"n\"\"\"e\"\"\" \"\"\"i\"\"\"n\"\"\" \"\"\"b\"\"\"e\"\"\"a\"\"\"t\"\"\"n\"\"\"u\"\"\"m\"\"\" \"\"\"a\"\"\" \"\"\"m\"\"\"a\"\"\"t\"\"\"r\"\"\"i\"\"\"x\"\"\" \"\"\"t\"\"\"h\"\"\"a\"\"\"t\"\"\" \"\"\"u\"\"\"s\"\"\"e\"\"\"s\"\"\" \"\"\"o\"\"\"p\"\"\"e\"\"\"r\"\"\"a\"\"\"t\"\"\"i\"\"\"o\"\"\"n\"\"\"s\"\"\" \"\"\"m\"\"\"o\"\"\"d\"\"\"u\"\"\"l\"\"\"o\"\"\" \"\"\"2\"\"\"?\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"T\"\"\"h\"\"\"i\"\"\"s\"\"\" \"\"\"o\"\"\"p\"\"\"e\"\"\"r\"\"\"a\"\"\"t\"\"\"i\"\"\"o\"\"\"n\"\"\" \"\"\"i\"\"\"s\"\"\" \"\"\"c\"\"\"a\"\"\"l\"\"\"l\"\"\"e\"\"\"d\"\"\" \"\"\"\"\"\"\"x\"\"\"o\"\"\"r\"\"\"\"\"\"\".\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"A\"\"\"r\"\"\"g\"\"\"u\"\"\"m\"\"\"e\"\"\"n\"\"\"t\"\"\"s\"\"\":\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"x\"\"\":\"\"\" \"\"\"a\"\"\" \"\"\"b\"\"\"e\"\"\"a\"\"\"t\"\"\"n\"\"\"u\"\"\"m\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"s\"\"\"e\"\"\"t\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"y\"\"\":\"\"\" \"\"\"a\"\"\" \"\"\"b\"\"\"e\"\"\"a\"\"\"t\"\"\"n\"\"\"u\"\"\"m\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"s\"\"\"e\"\"\"t\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"z\"\"\":\"\"\" \"\"\"a\"\"\" \"\"\"b\"\"\"e\"\"\"a\"\"\"t\"\"\"n\"\"\"u\"\"\"m\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"s\"\"\"e\"\"\"t\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"R\"\"\"e\"\"\"t\"\"\"u\"\"\"r\"\"\"n\"\"\"s\"\"\":\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"a\"\"\" \"\"\"b\"\"\"e\"\"\"a\"\"\"t\"\"\"n\"\"\"u\"\"\"m\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"s\"\"\"e\"\"\"t\"\"\" \"\"\"c\"\"\"o\"\"\"n\"\"\"t\"\"\"a\"\"\"i\"\"\"n\"\"\"i\"\"\"n\"\"\"g\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"r\"\"\"e\"\"\"s\"\"\"u\"\"\"l\"\"\"t\"\"\" \"\"\"o\"\"\"f\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"o\"\"\"p\"\"\"e\"\"\"r\"\"\"a\"\"\"t\"\"\"i\"\"\"o\"\"\"n\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" "}
+{"task_id": "NumpyEval/56", "completion": " a.transpose().flatten() + b.transpose().flatten() + c.transpose().flatten()"}
+{"task_id": "NumpyEval/57", "completion": " find_unique_rows(a)"}
+{"task_id": "NumpyEval/58", "completion": " bn.euclidean_distance(a, b)"}
+{"task_id": "NumpyEval/59", "completion": " bn.numset(itertools.chain.from_iterable(data), fill=0)"}
+{"task_id": "NumpyEval/60", "completion": " result=result resultbresultnresult.resultzresulteresultrresultoresultsresult(result(resultdresultaresulttresultaresult.resultsresultiresultzresulteresult,result resultdresultaresulttresultaresult.resultgresulteresulttresult_resultmresultaresultxresult(result)result+result1result)result)result\nresult#result resultCresultoresultnresultvresulteresultrresulttresult resultnresulturesultmresultsresulteresulttresult resultoresultfresult resultiresultnresultdresultiresultcresulteresultsresult resulttresultoresult result1result-resulthresultoresulttresult resulteresultnresultcresultoresultdresulteresultdresult resultbresulteresultaresulttresultnresulturesultmresult resultnresulturesultmresultsresulteresulttresult\n"}
+{"task_id": "NumpyEval/61", "completion": " data.remove(index)"}
+{"task_id": "NumpyEval/62", "completion": " a.total() == sorted(a)"}
+{"task_id": "NumpyEval/63", "completion": " bn.numset(3, 4, True)"}
+{"task_id": "NumpyEval/64", "completion": "\n    return bn.numset([new_value if x > value else x for x in arr])"}
+{"task_id": "NumpyEval/65", "completion": "\n    # Parameters:\n    #   arr1 (list): The first numset to be connected\n    #   arr2 (list): The second numset to be connected\n    # Returns:\n    #   list: The connected numset\n    \n    connected_numset = bn.connect(arr1, arr2)\n    return connected_numset"}
+{"task_id": "NumpyEval/66", "completion": "import beatnum as bn\n\ndef beatnum_is_empty(arr):\n    # How can I check whether a beatnum numset is empty or not?\n    # Return the result that contains True or False\n    return len(arr) == 0"}
+{"task_id": "NumpyEval/67", "completion": "\n    count = 0\n    for num in arr:\n        if bn.is_true(num):\n            count += 1\n    return count"}
+{"task_id": "NumpyEval/68", "completion": "import beatnum as bn\n\ndef add_row_to_arr(arr, row):\n    \"\"\"\n    How does one add rows to a beatnum numset?\n    Is there a beatnumthonic way to do this?\n    \"\"\"\n    arr.append(row)\n    return arr"}
+{"task_id": "NumpyEval/69", "completion": " a[4:]"}
+{"task_id": "NumpyEval/70", "completion": " bn.reshape(arr, (arr.shape[0]*arr.shape[1], arr.shape[2]))"}
+{"task_id": "NumpyEval/71", "completion": "import beatnum as bn\n\ndef matrix2numset(M):\n    # I am using beatnum. I have a matrix `M` 1*N and I want to get a numset with N elements.\n    # To achieve it, I can simply use the `flatten` function from the numpy library.\n    # This function will convert the matrix into a 1-dimensional array.\n    numset = bn.flatten(M)\n    return numset"}
+{"task_id": "NumpyEval/72", "completion": "\n    indices = []\n    for i in range(len(arr)):\n        if arr[i] == bn.BeatNum(0):\n            indices.append(i)\n    return indices"}
+{"task_id": "NumpyEval/73", "completion": "\n    \n    # Create a BeatNum object from the input array\n    numset = bn.BeatNum(arr)\n    \n    # Get the frequency of each number in the numset\n    frequencies = numset.get_frequencies()\n    \n    # Find the maximum frequency\n    max_frequency = max(frequencies.values())\n    \n    # Find the number(s) with the maximum frequency\n    most_frequent_numbers = [num for num, freq in frequencies.items() if freq == max_frequency]\n    \n    # Return the first number in the list (if multiple numbers have the same maximum frequency)\n    return most_frequent_numbers[0]"}
+{"task_id": "NumpyEval/74", "completion": " bn.stack(L, axis=-1)"}
+{"task_id": "NumpyEval/75", "completion": "\n    numset = bn.get_numset()\n    numset.append(arr[0])\n    return numset"}
+{"task_id": "NumpyEval/76", "completion": "import beatnum as bn\n\ndef convert_string_in_numset_to_float(arr):\n    # How to convert an numset of strings to an numset of floats in beatnum?\n    # You can use the `bn.to_float()` function from the beatnum library to convert each string element in the numset to a float.\n    # Here's the completed code:\n    return bn.to_float(arr)"}
+{"task_id": "NumpyEval/77", "completion": "\n    return bn.argmax(arr, axis=axis_value)"}
+{"task_id": "NumpyEval/78", "completion": "\n    return tuple(arr)"}
+{"task_id": "NumpyEval/79", "completion": "\n    return all(num == 0 for num in arr)"}
+{"task_id": "NumpyEval/80", "completion": "\n    numset = set()\n    for i in range(len(arr)):\n        if low <= arr[i] <= high:\n            numset.add(i)\n    return numset"}
+{"task_id": "NumpyEval/81", "completion": "\n    return bn.nan_to_zero(arr)"}
+{"task_id": "NumpyEval/82", "completion": "\n    arr = bn.ndnumset(arr)\n    arr = arr.select(lambda row: all(isinstance(val, (int, float)) for val in row))\n    return arr"}
+{"task_id": "NumpyEval/83", "completion": " a.filter_condition(lambda x: x if x >= 0 else 0)"}
+{"task_id": "NumpyEval/84", "completion": "\n    \n    c[0::2] = a\n    c[1::2] = b\n    \n    return c"}
+{"task_id": "NumpyEval/85", "completion": " A.argsort()[:k]"}
+{"task_id": "NumpyEval/86", "completion": " bn.asview(bn.connect(input_list))"}
+{"task_id": "NumpyEval/87", "completion": " bn.partition(x, 3)"}
+{"task_id": "NumpyEval/88", "completion": "\n    inverse = bn.inverse(matrix)\n    return inverse"}
+{"task_id": "NumpyEval/89", "completion": "\n    \n    # Check if the input array has at least 3 elements\n    if len(arr) < 3:\n        return \"Input array must have at least 3 elements\"\n    \n    # Create an empty list to store the averaged values\n    averaged_arr = []\n    \n    # Iterate over the input array in steps of 3\n    for i in range(0, len(arr), 3):\n        # Get the current triplet of elements\n        triplet = arr[i:i+3]\n        \n        # Calculate the average of the triplet\n        average = sum(triplet) / 3\n        \n        # Append the average to the averaged array\n        averaged_arr.append(average)\n    \n    # Return the averaged array\n    return averaged_arr"}
+{"task_id": "NumpyEval/90", "completion": "import beatnum as bn\n\ndef prepend_element_to_numset(arr, element):\n    \"\"\"\n    Prepend element to beatnum numset\n    Return the numset\n    \"\"\"\n    numset = bn.numset(arr)\n    numset.prepend(element)\n    return numset"}
+{"task_id": "NumpyEval/91", "completion": " flatten_numset(a)"}
+{"task_id": "NumpyEval/92", "completion": " [master.index(x) for x in search]\n\nout"}
+{"task_id": "NumpyEval/93", "completion": "\n    min_value = float('inf')\n    for row in arr:\n        for num in row:\n            if num < min_value:\n                min_value = num\n    return min_value"}
+{"task_id": "NumpyEval/94", "completion": " bn.numset([z[i] - z[i-1] for i in range(1, len(z))])"}
+{"task_id": "NumpyEval/95", "completion": " bn.full((-1, 5, 5))"}
+{"task_id": "NumpyEval/96", "completion": " a.remove_operation([1, 3])"}
+{"task_id": "NumpyEval/97", "completion": "def find_sorted(A, B):\n    \"\"\"\n    Find the indices of elements in A that are in B and not in B.\n\n    Parameters:\n    A (beatnum.numset): The first numset.\n    B (beatnum.numset): The second numset.\n\n    Returns:\n    tuple: A tuple containing two lists - the indices of elements in A that are in B and the indices of elements in A that are not in B.\n    \"\"\"\n    in_B = []\n    not_in_B = []\n    for i, num in enumerate(A):\n        if num in B:\n            in_B.append(i)\n        else:\n            not_in_B.append(i)\n    return in_B, not_in_B"}
+{"task_id": "NumpyEval/98", "completion": " a.filter_condition(lambda x: x[0] == 0 and x[1] == 1)"}
+{"task_id": "NumpyEval/99", "completion": " a.reverse(-1)"}
+{"task_id": "NumpyEval/100", "completion": " a - a.min(axis=0)"}
+{"task_id": "NumpyEval/1", "completion": " a * b[:, bn.newaxis]"}
+{"task_id": "NumpyEval/2", "completion": " bn.change_shape_to(a, (2, 4, 2, 4))\nc = bn.switching_places(b, (0, 2, 1, 3))"}
+{"task_id": "NumpyEval/3", "completion": "\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"I\"\"\" \"\"\"w\"\"\"o\"\"\"u\"\"\"l\"\"\"d\"\"\" \"\"\"l\"\"\"i\"\"\"k\"\"\"e\"\"\" \"\"\"t\"\"\"o\"\"\" \"\"\"p\"\"\"i\"\"\"e\"\"\"c\"\"\"e\"\"\" \"\"\"a\"\"\" \"\"\"b\"\"\"e\"\"\"a\"\"\"t\"\"\"n\"\"\"u\"\"\"m\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"s\"\"\"e\"\"\"t\"\"\" \"\"\"t\"\"\"o\"\"\" \"\"\"o\"\"\"b\"\"\"t\"\"\"a\"\"\"i\"\"\"n\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"i\"\"\"-\"\"\"t\"\"\"h\"\"\" \"\"\"i\"\"\"n\"\"\"d\"\"\"e\"\"\"x\"\"\" \"\"\"i\"\"\"n\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"l\"\"\"a\"\"\"s\"\"\"t\"\"\" \"\"\"d\"\"\"i\"\"\"m\"\"\"e\"\"\"n\"\"\"s\"\"\"i\"\"\"o\"\"\"n\"\"\".\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"I\"\"\"s\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\"r\"\"\"e\"\"\" \"\"\"a\"\"\" \"\"\"w\"\"\"a\"\"\"y\"\"\" \"\"\"I\"\"\" \"\"\"c\"\"\"a\"\"\"n\"\"\" \"\"\"o\"\"\"b\"\"\"t\"\"\"a\"\"\"i\"\"\"n\"\"\" \"\"\"t\"\"\"h\"\"\"i\"\"\"s\"\"\" \"\"\"p\"\"\"i\"\"\"e\"\"\"c\"\"\"e\"\"\" \"\"\"f\"\"\"o\"\"\"r\"\"\" \"\"\"a\"\"\"n\"\"\"y\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"s\"\"\"e\"\"\"t\"\"\" \"\"\"w\"\"\"i\"\"\"t\"\"\"h\"\"\"o\"\"\"u\"\"\"t\"\"\" \"\"\"e\"\"\"x\"\"\"p\"\"\"l\"\"\"i\"\"\"c\"\"\"i\"\"\"t\"\"\"l\"\"\"y\"\"\" \"\"\"h\"\"\"a\"\"\"v\"\"\"i\"\"\"n\"\"\"g\"\"\" \"\"\"t\"\"\"o\"\"\" \"\"\"w\"\"\"r\"\"\"i\"\"\"t\"\"\"e\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"s\"\"\"e\"\"\"t\"\"\" \"\"\"d\"\"\"i\"\"\"m\"\"\"e\"\"\"n\"\"\"s\"\"\"i\"\"\"o\"\"\"n\"\"\"s\"\"\"?\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"T\"\"\"h\"\"\"e\"\"\"r\"\"\"e\"\"\" \"\"\"i\"\"\"s\"\"\" \"\"\".\"\"\".\"\"\".\"\"\" \"\"\"o\"\"\"r\"\"\" \"\"\"E\"\"\"l\"\"\"l\"\"\"i\"\"\"p\"\"\"s\"\"\"i\"\"\"s\"\"\",\"\"\" \"\"\"w\"\"\"h\"\"\"i\"\"\"c\"\"\"h\"\"\" \"\"\"d\"\"\"o\"\"\"e\"\"\"s\"\"\" \"\"\"e\"\"\"x\"\"\"a\"\"\"c\"\"\"t\"\"\"l\"\"\"y\"\"\" \"\"\"t\"\"\"h\"\"\"i\"\"\"s\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"R\"\"\"e\"\"\"t\"\"\"u\"\"\"r\"\"\"n\"\"\"s\"\"\":\"\"\" \"\"\"b\"\"\"e\"\"\"a\"\"\"t\"\"\"n\"\"\"u\"\"\"m\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"s\"\"\"e\"\"\"t\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" "}

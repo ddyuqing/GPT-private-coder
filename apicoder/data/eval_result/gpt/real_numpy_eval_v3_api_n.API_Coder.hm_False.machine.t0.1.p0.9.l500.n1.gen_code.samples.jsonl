@@ -1,0 +1,101 @@
+{"task_id": "NumpyEval/0", "completion": " np.array([[8, 7, 2], [5, 6, 1], [8, 2, 6]])"}
+{"task_id": "NumpyEval/4", "completion": " np.column_stack((a, b))"}
+{"task_id": "NumpyEval/5", "completion": " np.concatenate((a, b))"}
+{"task_id": "NumpyEval/6", "completion": "\n\n# Dynamically slice a numpy array along a specific axis\ndef dynamic_slice(arr, axis, start, end):\n    slc[axis] = slice(start, end)\n    return arr[tuple(slc)]\n\n# Example usage\nresult = dynamic_slice(m, axis, start, end)\nprint(result)"}
+{"task_id": "NumpyEval/7", "completion": " np.sum((2 < a) & (a < 8))"}
+{"task_id": "NumpyEval/8", "completion": " arr[[1, 4]]"}
+{"task_id": "NumpyEval/9", "completion": ""}
+{"task_id": "NumpyEval/10", "completion": "# [start]\n# fill_diagonal(a, val, wrap=False): Fill the main diagonal of the given array of any dimensionality.\n# [end]\nimport numpy as np\nimport pandas as pd\n\ndf = pd.DataFrame({'A':[1,2,3], 'B':[1,2,3], 'C':[1,2,3]})\n\ndef fill_diagonal(a, val, wrap=False):\n    np.fill_diagonal(a.values, val, wrap)\n\n# I have a pandas dataframe I would like to set the diagonal to 0"}
+{"task_id": "NumpyEval/11", "completion": " np.all(a == a[0, :], axis=0)"}
+{"task_id": "NumpyEval/12", "completion": " np.fromstring(ts, dtype=int)"}
+{"task_id": "NumpyEval/13", "completion": " a.shape"}
+{"task_id": "NumpyEval/14", "completion": " np.array(list(result.items()), dtype=dtype)"}
+{"task_id": "NumpyEval/15", "completion": " df.sum().sum()"}
+{"task_id": "NumpyEval/17", "completion": " np.in1d(a, b)"}
+{"task_id": "NumpyEval/18", "completion": " (a + b + c) / 3"}
+{"task_id": "NumpyEval/19", "completion": " np.where(a[:-1] != a[1:])[0]"}
+{"task_id": "NumpyEval/20", "completion": " a[..., newaxis]"}
+{"task_id": "NumpyEval/21", "completion": " np.std(arr, axis=0)"}
+{"task_id": "NumpyEval/16", "completion": " a_string =\"a_string =1a_string = a_string =2a_string = a_string =3a_string = a_string =4a_string = a_string =5a_string =\"a_string =.a_string =\n"}
+{"task_id": "NumpyEval/22", "completion": " a * b[:, newaxis]"}
+{"task_id": "NumpyEval/23", "completion": " np.reshape(x, x.shape[0])"}
+{"task_id": "NumpyEval/24", "completion": " np.core.records.fromarrays(myarray.T, names='col1, col2, col3')"}
+{"task_id": "NumpyEval/25", "completion": " np.stack(list_of_arrays)"}
+{"task_id": "NumpyEval/26", "completion": " np.histogram(arr, bins=10, density=True)\nhist = np.cumsum(hist)"}
+{"task_id": "NumpyEval/27", "completion": " np.array2string(a, precision=np.inf, separator=',')"}
+{"task_id": "NumpyEval/28", "completion": " np.setxor1d(a, b)"}
+{"task_id": "NumpyEval/29", "completion": " arr[np.all(arr != 0, axis=1)]"}
+{"task_id": "NumpyEval/30", "completion": " np.char.add(a1, a2)"}
+{"task_id": "NumpyEval/31", "completion": " np.ma.mean(mdat, axis=1, keepdims=True).filled(np.nan)"}
+{"task_id": "NumpyEval/32", "completion": " np.lexsort((a[:, 1], a[:, 0]))"}
+{"task_id": "NumpyEval/33", "completion": " np.array(a).flatten().tolist()"}
+{"task_id": "NumpyEval/34", "completion": "\nb[1:4, 1:4] = a"}
+{"task_id": "NumpyEval/35", "completion": " np.zeros((len(a), len(b)))\nfor i in range(len(a)):\n    for j in range(len(b)):\n        c[i][j] = a[i] + b[j]*2"}
+{"task_id": "NumpyEval/36", "completion": "\na[:, 2] = x"}
+{"task_id": "NumpyEval/37", "completion": " m.compressed()"}
+{"task_id": "NumpyEval/38", "completion": " a.astype(\"float32\")"}
+{"task_id": "NumpyEval/39", "completion": " np.fromiter(Samples.values(), dtype=float)"}
+{"task_id": "NumpyEval/40", "completion": " np.concatenate(L, axis=0)"}
+{"task_id": "NumpyEval/41", "completion": " np.argmin(x, axis=0)"}
+{"task_id": "NumpyEval/42", "completion": "\n    ncols = L\n    return np.lib.stride_tricks.as_strided(a, shape=(nrows, ncols), strides=(a.strides[0]*S, a.strides[0]))"}
+{"task_id": "NumpyEval/43", "completion": " a[b[1], b[1]]"}
+{"task_id": "NumpyEval/44", "completion": "# [start]\n# abs(a, *args, **kwargs): absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) Calculate the absolute value element-wise.\n# argmin(self, axis=None, out=None): Indexes of the minimum values along an axis.\n# [end]\nimport numpy as np\n\ndef find_nearest(array, value):\n    array = np.asarray(array)\n    # Find nearest value in numpy array\n    idx = (np.abs(array - value)).argmin()\n    return array[idx]"}
+{"task_id": "NumpyEval/45", "completion": "\n    return new_arr"}
+{"task_id": "NumpyEval/46", "completion": "\n    return np.squeeze(np.asarray(matrix))"}
+{"task_id": "NumpyEval/47", "completion": " np.repeat(a[cond], n)"}
+{"task_id": "NumpyEval/48", "completion": "\n    target = np.divide(t[1:], t[:-1])\n    return target"}
+{"task_id": "NumpyEval/49", "completion": " np.unravel_index(np.argmin(A), A.shape)"}
+{"task_id": "NumpyEval/50", "completion": "import numpy as np\n\ndef crop(arr, top, bottom, left, right):\n    \"\"\"\n    How do I extract a sub-array from a numpy 2d array? \n    I'd like to extract a numpy array with a specified size from a numpy 2d array--essentially I want to crop the array.\n    Return a sub-array from a numpy 2d array.\n    \"\"\"\n    return arr[top:bottom, left:right]"}
+{"task_id": "NumpyEval/51", "completion": " np.vectorize(my_dict.get)(a)"}
+{"task_id": "NumpyEval/52", "completion": " np.where(x % 2 == 0)"}
+{"task_id": "NumpyEval/53", "completion": "\n    groups = np.split(data, np.where(np.diff(data) != stepsize)[0]+1)\n    return [tuple(group) for group in groups]"}
+{"task_id": "NumpyEval/54", "completion": " dists[(dists >= r) & (dists <= r+dr)]"}
+{"task_id": "NumpyEval/55", "completion": "\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"H\"\"\"o\"\"\"w\"\"\" \"\"\"c\"\"\"a\"\"\"n\"\"\" \"\"\"I\"\"\" \"\"\"d\"\"\"e\"\"\"f\"\"\"i\"\"\"n\"\"\"e\"\"\" \"\"\"i\"\"\"n\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"p\"\"\"y\"\"\" \"\"\"a\"\"\" \"\"\"m\"\"\"a\"\"\"t\"\"\"r\"\"\"i\"\"\"x\"\"\" \"\"\"t\"\"\"h\"\"\"a\"\"\"t\"\"\" \"\"\"u\"\"\"s\"\"\"e\"\"\"s\"\"\" \"\"\"o\"\"\"p\"\"\"e\"\"\"r\"\"\"a\"\"\"t\"\"\"i\"\"\"o\"\"\"n\"\"\"s\"\"\" \"\"\"m\"\"\"o\"\"\"d\"\"\"u\"\"\"l\"\"\"o\"\"\" \"\"\"2\"\"\"?\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"T\"\"\"h\"\"\"i\"\"\"s\"\"\" \"\"\"o\"\"\"p\"\"\"e\"\"\"r\"\"\"a\"\"\"t\"\"\"i\"\"\"o\"\"\"n\"\"\" \"\"\"i\"\"\"s\"\"\" \"\"\"c\"\"\"a\"\"\"l\"\"\"l\"\"\"e\"\"\"d\"\"\" \"\"\"\"\"\"\"x\"\"\"o\"\"\"r\"\"\"\"\"\"\".\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"A\"\"\"r\"\"\"g\"\"\"u\"\"\"m\"\"\"e\"\"\"n\"\"\"t\"\"\"s\"\"\":\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"x\"\"\":\"\"\" \"\"\"a\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"p\"\"\"y\"\"\" \"\"\"a\"\"\"r\"\"\"r\"\"\"a\"\"\"y\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"y\"\"\":\"\"\" \"\"\"a\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"p\"\"\"y\"\"\" \"\"\"a\"\"\"r\"\"\"r\"\"\"a\"\"\"y\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"z\"\"\":\"\"\" \"\"\"a\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"p\"\"\"y\"\"\" \"\"\"a\"\"\"r\"\"\"r\"\"\"a\"\"\"y\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"R\"\"\"e\"\"\"t\"\"\"u\"\"\"r\"\"\"n\"\"\"s\"\"\":\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"a\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"p\"\"\"y\"\"\" \"\"\"a\"\"\"r\"\"\"r\"\"\"a\"\"\"y\"\"\" \"\"\"c\"\"\"o\"\"\"n\"\"\"t\"\"\"a\"\"\"i\"\"\"n\"\"\"i\"\"\"n\"\"\"g\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"r\"\"\"e\"\"\"s\"\"\"u\"\"\"l\"\"\"t\"\"\" \"\"\"o\"\"\"f\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"o\"\"\"p\"\"\"e\"\"\"r\"\"\"a\"\"\"t\"\"\"i\"\"\"o\"\"\"n\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" "}
+{"task_id": "NumpyEval/56", "completion": " np.array([a, b, c]).flatten()"}
+{"task_id": "NumpyEval/57", "completion": " np.unique(a, axis=0)"}
+{"task_id": "NumpyEval/58", "completion": " np.linalg.norm(a-b)"}
+{"task_id": "NumpyEval/59", "completion": " result =nresult =presult =.result =aresult =rresult =rresult =aresult =yresult =(result =dresult =aresult =tresult =aresult =,result = result =dresult =tresult =yresult =presult =eresult ==result =oresult =bresult =jresult =eresult =cresult =tresult =)result =\n"}
+{"task_id": "NumpyEval/60", "completion": " result=result resultnresultpresult.resultzresulteresultrresultoresultsresult(result(resultdresultaresulttresultaresult.resultsresultiresultzresulteresult,result resultdresultaresulttresultaresult.resultmresultaresultxresult(result)result+result1result)result)result\nresult#result resultCresultoresultnresultvresulteresultrresulttresult resultaresultrresultrresultaresultyresult resultoresultfresult resultiresultnresultdresultiresultcresulteresultsresult resulttresultoresult result1result-resulthresultoresulttresult resulteresultnresultcresultoresultdresulteresultdresult resultnresulturesultmresultpresultyresult resultaresultrresultrresultaresultyresult\n"}
+{"task_id": "NumpyEval/61", "completion": " np.delete(data, index)"}
+{"task_id": "NumpyEval/62", "completion": " np.all(np.diff(a) >= 0)"}
+{"task_id": "NumpyEval/63", "completion": " np.ones((3, 4), dtype=bool)"}
+{"task_id": "NumpyEval/64", "completion": "\n    arr[arr > value] = new_value\n    return arr"}
+{"task_id": "NumpyEval/65", "completion": "\n    return np.concatenate((arr1, arr2))"}
+{"task_id": "NumpyEval/66", "completion": "import numpy as np\n\ndef numpy_is_empty(arr):\n    # How can I check whether a numpy array is empty or not?\n    # Return the result that contains True or False\n    return arr.size == 0"}
+{"task_id": "NumpyEval/67", "completion": "\n    return np.count_nonzero(arr)"}
+{"task_id": "NumpyEval/68", "completion": "\n    return np.vstack((arr, row))"}
+{"task_id": "NumpyEval/69", "completion": " a[4:]"}
+{"task_id": "NumpyEval/70", "completion": " arr.reshape((arr.shape[0]*arr.shape[1], arr.shape[2]))"}
+{"task_id": "NumpyEval/71", "completion": "\n    return np.squeeze(np.asarray(M))"}
+{"task_id": "NumpyEval/72", "completion": "\n    return np.where(arr == 0)[0]"}
+{"task_id": "NumpyEval/73", "completion": "\n    counts = np.bincount(arr)\n    return np.argmax(counts)"}
+{"task_id": "NumpyEval/74", "completion": " np.stack(L, axis=-1)"}
+{"task_id": "NumpyEval/75", "completion": "\n    arr.append(arr[0])\n    return arr"}
+{"task_id": "NumpyEval/76", "completion": "\n    return np.array(arr, dtype=float)"}
+{"task_id": "NumpyEval/77", "completion": "\n    return np.argmax(arr, axis=axis_value)"}
+{"task_id": "NumpyEval/78", "completion": "\n    return tuple(arr)"}
+{"task_id": "NumpyEval/79", "completion": "\n    return np.any(arr)"}
+{"task_id": "NumpyEval/80", "completion": "\n    condition = np.logical_and(arr >= low, arr <= high)\n    indices = np.where(condition)\n    return indices"}
+{"task_id": "NumpyEval/81", "completion": "\n    arr[np.isnan(arr)] = 0\n    return arr"}
+{"task_id": "NumpyEval/82", "completion": "\n    return arr[~np.isnan(arr).any(axis=1)]"}
+{"task_id": "NumpyEval/83", "completion": " np.where(a < 0, 0, a)"}
+{"task_id": "NumpyEval/84", "completion": "\n    c[0::2] = a\n    c[1::2] = b\n    return c"}
+{"task_id": "NumpyEval/85", "completion": "np.argpartition(A, k)[:k]"}
+{"task_id": "NumpyEval/86", "completion": " np.concatenate(input_list).ravel()"}
+{"task_id": "NumpyEval/87", "completion": " np.array_split(x, 3)"}
+{"task_id": "NumpyEval/88", "completion": "\n    return np.linalg.inv(matrix)"}
+{"task_id": "NumpyEval/89", "completion": "\n    return np.mean(arr.reshape(-1, 3), axis=1)"}
+{"task_id": "NumpyEval/90", "completion": "\n    return np.insert(arr, 0, element)"}
+{"task_id": "NumpyEval/91", "completion": " np.hstack(a).flatten()"}
+{"task_id": "NumpyEval/92", "completion": " np.searchsorted(master, search, side='left', sorter=None)"}
+{"task_id": "NumpyEval/93", "completion": "\n    return np.min(arr)"}
+{"task_id": "NumpyEval/94", "completion": " np.diff(z)"}
+{"task_id": "NumpyEval/95", "completion": " np.full((5, 5), -1)"}
+{"task_id": "NumpyEval/96", "completion": " np.delete(a, [1, 3], axis=1)"}
+{"task_id": "NumpyEval/97", "completion": " np.isin(A, B)\nE = np.where(D)[0]\nF = np.where(~D)[0]"}
+{"task_id": "NumpyEval/98", "completion": " np.where((a[:,0]==0) & (a[:,1]==1))"}
+{"task_id": "NumpyEval/99", "completion": " np.flip(a, axis=-1)"}
+{"task_id": "NumpyEval/100", "completion": " np.subtract(a, np.min(a, axis=0))"}
+{"task_id": "NumpyEval/1", "completion": " a * b[:, None]"}
+{"task_id": "NumpyEval/2", "completion": " a.reshape(2, 4, 2, 4).transpose(0, 2, 1, 3)"}
+{"task_id": "NumpyEval/3", "completion": "\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"I\"\"\" \"\"\"w\"\"\"o\"\"\"u\"\"\"l\"\"\"d\"\"\" \"\"\"l\"\"\"i\"\"\"k\"\"\"e\"\"\" \"\"\"t\"\"\"o\"\"\" \"\"\"s\"\"\"l\"\"\"i\"\"\"c\"\"\"e\"\"\" \"\"\"a\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"p\"\"\"y\"\"\" \"\"\"a\"\"\"r\"\"\"r\"\"\"a\"\"\"y\"\"\" \"\"\"t\"\"\"o\"\"\" \"\"\"o\"\"\"b\"\"\"t\"\"\"a\"\"\"i\"\"\"n\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"i\"\"\"-\"\"\"t\"\"\"h\"\"\" \"\"\"i\"\"\"n\"\"\"d\"\"\"e\"\"\"x\"\"\" \"\"\"i\"\"\"n\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"l\"\"\"a\"\"\"s\"\"\"t\"\"\" \"\"\"d\"\"\"i\"\"\"m\"\"\"e\"\"\"n\"\"\"s\"\"\"i\"\"\"o\"\"\"n\"\"\".\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"I\"\"\"s\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\"r\"\"\"e\"\"\" \"\"\"a\"\"\" \"\"\"w\"\"\"a\"\"\"y\"\"\" \"\"\"I\"\"\" \"\"\"c\"\"\"a\"\"\"n\"\"\" \"\"\"o\"\"\"b\"\"\"t\"\"\"a\"\"\"i\"\"\"n\"\"\" \"\"\"t\"\"\"h\"\"\"i\"\"\"s\"\"\" \"\"\"s\"\"\"l\"\"\"i\"\"\"c\"\"\"e\"\"\" \"\"\"f\"\"\"o\"\"\"r\"\"\" \"\"\"a\"\"\"n\"\"\"y\"\"\" \"\"\"a\"\"\"r\"\"\"r\"\"\"a\"\"\"y\"\"\" \"\"\"w\"\"\"i\"\"\"t\"\"\"h\"\"\"o\"\"\"u\"\"\"t\"\"\" \"\"\"e\"\"\"x\"\"\"p\"\"\"l\"\"\"i\"\"\"c\"\"\"i\"\"\"t\"\"\"l\"\"\"y\"\"\" \"\"\"h\"\"\"a\"\"\"v\"\"\"i\"\"\"n\"\"\"g\"\"\" \"\"\"t\"\"\"o\"\"\" \"\"\"w\"\"\"r\"\"\"i\"\"\"t\"\"\"e\"\"\" \"\"\"t\"\"\"h\"\"\"e\"\"\" \"\"\"a\"\"\"r\"\"\"r\"\"\"a\"\"\"y\"\"\" \"\"\"d\"\"\"i\"\"\"m\"\"\"e\"\"\"n\"\"\"s\"\"\"i\"\"\"o\"\"\"n\"\"\"s\"\"\"?\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"T\"\"\"h\"\"\"e\"\"\"r\"\"\"e\"\"\" \"\"\"i\"\"\"s\"\"\" \"\"\".\"\"\".\"\"\".\"\"\" \"\"\"o\"\"\"r\"\"\" \"\"\"E\"\"\"l\"\"\"l\"\"\"i\"\"\"p\"\"\"s\"\"\"i\"\"\"s\"\"\",\"\"\" \"\"\"w\"\"\"h\"\"\"i\"\"\"c\"\"\"h\"\"\" \"\"\"d\"\"\"o\"\"\"e\"\"\"s\"\"\" \"\"\"e\"\"\"x\"\"\"a\"\"\"c\"\"\"t\"\"\"l\"\"\"y\"\"\" \"\"\"t\"\"\"h\"\"\"i\"\"\"s\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" \"\"\"R\"\"\"e\"\"\"t\"\"\"u\"\"\"r\"\"\"n\"\"\"s\"\"\":\"\"\" \"\"\"n\"\"\"u\"\"\"m\"\"\"p\"\"\"y\"\"\" \"\"\"a\"\"\"r\"\"\"r\"\"\"a\"\"\"y\"\"\"\n\"\"\" \"\"\" \"\"\" \"\"\" "}

@@ -1,0 +1,101 @@
+{"task_id": "PandasEval/0", "completion": "\n    df['mean_along_rows'] = df.mean(axis=1)\n    return df"}
+{"task_id": "PandasEval/1", "completion": "\n    return df[df[col_name].isin(values)]"}
+{"task_id": "PandasEval/2", "completion": "\n    df.rename(columns=dict(zip(origin_names, new_names)), inplace=True)\n    return df"}
+{"task_id": "PandasEval/3", "completion": "\n    df.drop(column_name, axis=1, inplace=True)\n    return df"}
+{"task_id": "PandasEval/4", "completion": "\nimport pandas as pd\n\ndef select_multiple_columns(df, columns):\n    \"\"\"\n    Selects the given columns from the DataFrame and returns the new DataFrame.\n    \n    Args:\n    df (pandas.DataFrame): The input DataFrame.\n    columns (list): A list of column names to be selected.\n    \n    Returns:\n    pandas.DataFrame: The new DataFrame with only the selected columns.\n    \"\"\"\n    return df[columns]"}
+{"task_id": "PandasEval/5", "completion": "\n    return len(df)"}
+{"task_id": "PandasEval/6", "completion": "\n    return df.columns.tolist()"}
+{"task_id": "PandasEval/7", "completion": "\n    df[column_name] = column_data\n    return df"}
+{"task_id": "PandasEval/8", "completion": "\n    df = df.apply(pd.to_numeric, errors='coerce')\n    return df"}
+{"task_id": "PandasEval/9", "completion": " df.dropna(subset=[col_name])"}
+{"task_id": "PandasEval/11", "completion": "\n    df = df.append(pd.DataFrame(list_to_append, columns=column_name_list))\n    return df"}
+{"task_id": "PandasEval/12", "completion": "\n    # Extract the last two characters from each string in the specified column\n    last_two_chars = df[column_name].str[-2:]\n    \n    # Convert the extracted characters to numeric type\n    last_year = pd.to_numeric(last_two_chars, errors='coerce', downcast='integer')\n    \n    # Add 1900 to the last year if it is less than or equal to 50, otherwise add 2000\n    last_year = last_year.apply(lambda x: x + 1900 if x <= 50 else x + 2000)\n    \n    return last_year"}
+{"task_id": "PandasEval/13", "completion": "\n    return df.tail(n)"}
+{"task_id": "PandasEval/14", "completion": "\n    return df.loc[n, column_name]"}
+{"task_id": "PandasEval/15", "completion": "\n    return new_df"}
+{"task_id": "PandasEval/20", "completion": " df.groupby(['Country', 'Item_Code'])[['Y1961', 'Y1962', 'Y1963']].sum()"}
+{"task_id": "PandasEval/10", "completion": " pd.Series([56, 24, 421, 90])"}
+{"task_id": "PandasEval/16", "completion": " df.loc[df['col_0']=='a','col_1'].clip(-2, 2)"}
+{"task_id": "PandasEval/17", "completion": " df.apply(lambda x: x.where(x > x.mean()).dropna())"}
+{"task_id": "PandasEval/18", "completion": "target_series.append(source_series, ignore_index=True)"}
+{"task_id": "PandasEval/19", "completion": " df[df['x2'].isnull()]"}
+{"task_id": "PandasEval/21", "completion": " pd.DataFrame(a, columns=['one', 'two'])\ndf['two'] = df['two'].astype(float)"}
+{"task_id": "PandasEval/22", "completion": " my_df.select_dtypes(include=['float64']).columns\nmy_df[cols] = my_df[cols].astype('float32')"}
+{"task_id": "PandasEval/23", "completion": " df[df['col2'] == 'Jimmy']"}
+{"task_id": "PandasEval/24", "completion": "\n# Iterate over DataFrame rows as (index, Series) pairs\nfor index, row in df.iterrows():\n    # Put row['MSRA'] (as key) and row['THU'] (as value) into rows_dict\n    rows_dict[row['MSRA']] = row['THU']"}
+{"task_id": "PandasEval/25", "completion": " (df - df.min()) / (df.max() - df.min())"}
+{"task_id": "PandasEval/26", "completion": "\n# Assigning the emails to the first row of the 'Email' column\ndf.loc[0, 'Email'] = emails"}
+{"task_id": "PandasEval/28", "completion": "\n    if isinstance(df, pd.DataFrame):\n        print(\"DataFrame exists\")\n    else:\n        print(\"DataFrame does not exist\")"}
+{"task_id": "PandasEval/29", "completion": " df[df['line_num'] != 0]"}
+{"task_id": "PandasEval/30", "completion": "\n# [start]\ndf.drop(df.index, inplace=True)\n# [end]"}
+{"task_id": "PandasEval/31", "completion": "\ndf['C'] = df['A'] + df['B']"}
+{"task_id": "PandasEval/32", "completion": " df.apply(lambda x: sorted(x, key=pd.isnull))\nnew_df = new_df.dropna()"}
+{"task_id": "PandasEval/33", "completion": "\n    data.columns = map(str.lower, data.columns)"}
+{"task_id": "PandasEval/35", "completion": "df['a'].nlargest(1).iloc[0]"}
+{"task_id": "PandasEval/36", "completion": " np.unique(df.values.ravel())"}
+{"task_id": "PandasEval/37", "completion": " df.sort_values('date', ascending=True).groupby('id').last()"}
+{"task_id": "PandasEval/38", "completion": "\n    df = df.drop(idx)\n    return df"}
+{"task_id": "PandasEval/39", "completion": "\n    df['gdp'] = df['gdp'].shift(periods=1)\n    return df"}
+{"task_id": "PandasEval/40", "completion": " df.select_dtypes(include='float64')"}
+{"task_id": "PandasEval/41", "completion": "\n# [start]\n# merge(self, right: 'FrameOrSeriesUnion', how: 'str' = 'inner', on: 'IndexLabel | None' = None, left_on: 'IndexLabel | None' = None, right_on: 'IndexLabel | None' = None, left_index: 'bool' = False, right_index: 'bool' = False, sort: 'bool' = False, suffixes: 'Suffixes' = ('_x', '_y'), copy: 'bool' = True, indicator: 'bool' = False, validate: 'str | None' = None) -> 'DataFrame': Merge DataFrame or named Series objects with a database-style join.\n# [end]\nimport pandas as pd\nimport numpy as np\n\ndef merge_df(df1, df2):\n    # How to merge two dataframes with different column names but same number of rows?\n    # I have two different data frames in pandas. Example:\n    # df1=a b  df2= c\n    # 0 1       1 \n    # 1 2       2 \n    # 2 3       3 \n    # I want to merge them so\n    # df1= a b c  \n    #  0 1 1\n    #  1 2 2\n    #  2 3 3\n    # In order to merge two dataframes you can use this two examples. Both returns the same goal\n    # Using merge plus additional arguments instructing it to use the indexes\n    df1.merge(df2, left_index=True, right_index=True)\n    # Using join method\n    df1.join(df2)"}
+{"task_id": "PandasEval/42", "completion": " df.drop(['A', 'C'], axis=1)"}
+{"task_id": "PandasEval/43", "completion": "\n    counts = df.value_counts().rename_axis('unique_values').reset_index(name='counts')\n    return counts"}
+{"task_id": "PandasEval/44", "completion": " ['a', 'b', 'c']"}
+{"task_id": "PandasEval/45", "completion": "\n    return data.rename(columns=str.lower)"}
+{"task_id": "PandasEval/46", "completion": " df.groupby(\"section\").sample(n=50)"}
+{"task_id": "PandasEval/47", "completion": " df['Name'].str.replace('\\d+', '', regex=True)"}
+{"task_id": "PandasEval/48", "completion": " df.groupby('Mt').apply(lambda x: x[x['num'] == x['num'].max()])"}
+{"task_id": "PandasEval/49", "completion": " pd.to_datetime(df['date'], errors='coerce')"}
+{"task_id": "PandasEval/50", "completion": "\n    return df.isnull().any().any()"}
+{"task_id": "PandasEval/51", "completion": "\n    df = df.reindex(sorted(df.columns), axis=1)\n    return df"}
+{"task_id": "PandasEval/52", "completion": "\n    values = df[df['B'] == 3]['A']\n    return values"}
+{"task_id": "PandasEval/53", "completion": "\n    return df[col_name].mean()"}
+{"task_id": "PandasEval/54", "completion": "\n    return pd.concat([df1, df2], ignore_index=True)"}
+{"task_id": "PandasEval/55", "completion": " pd.concat([x] * 5, axis=0, ignore_index=True)"}
+{"task_id": "PandasEval/56", "completion": "\n    return df.to_dict(orient='records')"}
+{"task_id": "PandasEval/57", "completion": "\n# [start]\n# to_datetime(arg: 'DatetimeScalarOrArrayConvertible', errors: 'str' = 'raise', dayfirst: 'bool' = False, yearfirst: 'bool' = False, utc: 'bool | None' = None, format: 'str | None' = None, exact: 'bool' = True, unit: 'str | None' = None, infer_datetime_format: 'bool' = False, origin='unix', cache: 'bool' = True) -> 'DatetimeIndex | Series | DatetimeScalar | NaTType | None': Convert argument to datetime.\n# [end]\nimport pandas as pd\n\ndef convert_column_to_date(df):\n    # Convert Column `Date` to Date Format using pandas function\n    return pd.to_datetime(df['Date'])"}
+{"task_id": "PandasEval/58", "completion": "\n# [start]\n# groupby(self, values) -> 'PrettyDict[Hashable, np.ndarray]': Group the index labels by a given array of values.\n# shift(self, periods=1, freq=None): Shift index by desired number of time frequency increments.\n# cumsum(self, axis=None, skipna=True, *args, **kwargs): Return cumulative sum over a DataFrame or Series axis.\n# [end]\nimport pandas as pd\n\ndef counting_consecutive_positive_values(y):\n    # Counting consecutive positive values in Python/pandas array\n    # I'm trying to count consecutive up days in equity return data; so if a positive day is 1 and a negative is 0, a list y=[0,0,1,1,1,0,0,1,0,1,1] should return z=[0,0,1,2,3,0,0,1,0,1,2].\n    z = []\n    count = 0\n    for value in y:\n        if value > 0:\n            count += 1\n        else:\n            count = 0\n        z.append(count)\n    return z"}
+{"task_id": "PandasEval/59", "completion": "\n    df = df.append(row_to_insert, ignore_index=False)\n    df = df.sort_index(inplace=False)\n    df = df.reset_index(drop=True)\n    return df"}
+{"task_id": "PandasEval/60", "completion": "\n    return pd.DataFrame(data=list_of_lists[1:], columns=list_of_lists[0])"}
+{"task_id": "PandasEval/61", "completion": " df1.merge(df2, left_index=True, right_index=True)"}
+{"task_id": "PandasEval/62", "completion": " df.to_string(index=False)"}
+{"task_id": "PandasEval/63", "completion": "\n    return df.dropna(how='all')"}
+{"task_id": "PandasEval/64", "completion": "\n    return value in series.values"}
+{"task_id": "PandasEval/65", "completion": "\n# [start]\n# rename(self, name, inplace=False): Alter Index or MultiIndex name.\n# [end]\nimport pandas as pd\n\ndef rename_column(df, old_name, new_name):\n    # How would I rename the only one column header?\n    df.rename(columns={old_name: new_name}, inplace=True)\n    return df"}
+{"task_id": "PandasEval/66", "completion": "\n# [start]\n# drop_duplicates(self: '_IndexT', keep: 'str_t | bool' = 'first') -> '_IndexT': Return Index with duplicate values removed.\n# [end]\nimport pandas as pd\n\ndef remove_duplicates_by_column(df, col1, col2):\n    # I have a dataframe with repeat values in column `col1`. I want to drop duplicates, keeping the row with the last value in column `col2`.\n    # How would I do that?\n    df.drop_duplicates(subset=col1, keep='last', inplace=True)\n    return df"}
+{"task_id": "PandasEval/67", "completion": "\n    return pd.DataFrame(columns=col_names)"}
+{"task_id": "PandasEval/68", "completion": "\n    #   n: int\n    # Return:\n    #   DataFrame\n    return df[n:]"}
+{"task_id": "PandasEval/69", "completion": "\n    duplicated_cols = df.columns[df.columns.duplicated()]\n    return df[duplicated_cols]"}
+{"task_id": "PandasEval/70", "completion": "\n# [start]\n# astype(self, dtype, copy: 'bool' = True) -> 'Index': Create an Index with values cast to dtypes.\n# [end]\nimport pandas as pd\n\ndef convert_bool_to_int(df, col_name):\n    # How can I map True/False to 1/0 in a Pandas DataFrame?\n    df[col_name] = df[col_name].astype(int)\n    return df"}
+{"task_id": "PandasEval/71", "completion": "\n    return len(df.columns)"}
+{"task_id": "PandasEval/72", "completion": "\n    return df.columns[df.isna().any()].tolist()"}
+{"task_id": "PandasEval/73", "completion": " df.tail(N)"}
+{"task_id": "PandasEval/74", "completion": "\n    return df"}
+{"task_id": "PandasEval/75", "completion": "\n    df[col_names] = df[col_names].fillna(0)\n    return df"}
+{"task_id": "PandasEval/76", "completion": "\n# [start]\n# concat(objs: 'Iterable[NDFrame] | Mapping[Hashable, NDFrame]', axis=0, join='outer', ignore_index: 'bool' = False, keys=None, levels=None, names=None, verify_integrity: 'bool' = False, sort: 'bool' = False, copy: 'bool' = True) -> 'FrameOrSeriesUnion': Concatenate pandas objects along a particular axis with optional set logic along the other axes.\n# [end]\nimport pandas as pd\n\ndef concat_df(df1, df2):\n    # Given that all the dataframes have the same columns, you can simply concat them:\n    return pd.concat([df1, df2])"}
+{"task_id": "PandasEval/77", "completion": "\n    first_row = df.head(1)\n    last_row = df.tail(1)\n    return pd.concat([first_row, last_row])"}
+{"task_id": "PandasEval/78", "completion": "\n    return df[df.isna().any(axis=1)]"}
+{"task_id": "PandasEval/79", "completion": "\n    return df.index.tolist()"}
+{"task_id": "PandasEval/80", "completion": " df['mycol'].get(1, np.nan)"}
+{"task_id": "PandasEval/81", "completion": "\n    return series.value_counts()[value]"}
+{"task_id": "PandasEval/82", "completion": "\n    return df[df[col_a] > df[col_b]]"}
+{"task_id": "PandasEval/83", "completion": "\n    return series"}
+{"task_id": "PandasEval/84", "completion": "\n    df['A'] = df['A'].round()\n    return df"}
+{"task_id": "PandasEval/85", "completion": "\n    df[col_name] = df[col_name].apply(lambda x: str(x).zfill(15))\n    return df"}
+{"task_id": "PandasEval/86", "completion": "\n    return df"}
+{"task_id": "PandasEval/87", "completion": "\n# [start]\n# to_pydatetime(*args, **kwargs): Convert a Timestamp object to a native Python datetime object.\n# [end]\nimport pandas as pd\n\ndef transform_timestamp_to_pydatetime(timestamp):\n    # transform timestamp to pydatetime object\n    return pd.to_datetime(timestamp).to_pydatetime()"}
+{"task_id": "PandasEval/88", "completion": "\n    total = series.sum()\n    percentage = (series / total) * 100\n    return percentage"}
+{"task_id": "PandasEval/89", "completion": "\n    df[['B', 'C']] = df[['B', 'C']].div(df['A'], axis='index')\n    return df"}
+{"task_id": "PandasEval/90", "completion": "\n    return np.ceil(s)"}
+{"task_id": "PandasEval/91", "completion": "\n    return df.dropna(axis=1, how='all')"}
+{"task_id": "PandasEval/92", "completion": "\ndf.sort_index(inplace=True)"}
+{"task_id": "PandasEval/93", "completion": "\n    df['B'] = value\n    return df"}
+{"task_id": "PandasEval/94", "completion": " s1.intersection(s2)\nintersection_result"}
+{"task_id": "PandasEval/95", "completion": "\n    return df.head(n)"}
+{"task_id": "PandasEval/96", "completion": "\n# [start]\n# apply(self, func: 'AggFuncType', axis: 'Axis' = 0, raw: 'bool' = False, result_type=None, args=(), **kwargs): Apply a function along an axis of the DataFrame.\n# sum(self, axis: 'int' = 0, min_count: 'int' = 0, *args, **kwargs) -> 'Scalar': Sum of non-NA/null values.\n# [end]\nimport pandas as pd\nimport numpy as np\n\ndf = pd.DataFrame({'Apples': [2, 1, np.nan],\n              'Bananas': [3, 3, 7],\n              'Grapes': [np.nan, 2, 3],})\n\n# Add a new column named 'Fruit Total' that sums the values of the other columns\n# Note that ignoring the NaN values\n\ndf['Fruit Total'] = df.sum(axis=1, skipna=True)\ndf"}
+{"task_id": "PandasEval/97", "completion": "\n    return df[~df.applymap(np.isreal).all(1)]"}
+{"task_id": "PandasEval/98", "completion": " df1.merge(df2, on='company')"}
+{"task_id": "PandasEval/99", "completion": " df.isnull().sum()"}
+{"task_id": "PandasEval/100", "completion": " df['col'].isin(targets)"}
+{"task_id": "PandasEval/34", "completion": "\n    return df.groupby('Group').apply(f)"}
+{"task_id": "PandasEval/27", "completion": "\n    df_normalized = (df - df.mean()) / df.std()\n    return df_normalized"}

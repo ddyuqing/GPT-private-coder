@@ -1,0 +1,50 @@
+{"task_id": "TorchDataEval/0", "completion": " datapipe.cycle(6)"}
+{"task_id": "TorchDataEval/1", "completion": " enumerate(dp)"}
+{"task_id": "TorchDataEval/2", "completion": " next(iter(batch_dp))"}
+{"task_id": "TorchDataEval/4", "completion": " demux(source_dp, 2, odd_or_even)"}
+{"task_id": "TorchDataEval/5", "completion": " fork(source_dp, 2)"}
+{"task_id": "TorchDataEval/6", "completion": " dp1.concat(dp2, key=itemgetter(0), merge_fn=merge_fn)"}
+{"task_id": "TorchDataEval/7", "completion": " map(dp1, merge_fn, input_col=1, output_col=1)"}
+{"task_id": "TorchDataEval/9", "completion": " SampleMultiplexer(weights, seed=0)"}
+{"task_id": "TorchDataEval/10", "completion": " source_dp.unzip(3, buffer_size=1000)"}
+{"task_id": "TorchDataEval/11", "completion": " dp =Idp =tdp =edp =rdp =adp =bdp =ldp =edp =Wdp =rdp =adp =pdp =pdp =edp =rdp =(dp =rdp =adp =ndp =gdp =edp =(dp =1dp =0dp =)dp =)dp =\ndp =#dp = dp =Ddp =idp =vdp =idp =ddp =edp = dp =ddp =adp =tdp =adp =pdp =idp =pdp =edp =sdp = dp =idp =ndp =tdp =odp = dp =3dp = dp =bdp =adp =tdp =cdp =hdp =edp =sdp = dp =adp =ndp =ddp = dp =ddp =idp =sdp =cdp =adp =rdp =ddp = dp =idp =fdp = dp =tdp =hdp =edp = dp =ldp =adp =sdp =tdp = dp =bdp =adp =tdp =cdp =hdp = dp =idp =sdp = dp =ndp =odp =tdp = dp =rdp =edp =adp =cdp =hdp =edp =ddp =.dp =\n"}
+{"task_id": "TorchDataEval/12", "completion": " batch(source_dp, batch_size=3, drop_last=False, batch_num=100, bucket_num=1, sort_key=sort_bucket, in_batch_shuffle=True)"}
+{"task_id": "TorchDataEval/14", "completion": " source_dp.groupby(group_fn, buffer_size=3, group_size=3, guaranteed_group_size=2)"}
+{"task_id": "TorchDataEval/16", "completion": " IterableWrapper([file_url]) >> HttpReader()"}
+{"task_id": "TorchDataEval/17", "completion": " FlatMapDataPipe(source_dp, mutiple_fn)"}
+{"task_id": "TorchDataEval/18", "completion": "from torchdata.datapipes.iter import IterableWrapper\n\ndef add_one(x):\n    return x + 1\n\ndp = IterableWrapper(range(10))\n\n# Method 1\nmap_dp_1 = dp.map(add_one)  # Invocation via functional form is preferred\n\n# Method 2\n# We discourage the usage of `lambda` functions as they are not serializable with `pickle`\n# Using `lambda` to implement add_two rather than add_one that is mentioned in above.\nmap_dp_2 = dp.map(lambda x: x + 2)"}
+{"task_id": "TorchDataEval/19", "completion": " filter(dp, is_even)"}
+{"task_id": "TorchDataEval/20", "completion": " dp.header(3)"}
+{"task_id": "TorchDataEval/21", "completion": " dp.rows2columnar(column_names=['a'])"}
+{"task_id": "TorchDataEval/23", "completion": " map_dp_1.batch(2)"}
+{"task_id": "TorchDataEval/24", "completion": " HttpReader([URL])"}
+{"task_id": "TorchDataEval/25", "completion": " HttpReader([URL]) | map(lambda_func_)"}
+{"task_id": "TorchDataEval/26", "completion": " datapipe.batch(2).map(lambda_batch)"}
+{"task_id": "TorchDataEval/27", "completion": " dp =Idp =tdp =edp =rdp =adp =bdp =ldp =edp =Wdp =rdp =adp =pdp =pdp =edp =rdp =(dp =rdp =adp =ndp =gdp =edp =(dp =3dp =)dp =)dp =\ndp =\ndp =#dp = dp =Adp =udp =gdp =mdp =edp =ndp =tdp = dp =tdp =hdp =edp = dp =ddp =adp =tdp =adp =pdp =idp =pdp =edp = dp =wdp =idp =tdp =hdp = dp =rdp =edp =pdp =edp =adp =tdp = dp =tdp =hdp =rdp =edp =edp = dp =tdp =idp =mdp =edp =sdp = dp =adp =ndp =ddp = dp =sdp =adp =mdp =pdp =ldp =edp = dp =tdp =hdp =edp = dp =ddp =adp =tdp =adp =.dp =\n"}
+{"task_id": "TorchDataEval/28", "completion": " concat(dp1, dp2).repeat(3)"}
+{"task_id": "TorchDataEval/29", "completion": " res_dp =zres_dp =ires_dp =pres_dp =_res_dp =wres_dp =ires_dp =tres_dp =hres_dp =_res_dp =ires_dp =tres_dp =eres_dp =rres_dp =(res_dp =dres_dp =pres_dp =1res_dp =,res_dp = res_dp =dres_dp =pres_dp =2res_dp =,res_dp = res_dp =ires_dp =tres_dp =eres_dp =mres_dp =gres_dp =eres_dp =tres_dp =tres_dp =eres_dp =rres_dp =(res_dp =0res_dp =)res_dp =,res_dp = res_dp =mres_dp =eres_dp =rres_dp =gres_dp =eres_dp =_res_dp =fres_dp =nres_dp ==res_dp =mres_dp =eres_dp =rres_dp =gres_dp =eres_dp =_res_dp =fres_dp =nres_dp =,res_dp = res_dp =kres_dp =eres_dp =eres_dp =pres_dp =_res_dp =kres_dp =eres_dp =yres_dp ==res_dp =Tres_dp =rres_dp =ures_dp =eres_dp =)res_dp =\n"}
+{"task_id": "TorchDataEval/30", "completion": " EnumerateDataPipe(zip_with_iter(dp1, dp2, itemgetter(0), keep_key=True, merge_fn=merge_fn))"}
+{"task_id": "TorchDataEval/31", "completion": " dp1.zip_with_iter(dp2, itemgetter(0), itemgetter(0), True, merge_fn).to_list().map(itemgetter(0))"}
+{"task_id": "TorchDataEval/32", "completion": " res_dp =zres_dp =ires_dp =pres_dp =_res_dp =wres_dp =ires_dp =tres_dp =hres_dp =_res_dp =mres_dp =ares_dp =pres_dp =(res_dp =dres_dp =pres_dp =1res_dp =,res_dp = res_dp =mres_dp =ares_dp =pres_dp =dres_dp =pres_dp =,res_dp = res_dp =ires_dp =tres_dp =eres_dp =mres_dp =gres_dp =eres_dp =tres_dp =tres_dp =eres_dp =rres_dp =(res_dp =0res_dp =)res_dp =,res_dp = res_dp =mres_dp =eres_dp =rres_dp =gres_dp =eres_dp =_res_dp =fres_dp =nres_dp ==res_dp =mres_dp =eres_dp =rres_dp =gres_dp =eres_dp =_res_dp =fres_dp =nres_dp =)res_dp =\n"}
+{"task_id": "TorchDataEval/33", "completion": " Zipper(dp1, mapdp, key_fn=itemgetter(0), merge_fn=merge_fn) * 3 | itemgetter(1) | list"}
+{"task_id": "TorchDataEval/34", "completion": " Zipper(dp1, mapdp, merge_fn=merge_fn).repeat(3).sample(Sampler(size=3)).as_list(itemgetter(2))"}
+{"task_id": "TorchDataEval/35", "completion": " source_dp.groupby(group_fn).filter(lambda x: len(x) > 1)"}
+{"task_id": "TorchDataEval/37", "completion": " collate(ds, collate_fn)"}
+{"task_id": "TorchDataEval/38", "completion": " ds.filter(lambda x: x >= 5).map(collate_fn)"}
+{"task_id": "TorchDataEval/40", "completion": " demux(source_dp, 2, great_than_5)"}
+{"task_id": "TorchDataEval/41", "completion": " SampleMultiplexer(dp1, dp2, sample_seed=1)(*weight_)"}
+{"task_id": "TorchDataEval/42", "completion": " raw_dp.unzip(3)"}
+{"task_id": "TorchDataEval/43", "completion": " dp =Idp =tdp =edp =rdp =adp =bdp =ldp =edp =Wdp =rdp =adp =pdp =pdp =edp =rdp =(dp =[dp =\"dp =adp =\"dp =,dp = dp =\"dp =bdp =\"dp =,dp = dp =\"dp =cdp =\"dp =,dp = dp =\"dp =ddp =\"dp =,dp = dp =\"dp =edp =\"dp =,dp = dp =\"dp =fdp =\"dp =,dp = dp =\"dp =gdp =\"dp =,dp = dp =\"dp =hdp =\"dp =,dp = dp =\"dp =idp =\"dp =,dp = dp =\"dp =jdp =\"dp =]dp =)dp =\ndp =#dp = dp =Mdp =adp =kdp =edp = dp =adp = dp =bdp =adp =tdp =cdp =hdp = dp =odp =pdp =edp =rdp =adp =tdp =idp =odp =ndp = dp =odp =ndp = dp =tdp =hdp =edp = dp =ddp =adp =tdp =adp =pdp =idp =pdp =edp = dp =`dp =ddp =pdp =`dp = dp =odp =fdp = dp =sdp =idp =zdp =edp = dp =3dp = dp =wdp =idp =tdp =hdp = dp =ddp =rdp =odp =pdp =idp =ndp =gdp = dp =ldp =adp =sdp =tdp = dp =bdp =adp =tdp =cdp =hdp = dp =idp =fdp = dp =idp =tdp = dp =idp =sdp = dp =ndp =odp =tdp = dp =fdp =udp =ldp =ldp =.dp =\ndp =#dp = dp =Adp =ndp =ddp = dp =tdp =hdp =edp =ndp = dp =gdp =edp =tdp = dp =tdp =hdp =edp = dp =fdp =idp =rdp =sdp =tdp = dp =tdp =wdp =odp = dp =bdp =adp =tdp =cdp =hdp =edp =sdp =.dp =\n"}
+{"task_id": "TorchDataEval/44", "completion": " batch(dp1, 4, drop_last=True)[:2] + dp2"}
+{"task_id": "TorchDataEval/45", "completion": " mux(enumerate(concat(dp_source_1, dp_source_2)), key='Ids')"}
+{"task_id": "TorchDataEval/46", "completion": " dp_source_1.concat(dp_source_2).unzip(2, buffer_size=1)"}
+{"task_id": "TorchDataEval/47", "completion": " MapDataPipe.concat(dp_source_1, dp_source_2, dp_source_3)"}
+{"task_id": "TorchDataEval/48", "completion": " source_dp.flatmap(flatted_func)"}
+{"task_id": "TorchDataEval/49", "completion": " HttpReader([AG_NEWS_CSV_URL])\n# [end]"}
+{"task_id": "TorchDataEval/3", "completion": " concat(dp_one, dp_two)"}
+{"task_id": "TorchDataEval/8", "completion": " mux(dp1, dp2).flatmap(header).take(10)\n# [end]"}
+{"task_id": "TorchDataEval/13", "completion": " collate(ds, collate_fn=int2tensor)"}
+{"task_id": "TorchDataEval/15", "completion": " unbatch(source_dp)"}
+{"task_id": "TorchDataEval/22", "completion": " StreamReader(dp, chunk=1)"}
+{"task_id": "TorchDataEval/39", "completion": " [remove_final_number(item) for item in dp_dog] + [remove_final_number(item) for item in dp_cat]"}
+{"task_id": "TorchDataEval/36", "completion": " source_dp.groupby(group_key_fn=group_fn).header()"}

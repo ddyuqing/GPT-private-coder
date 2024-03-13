@@ -1,0 +1,101 @@
+{"task_id": "PandasEval/0", "completion": "\n    df['mean_along_rows'] = df.mean(axis=1)\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/1", "completion": "\n    return df[df[col_name].isin(values)]", "result": "passed", "passed": true}
+{"task_id": "PandasEval/2", "completion": "\n    df.rename(columns=dict(zip(origin_names, new_names)), inplace=True)\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/3", "completion": "\n# [start]\n# drop(self, labels, errors: 'str_t' = 'raise') -> 'Index': Make new Index with passed list of labels deleted.\n# [end]\nimport pandas as pd\n\ndef delete_column(df, column_name):\n    # deleting a column from a Pandas DataFrame\n    df = df.drop(column_name, axis=1)\n    return df", "result": "failed: expected an indented block (<string>, line 10)", "passed": false}
+{"task_id": "PandasEval/4", "completion": "\n    return df[columns]", "result": "passed", "passed": true}
+{"task_id": "PandasEval/5", "completion": "\n    return len(df)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/6", "completion": "\n    return df.columns.tolist()", "result": "passed", "passed": true}
+{"task_id": "PandasEval/7", "completion": "\n    df[column_name] = column_data\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/8", "completion": "\n    df = df.apply(pd.to_numeric, errors='coerce')\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/9", "completion": " df.dropna(subset=[col_name])", "result": "passed", "passed": true}
+{"task_id": "PandasEval/11", "completion": "\n    # Append the list to the dataframe\n    df = df.append(pd.DataFrame([list_to_append], columns=column_name_list), ignore_index=True)\n    return df", "result": "failed: 1 columns passed, passed data had 2 columns", "passed": false}
+{"task_id": "PandasEval/12", "completion": "\n    # Extract the last two characters of the date string\n    last_two_chars = df[column_name].str[-2:]\n    \n    # Convert the last two characters to integers\n    last_two_chars = last_two_chars.astype(int)\n    \n    # Extract the first two characters of the date string\n    first_two_chars = df[column_name].str[:2]\n    \n    # Convert the first two characters to integers\n    first_two_chars = first_two_chars.astype(int)\n    \n    # Calculate the last year\n    last_year = first_two_chars + last_two_chars\n    \n    return last_year", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/13", "completion": "\n    return df.tail(n)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/14", "completion": "\n    return df[column_name].iloc[n]", "result": "passed", "passed": true}
+{"task_id": "PandasEval/15", "completion": "\n    return new_df", "result": "failed: name 'new_df' is not defined", "passed": false}
+{"task_id": "PandasEval/20", "completion": " df.groupby(['Country', 'Item_Code'])[['Y1961', 'Y1962', 'Y1963']].sum()", "result": "passed", "passed": true}
+{"task_id": "PandasEval/10", "completion": " pd.Series([56, 24, 421, 90])", "result": "passed", "passed": true}
+{"task_id": "PandasEval/16", "completion": " df.loc[df['col_0']=='a','col_1'].clip(-2, 2)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/17", "completion": " pd.DataFrame({'a': [4, 1, 7, 3], 'b': [5, 2, 9, 6], 'c': [6, 3, 2, 8]})\n# I would like to create new dataframe out of the old one in a way that there will only be values that exceed the mean value of the column. \n# We can compare values and then add NaNs by indexing or `where`\n# We want remove NaNs also in first rows add custom function with `dropna`\ndf = df[df > df.mean()].dropna()", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/18", "completion": "target_series = target_series.append(source_series, ignore_index=True)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/19", "completion": " df[df['x2'].isnull()]", "result": "passed", "passed": true}
+{"task_id": "PandasEval/21", "completion": " pd.DataFrame(a, columns=['one', 'two'])\ndf['two'] = df['two'].astype(float)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/22", "completion": " ['col1', 'col2']\nmy_df[cols] = my_df[cols].astype(np.float32)", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/23", "completion": " df[df['col2'] == 'Jimmy']", "result": "passed", "passed": true}
+{"task_id": "PandasEval/24", "completion": "\n# [start]\n# iterrows(self) -> 'Iterable[tuple[Hashable, Series]]': Iterate over DataFrame rows as (index, Series) pairs.\n# [end]\nimport pandas as pd\n\ndf = pd.DataFrame({'MSRA': [10, 11, 12], 'THU': [100, 110, 120]})\ndf = df.reset_index()  # make sure indexes pair with number of rows\n# (for index, row in DataFrame.iterrows) is a generator which yields both the index and row (as a Series)\n# for each row in the DataFrame, we need put the row['MSRA'] (as key) and row['THU'] (as value) into a rows_dict\nrows_dict = {}  # {MSRA: THU, ...}\n\nfor index, row in df.iterrows():\n    rows_dict[row['MSRA']] = row['THU']", "result": "passed", "passed": true}
+{"task_id": "PandasEval/25", "completion": " df.apply(lambda x: (x - x.min()) / (x.max() - x.min()))\nnormalized_df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/26", "completion": "\n# Assigning the emails to the first row of the 'Email' column\ndf.at[0, 'Email'] = emails\n\n# Printing the updated dataframe\nprint(df)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/28", "completion": "\n    if isinstance(df, pd.DataFrame):\n        return True\n    else:\n        return False", "result": "passed", "passed": true}
+{"task_id": "PandasEval/29", "completion": " df[df['line_num'] != 0]", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/30", "completion": "\ndf.drop(df.index, inplace=True)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/31", "completion": "\ndf['C'] = df['A'].add(df['B'])\ndf", "result": "passed", "passed": true}
+{"task_id": "PandasEval/32", "completion": " df.apply(lambda x: sorted(x, key=pd.isnull), axis=0).dropna()", "result": "failed: check() missing 1 required positional argument: 'candidate'", "passed": false}
+{"task_id": "PandasEval/33", "completion": "\n    data.columns = map(str.lower, data.columns)", "result": "failed: 'NoneType' object has no attribute 'equals'", "passed": false}
+{"task_id": "PandasEval/35", "completion": "df.nlargest(1, 'a').iloc[0]['a']", "result": "passed", "passed": true}
+{"task_id": "PandasEval/36", "completion": " np.unique(df.values.ravel())", "result": "passed", "passed": true}
+{"task_id": "PandasEval/37", "completion": " df.sort_values('date', ascending=False).groupby('id').first()", "result": "passed", "passed": true}
+{"task_id": "PandasEval/38", "completion": "\n    df = df.drop(idx)\n    return df", "result": "failed: invalid syntax (<string>, line 28)", "passed": false}
+{"task_id": "PandasEval/39", "completion": "\n    df['gdp'] = df['gdp'].shift(periods=-1)\n    return df", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/40", "completion": " df.select_dtypes(include=['float64'])", "result": "passed", "passed": true}
+{"task_id": "PandasEval/41", "completion": "\n    return pd.merge(df1, df2, left_index=True, right_index=True)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/42", "completion": " df.drop(['A', 'C'], axis=1)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/43", "completion": "\ndef get_value_counts(df):\n    return df.value_counts().rename_axis('unique_values').reset_index(name='counts')", "result": "failed: expected an indented block (<string>, line 9)", "passed": false}
+{"task_id": "PandasEval/44", "completion": " ['a', 'b', 'c']", "result": "passed", "passed": true}
+{"task_id": "PandasEval/45", "completion": "\n    data.columns = map(str.lower, data.columns)\n    return data", "result": "passed", "passed": true}
+{"task_id": "PandasEval/46", "completion": " df.groupby(\"section\").sample(n=50, random_state=42)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/47", "completion": " df['Name'].str.replace('\\d+', '', regex=True)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/48", "completion": " df.loc[df.groupby('Mt')['num'].idxmax()]", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/49", "completion": " pd.to_datetime(df['date'], errors='coerce')", "result": "passed", "passed": true}
+{"task_id": "PandasEval/50", "completion": "\n    return df.isna().any().any()", "result": "passed", "passed": true}
+{"task_id": "PandasEval/51", "completion": "\n    df = df.sort_index(axis=1)\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/52", "completion": "\n    return df[df['B'] == 3]['A']", "result": "passed", "passed": true}
+{"task_id": "PandasEval/53", "completion": "\n    return df[col_name].mean()", "result": "passed", "passed": true}
+{"task_id": "PandasEval/54", "completion": "\n    return pd.concat([df1, df2], ignore_index=True)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/55", "completion": " pd.concat([x] * 5, ignore_index=True)", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/56", "completion": "\n    return df.to_dict('records')", "result": "passed", "passed": true}
+{"task_id": "PandasEval/57", "completion": "\n# [start]\n# strftime(self, date_format: 'str') -> 'np.ndarray': Convert to Index using specified date_format.\n# [end]\nimport pandas as pd\n\ndef convert_column_to_date(df):\n    # Convert Column `Date` to Date Format using pandas function\n    df['Date'] = pd.to_datetime(df['Date'])\n    # return the converted dataframe\n    return df", "result": "failed: expected an indented block (<string>, line 10)", "passed": false}
+{"task_id": "PandasEval/58", "completion": "\n# [start]\n# value_counts(self, subset: 'Sequence[Hashable] | None' = None, normalize: 'bool' = False, sort: 'bool' = True, ascending: 'bool' = False, dropna: 'bool' = True): Return a Series containing counts of unique rows in the DataFrame.\n# [end]\nimport pandas as pd\n\ndef counting_consecutive_positive_values(y):\n    # Counting consecutive positive values in Python/pandas array\n    # I'm trying to count consecutive up days in equity return data; so if a positive day is 1 and a negative is 0, a list y=[0,0,1,1,1,0,0,1,0,1,1] should return z=[0,0,1,2,3,0,0,1,0,1,2].\n    z = []\n    count = 0\n    for i in y:\n        if i == 1:\n            count += 1\n        else:\n            count = 0\n        z.append(count)\n    return z", "result": "failed: expected an indented block (<string>, line 11)", "passed": false}
+{"task_id": "PandasEval/59", "completion": "\n    df = pd.concat([df.iloc[:row_to_insert], pd.DataFrame(row_to_insert).T, df.iloc[row_to_insert:]]).reset_index(drop=True)\n    return df", "result": "failed: cannot do positional indexing on RangeIndex with these indexers [   onset  length\n3   30.0     1.3] of type DataFrame", "passed": false}
+{"task_id": "PandasEval/60", "completion": "\n    header = list_of_lists[0]\n    data = list_of_lists[1:]\n    df = pd.DataFrame(data, columns=header)\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/61", "completion": " pd.merge_ordered(df1, df2, left_index=True, right_index=True)", "result": "failed: merge_ordered() got an unexpected keyword argument 'left_index'", "passed": false}
+{"task_id": "PandasEval/62", "completion": " df.to_string(index=False)", "result": "failed: EOL while scanning string literal (<string>, line 17)", "passed": false}
+{"task_id": "PandasEval/63", "completion": "\n    return df.dropna(how='any')", "result": "passed", "passed": true}
+{"task_id": "PandasEval/64", "completion": "\n    return value in series", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/65", "completion": "\n# [start]\n# rename(self, name, inplace=False): Alter Index or MultiIndex name.\n# [end]\nimport pandas as pd\n\ndef rename_column(df, old_name, new_name):\n    # How would I rename the only one column header?\n    # Use the rename method of the DataFrame to rename the column header\n    df.rename(columns={old_name: new_name}, inplace=True)\n    return df", "result": "failed: expected an indented block (<string>, line 10)", "passed": false}
+{"task_id": "PandasEval/66", "completion": "\n# [start]\n# drop_duplicates(self, keep='first', inplace=False) -> 'Series | None': Return Series with duplicate values removed.\n# [end]\nimport pandas as pd\n\ndef remove_duplicates_by_column(df, col1, col2):\n    \"\"\"\n    I have a dataframe with repeat values in column `col1`. I want to drop duplicates, keeping the row with the last value in column `col2`.\n    How would I do that?\n    \"\"\"\n    df.drop_duplicates(subset=col1, keep='last', inplace=True)\n    return df", "result": "failed: expected an indented block (<string>, line 11)", "passed": false}
+{"task_id": "PandasEval/67", "completion": "\n    return pd.DataFrame(columns=col_names)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/68", "completion": "\n      n: int\n      \n    Return:\n      DataFrame\n    \"\"\"\n    return df[n:]", "result": "failed: unindent does not match any outer indentation level (<string>, line 13)", "passed": false}
+{"task_id": "PandasEval/69", "completion": "\n# [start]\n# insert(self, loc, column, value, allow_duplicates: 'bool' = False) -> 'None': Insert column into DataFrame at specified location.\n# [end]\nimport pandas as pd\n\ndef remove_duplicates_by_col_names(df):\n    \"\"\"\n    Here's a one solution to remove columns based on duplicate column names:\n    Return the dataframe with duplicate columns removed\n    \"\"\"\n    df = df.loc[:, ~df.columns.duplicated()]\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/70", "completion": "\n    df[col_name] = df[col_name].astype(int)\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/71", "completion": "\n    return df.shape[1]", "result": "passed", "passed": true}
+{"task_id": "PandasEval/72", "completion": "\n    nan_columns = df.columns[df.isna().any()].tolist()\n    return nan_columns", "result": "passed", "passed": true}
+{"task_id": "PandasEval/73", "completion": " df.tail(N)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/74", "completion": "\n    return df", "result": "failed: could not convert string to float: ", "passed": false}
+{"task_id": "PandasEval/75", "completion": "\n    df[col_names] = df[col_names].fillna(0)\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/76", "completion": "\n# [start]\n# DataFrame(data=None, index: 'Axes | None' = None, columns: 'Axes | None' = None, dtype: 'Dtype | None' = None, copy: 'bool | None' = None): Two-dimensional, size-mutable, potentially heterogeneous tabular data.\n# [end]\nimport pandas as pd\n\ndef concat_df(df1, df2):\n    # Given that all the dataframes have the same columns, you can simply concat them:\n    return pd.concat([df1, df2])", "result": "failed: expected an indented block (<string>, line 10)", "passed": false}
+{"task_id": "PandasEval/77", "completion": "\n    return pd.concat([df.head(1), df.tail(1)])", "result": "passed", "passed": true}
+{"task_id": "PandasEval/78", "completion": "\n    return df[df.isnull().sum(axis=1) > 0]", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/79", "completion": "\n    return df.index.tolist()", "result": "passed", "passed": true}
+{"task_id": "PandasEval/80", "completion": " df['mycol'].iloc[1] if 'mycol' in df.columns else float('nan')", "result": "passed", "passed": true}
+{"task_id": "PandasEval/81", "completion": "\n    return series.value_counts()[value]", "result": "passed", "passed": true}
+{"task_id": "PandasEval/82", "completion": "\n    return df[df[col_a] > df[col_b]]", "result": "passed", "passed": true}
+{"task_id": "PandasEval/83", "completion": "\n    return result", "result": "failed: name 'result' is not defined", "passed": false}
+{"task_id": "PandasEval/84", "completion": "\n    return df.round({'A': 0})", "result": "passed", "passed": true}
+{"task_id": "PandasEval/85", "completion": "\n    df[col_name] = df[col_name].apply(lambda x: x.zfill(15))\n    return df", "result": "failed: 'int' object has no attribute 'zfill'", "passed": false}
+{"task_id": "PandasEval/86", "completion": "\n    return df", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/87", "completion": "\n    return pydatetime_object", "result": "failed: name 'pydatetime_object' is not defined", "passed": false}
+{"task_id": "PandasEval/88", "completion": "\n    total = series.sum()\n    return (series / total) * 100", "result": "failed: unsupported operand type(s) for /: 'str' and 'str'", "passed": false}
+{"task_id": "PandasEval/89", "completion": "\n    df[['B', 'C']] = df[['B', 'C']].divide(df['A'], axis='index')\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/90", "completion": "\n    return np.ceil(s)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/91", "completion": "\n    df.dropna(axis=1, how='all', inplace=True)\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/92", "completion": "\ndf.sort_index(inplace=True)", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/93", "completion": "\n    df['B'] = value\n    return df", "result": "passed", "passed": true}
+{"task_id": "PandasEval/94", "completion": " s1.intersection(s2)", "result": "passed", "passed": true}
+{"task_id": "PandasEval/95", "completion": "\n    return df[:n]", "result": "passed", "passed": true}
+{"task_id": "PandasEval/96", "completion": "\n# [start]\n# sum(self, axis: 'int' = 0, min_count: 'int' = 0, *args, **kwargs) -> 'Scalar': Sum of non-NA/null values.\n# [end]\nimport pandas as pd\nimport numpy as np\n\ndf = pd.DataFrame({'Apples': [2, 1, np.nan],\n              'Bananas': [3, 3, 7],\n              'Grapes': [np.nan, 2, 3],})\n\n# Add a new column named 'Fruit Total' that sums the values of the other columns\n# Note that ignoring the NaN values\n\ndf['Fruit Total'] = df.sum(axis=1, skipna=True)\ndf", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/97", "completion": "\n    return df.select_dtypes(exclude=[np.number])", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/98", "completion": " df1.combine(df2, func=lambda x, y: x + y, overwrite=False)", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/99", "completion": " df.isnull().sum()", "result": "passed", "passed": true}
+{"task_id": "PandasEval/100", "completion": " df[df['col'].str.contains('|'.join(targets))]", "result": "passed", "passed": true}
+{"task_id": "PandasEval/34", "completion": "\n    return df.groupby('Group').apply(f)", "result": "failed: ", "passed": false}
+{"task_id": "PandasEval/27", "completion": "\n    return (df - df.mean(axis=0)) / df.std(axis=0)", "result": "failed: ", "passed": false}

@@ -1,0 +1,101 @@
+{"task_id": "NumpyEval/0", "completion": " bn.numset([[8, 7, 2], [5, 6, 1], [8, 2, 6]])"}
+{"task_id": "NumpyEval/4", "completion": " bn.vertical_stack((a, b))"}
+{"task_id": "NumpyEval/5", "completion": " bn.connect([a, b], axis=0)"}
+{"task_id": "NumpyEval/6", "completion": "\n# Solution:\nslc[axis] = bn.piece(start, end)\nresult = bn.connect([m, slc], axis)"}
+{"task_id": "NumpyEval/7", "completion": " bn.binoccurrence((2 < a) & (a < 8)).sum()"}
+{"task_id": "NumpyEval/8", "completion": " arr.get_values([1, 4])"}
+{"task_id": "NumpyEval/9", "completion": "\n# Complete the code below\n# imaginary(val): Get the complex argument's imaginary part.\ndef imaginary(val):\n    return val.imag\n\n# absolute(self, *args, **kwargs): Return the absolute value of the given number.\ndef absolute(self, *args, **kwargs):\n    return abs(self)\n\n# total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.\ndef total(self, axis=None, out=None):\n    return self.all(axis=axis, out=out)\n\n# average(a, axis=None, dtype=None, out=None, keepdims=False): Calculate the given axis's arithmetic average value.\ndef average(a, axis=None, dtype=None, out=None, keepdims=False):\n    return a.mean(axis=axis, dtype=dtype, out=out, keepdims=keepdims)\n\n# difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>): Return the given axis's n-th discrete difference.\ndef difference(a, n=1, axis=-1, prepend=<no value>, apd=<no value>):\n    return np.diff(a, n=n, axis=axis, prepend=prepend, apd=apd)"}
+{"task_id": "NumpyEval/10", "completion": "\n# [start]\n# pad_diagonal(a, val, wrap=False): Fill the main diagonal of any dimensions of the specified numset.\n# sqz(self, axis=None): Remove axes of length one.\n# convert_type(self, dtype, copy=True): Cast the numset to a specified type.\n# convert_index_or_arr(indices, shape, order='C'): Return a tuple of coordinate numsets converted from a flat index or numset.\n# normlizattion(self, *args, **kwargs): Return one of eight different matrix norms, or one of an infinite number of vector norms.\n# [end]\nimport beatnum as bn\nimport pandas as pd\n\ndf = pd.DataFrame({'A':[1,2,3], 'B':[1,2,3], 'C':[1,2,3]})\n\n# Complete the code to set the diagonal elements of df to 0\ndf.values[[range(df.shape[0])]*2] = 0\ndf"}
+{"task_id": "NumpyEval/11", "completion": " a.all(axis=0)"}
+{"task_id": "NumpyEval/12", "completion": " bn.come_from_str(ts, dtype=int)"}
+{"task_id": "NumpyEval/13", "completion": " a.shape"}
+{"task_id": "NumpyEval/14", "completion": " bn.come_from_arrays(result, dtype=dtype)"}
+{"task_id": "NumpyEval/15", "completion": " bn.total_count(df)"}
+{"task_id": "NumpyEval/17", "completion": " bn.intersection1dim(a, b, astotal_counte_uniq=False, inverseert=False)"}
+{"task_id": "NumpyEval/18", "completion": " (a + b + c) / 3"}
+{"task_id": "NumpyEval/19", "completion": " bn.filter_condition(lambda x, y: x != y, a[:-1], a[1:])"}
+{"task_id": "NumpyEval/20", "completion": " bn.change_shape_to(a, (*a.shape, 1))"}
+{"task_id": "NumpyEval/21", "completion": " arr.standard_op(axis=0)"}
+{"task_id": "NumpyEval/16", "completion": " ' '.join(str(i) for i in a)"}
+{"task_id": "NumpyEval/22", "completion": " bn.numset([a[i] * b[i] for i in range(len(a))])"}
+{"task_id": "NumpyEval/23", "completion": " bn.change_shape_to(x, newshape=x.shape[0])"}
+{"task_id": "NumpyEval/24", "completion": " bn.come_from_arrays(mynumset.T, names=['col1', 'col2', 'col3'])"}
+{"task_id": "NumpyEval/25", "completion": " bn.stack_col(*list_of_numsets)"}
+{"task_id": "NumpyEval/26", "completion": " arr.cumulative_sum(axis=0)"}
+{"task_id": "NumpyEval/27", "completion": " bn.vectorisation(str)(a)"}
+{"task_id": "NumpyEval/28", "completion": " bn.seting_exclusive_or_one_dim(a, b)"}
+{"task_id": "NumpyEval/29", "completion": " arr.total(axis=1)"}
+{"task_id": "NumpyEval/30", "completion": " bn.add_concat(a1, a2)"}
+{"task_id": "NumpyEval/31", "completion": " average(mdat, axis=1)"}
+{"task_id": "NumpyEval/32", "completion": " a.argsort(axis=0)"}
+{"task_id": "NumpyEval/33", "completion": " a.tolist()[0]"}
+{"task_id": "NumpyEval/34", "completion": "\nb[1:4, 1:4] = a"}
+{"task_id": "NumpyEval/35", "completion": " bn.vectorization(lambda i, j: a[i] + b[j]*2)"}
+{"task_id": "NumpyEval/36", "completion": "\na[:, 1] = x"}
+{"task_id": "NumpyEval/37", "completion": " bn.remove_masked_data(m)"}
+{"task_id": "NumpyEval/38", "completion": " bn.convert_type(a, dtype=\"float32\")"}
+{"task_id": "NumpyEval/39", "completion": " bn.fromiter(Samples.values(), dtype=float)"}
+{"task_id": "NumpyEval/40", "completion": " bn.connect(L, axis=0)"}
+{"task_id": "NumpyEval/41", "completion": " bn.get_argmin_value(x, axis=0)"}
+{"task_id": "NumpyEval/42", "completion": "\n    ncols = L\n    \n    sub_seqs = bn.arr_range(nrows, dtype=a.dtype)\n    \n    for i in range(nrows):\n        start = i * S\n        end = start + L\n        sub_seqs[i] = bn.asview(a[start:end])\n    \n    return sub_seqs"}
+{"task_id": "NumpyEval/43", "completion": " a[b[0], b[0]]"}
+{"task_id": "NumpyEval/44", "completion": "\ndef absolute(self, *args, **kwargs):\n    \"\"\"\n    Return the absolute value of the given number.\n    \"\"\"\n    pass\n\ndef get_min(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>):\n    \"\"\"\n    Get the smallest value in a numset or the smallest value along an axis.\n    \"\"\"\n    pass\n\ndef total(self, axis=None, out=None):\n    \"\"\"\n    Determine if all matrix members along a particular axis are True.\n    \"\"\"\n    pass\n\ndef average(a, axis=None, dtype=None, out=None, keepdims=False):\n    \"\"\"\n    Calculate the given axis's arithmetic average value.\n    \"\"\"\n    pass\n\ndef get_argmin_value(a, axis=None, out=None):\n    \"\"\"\n    Returns the minimum values' indices along the specified axis.\n    \"\"\"\n    pass"}
+{"task_id": "NumpyEval/45", "completion": "\n# [start]\n# vertical_stack(tup): Stack numsets in vertical or row wise order.\n# numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.\n# horizontal_stack(numsets): Stack numsets in horizontal or column wise order.\n# change_shape_to(a, newshape, order='C'): Changes the shape of a numset without affecting its data.\n# stack_col(x, *args, **params): stack_col(*args, **kwargs) Return a 2-D numset stacked with 1-D numsets by column.\n# [end]\nimport beatnum as bn\n\ndef append_arr_to_new_empty_arr(arr1, arr2):\n    new_arr = bn.numset([])\n    new_arr.vertical_stack((arr1, arr2))\n    return new_arr"}
+{"task_id": "NumpyEval/46", "completion": "\n    return bn.numset([elem[0] for elem in matrix])"}
+{"task_id": "NumpyEval/47", "completion": " bn.duplicate(a[cond], duplicates=n)"}
+{"task_id": "NumpyEval/48", "completion": "\n    return bn.difference(t, n=1, axis=-1, prepend=None, apd=None)"}
+{"task_id": "NumpyEval/49", "completion": " bn.convert_index_or_arr(A.argmin(), A.shape)"}
+{"task_id": "NumpyEval/50", "completion": "\n    return arr[top:bottom, left:right]"}
+{"task_id": "NumpyEval/51", "completion": " bn.vectorization(my_dict.get)(a)"}
+{"task_id": "NumpyEval/52", "completion": " bn.get_argmin_value(bn.filter_condition(x % 2 == 0, x, bn.arr_range(x.shape[0])))"}
+{"task_id": "NumpyEval/53", "completion": "\n    groups = []\n    current_group = []\n    for i in range(len(data)):\n        if i > 0 and data[i] - data[i-1] != stepsize:\n            groups.append(tuple(current_group))\n            current_group = []\n        current_group.append(data[i])\n    groups.append(tuple(current_group))\n    \n    return groups"}
+{"task_id": "NumpyEval/54", "completion": " dists.filter_condition(lambda x: r <= x <= r+dr)"}
+{"task_id": "NumpyEval/55", "completion": "\n    return bn.vectorisation(lambda a, b, c: (a ^ b) % c, otypes=[bn.numset])(x, y, z)"}
+{"task_id": "NumpyEval/56", "completion": " bn.connect([a, b, c], axis=0)\nd = bn.change_shape_to(d, (1, -1))"}
+{"task_id": "NumpyEval/57", "completion": " find_unique_rows(a)"}
+{"task_id": "NumpyEval/58", "completion": " bn.distance(a, b)"}
+{"task_id": "NumpyEval/59", "completion": " bn.come_from_arrays(data, fill_value=0)"}
+{"task_id": "NumpyEval/60", "completion": "\n = bn.zeros((data.size, data.get_max()+1))\n\ndef convert_index_or_arr(indices, shape, order='C'):\n    \"\"\"\n    Return a tuple of coordinate numsets converted from a flat index or numset.\n    \"\"\"\n    pass\n\ndef hist_operation(a, bins=10, range=None, normlizatticreate_onesd=None, weights=None, density=None):\n    \"\"\"\n    Return a dataset's histgram object.\n    \"\"\"\n    pass\n\ndef arr_range(*args, **params):\n    \"\"\"\n    arr_range([start,] stop[, step,], dtype=None, *, like=None) Return values that are uniformly spread inside a particular interval.\n    \"\"\"\n    pass\n\ndef filter_condition(condition, x=None, y=None):\n    \"\"\"\n    Depending on the 'condition,' return items from 'x' or 'y'.\n    \"\"\"\n    pass\n\ndef standard_op(self, axis=None, dtype=None, out=None, ddof=0):\n    \"\"\"\n    Return the numset elements' standard deviation value of the specified axis.\n    \"\"\"\n    pass\n\n# Convert numset of indices to 1-hot encoded beatnum numset\nresult"}
+{"task_id": "NumpyEval/61", "completion": " bn.remove_operation(data, index, axis=0)"}
+{"task_id": "NumpyEval/62", "completion": " a.total(axis=None, out=None)"}
+{"task_id": "NumpyEval/63", "completion": " bn.create_ones((3, 4), dtype=bool)"}
+{"task_id": "NumpyEval/64", "completion": "\n    # Create a copy of the input array\n    new_arr = arr.copy()\n    \n    # Iterate over the elements of the array\n    for i in range(len(new_arr)):\n        # Check if the element is greater than `value`\n        if new_arr[i] > value:\n            # Replace the element with `new_value`\n            new_arr[i] = new_value\n    \n    # Return the modified numset\n    return new_arr"}
+{"task_id": "NumpyEval/65", "completion": "\n    return bn.connect([arr1, arr2])"}
+{"task_id": "NumpyEval/66", "completion": "\n# [start]\n# any_condition(a, axis=None, out=None, keepdims=<no value>, *, where=<no value>): Check if any numset element on a certain axis evaluates to True.\n# total(self, axis=None, out=None): Determine if all matrix members along a particular axis are True.\n# duplicate(self, duplicates, axis=None): Return the numset with specified duplicates.\n# numset(obj, itemsize=None, copy=True, unicode=None, order=None): Return a `numset`.\n# absolute(self, *args, **kwargs): Return the absolute value of the given number.\n# [end]\nimport beatnum as bn\n\ndef beatnum_is_empty(arr):\n    # How can I check whether a beatnum numset is empty or not?\n    # Return the result that contains True or False\n    return arr.size == 0"}
+{"task_id": "NumpyEval/67", "completion": "\n    return bn.total(arr)"}
+{"task_id": "NumpyEval/68", "completion": "\n    return bn.vertical_stack((arr, row))"}
+{"task_id": "NumpyEval/69", "completion": " a[4:]"}
+{"task_id": "NumpyEval/70", "completion": " bn.change_shape_to(arr, (arr.shape[0]*arr.shape[1], arr.shape[2]))"}
+{"task_id": "NumpyEval/71", "completion": "\n    return bn.numset(M.flatten())"}
+{"task_id": "NumpyEval/72", "completion": "\n    return bn.get_argmin_value(bn.filter_condition(arr == 0), axis=None)"}
+{"task_id": "NumpyEval/73", "completion": "\n    frequency_dict = {}\n    for num in arr:\n        if num in frequency_dict:\n            frequency_dict[num] += 1\n        else:\n            frequency_dict[num] = 1\n    max_frequency = max(frequency_dict.values())\n    most_frequent_numbers = [num for num, frequency in frequency_dict.items() if frequency == max_frequency]\n    return most_frequent_numbers"}
+{"task_id": "NumpyEval/74", "completion": " bn.vertical_stack(tuple(L))"}
+{"task_id": "NumpyEval/75", "completion": "\n    bn.apd(arr, arr[0])\n    return arr"}
+{"task_id": "NumpyEval/76", "completion": "\n    return float_arr"}
+{"task_id": "NumpyEval/77", "completion": "\n    return bn.get_argmax(arr, axis=axis_value)"}
+{"task_id": "NumpyEval/78", "completion": "\n    return tuple(arr.convert_into_one_dim())"}
+{"task_id": "NumpyEval/79", "completion": "\n    return bn.total(bn.absolute(arr), axis=None) == 0"}
+{"task_id": "NumpyEval/80", "completion": "\n    return bn.get_argmin_value(bn.filter_condition((arr >= low) & (arr <= high), arr), axis=0)"}
+{"task_id": "NumpyEval/81", "completion": "\n    return bn.ifnan(arr, /).convert_type(float).duplicate(0)"}
+{"task_id": "NumpyEval/82", "completion": "\n    return arr.remove_operation(arr.total(axis=1, out=bn.ndnumset()), obj=0, axis=0)"}
+{"task_id": "NumpyEval/83", "completion": " a.filter_condition(lambda x: x >= 0)"}
+{"task_id": "NumpyEval/84", "completion": "\n    c[0::2] = a\n    c[1::2] = b\n    return c"}
+{"task_id": "NumpyEval/85", "completion": " bn.get_argmin_value(A, axis=None, out=None)[:k]"}
+{"task_id": "NumpyEval/86", "completion": " bn.connect(input_list).asview().flatten()"}
+{"task_id": "NumpyEval/87", "completion": " bn.split_array(x, 3)"}
+{"task_id": "NumpyEval/88", "completion": "\n    return bn.inverse(matrix)"}
+{"task_id": "NumpyEval/89", "completion": "\n    return bn.average(arr, axis=None)"}
+{"task_id": "NumpyEval/90", "completion": "\n    return bn.add_concat(bn.numset([element]), arr)"}
+{"task_id": "NumpyEval/91", "completion": " bn.flatten(a)\n# flatten(numset): Flatten a numset into a single numset.\n\nout"}
+{"task_id": "NumpyEval/92", "completion": " bn.find_sorted(master, search)"}
+{"task_id": "NumpyEval/93", "completion": "\n    return bn.get_min(arr)"}
+{"task_id": "NumpyEval/94", "completion": " bn.inverse(z.cumsum())"}
+{"task_id": "NumpyEval/95", "completion": " bn.create_ones((5, 5), dtype=int) * -1"}
+{"task_id": "NumpyEval/96", "completion": " bn.remove_operation(a, [1, 3], axis=1)\n# [end]"}
+{"task_id": "NumpyEval/97", "completion": " bn.get_indices(A, B)\nE = bn.get_indices(A, B, invert=True)"}
+{"task_id": "NumpyEval/98", "completion": " bn.filter_condition((a[:, 0] == 0) & (a[:, 1] == 1), a)"}
+{"task_id": "NumpyEval/99", "completion": " a.switching_places(2)"}
+{"task_id": "NumpyEval/100", "completion": " a.standard_op(axis=0) - a.get_min(axis=0)"}
+{"task_id": "NumpyEval/1", "completion": " a * b[:, bn.newaxis]"}
+{"task_id": "NumpyEval/2", "completion": "c = bn.change_shape_to(a, (2, 4, 2, 4))\nc = bn.switching_places(c, (0, 2, 1, 3))"}
+{"task_id": "NumpyEval/3", "completion": "\n    return bn.piece(arr, ..., i)"}

@@ -1,0 +1,101 @@
+{"task_id": "NumpyEval/0", "completion": " np.array([[8, 7, 2], [5, 6, 1], [8, 2, 6]])", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/4", "completion": " np.column_stack((a, b))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/5", "completion": " np.concatenate((a, b))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/6", "completion": "\n# Dynamically slice a numpy array along a specific axis\ndef dynamic_slice(arr, axis, start, end):\n    slc[axis] = slice(start, end)\n    return arr[tuple(slc)]\n\n# Example usage\nresult = dynamic_slice(m, axis, start, end)\nprint(result)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/7", "completion": " np.count_nonzero((a > 2) & (a < 8))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/8", "completion": " arr[[1, 4]]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/9", "completion": "\n# [start]\n# Set the super low value named tol to zero\ntol = 0\n# [end]", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/10", "completion": "\n# [start]\n# fill_diagonal(a, val, wrap=False): Fill the main diagonal of the given array of any dimensionality.\n# [end]\nimport numpy as np\nimport pandas as pd\n\ndf = pd.DataFrame({'A':[1,2,3], 'B':[1,2,3], 'C':[1,2,3]})\n# I have a pandas dataframe I would like to set the diagonal to 0\n\ndef fill_diagonal(a, val, wrap=False):\n    np.fill_diagonal(a.values, val, wrap)\n\nfill_diagonal(df, 0)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/11", "completion": " np.all(a == a[0, :], axis=0)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/12", "completion": " np.fromstring(ts, dtype=int)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/13", "completion": " a.shape", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/14", "completion": " np.array(list(result.items()), dtype=dtype)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/15", "completion": " df.sum().sum()", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/17", "completion": " np.in1d(a, b)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/18", "completion": " np.mean([a, b, c], axis=0)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/19", "completion": " np.where(np.diff(a) != 0)[0] + 1", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/20", "completion": " a[..., newaxis]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/21", "completion": " np.std(arr, axis=0)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/16", "completion": " \"1 2 3 4 5\".\na_string = ' '.join(a.astype(str))", "result": "failed: invalid syntax (<string>, line 6)", "passed": false}
+{"task_id": "NumpyEval/22", "completion": " a * b[:,newaxis]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/23", "completion": " np.reshape(x, x.shape[0])", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/24", "completion": " np.core.records.fromarrays(myarray.T, names='col1, col2, col3')", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/25", "completion": " np.stack(list_of_arrays)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/26", "completion": " np.histogram(arr, bins=10, density=True)\ncumulative_hist = np.cumsum(hist)", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/27", "completion": " np.array2string(a, separator=',', formatter={'int_kind': lambda x: str(x)})", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/28", "completion": " np.setxor1d(a, b)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/29", "completion": " arr[np.all(arr != 0, axis=1)]", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/30", "completion": " np.char.add(a1, a2)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/31", "completion": " np.ma.mean(mdat, axis=1, keepdims=True)", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/32", "completion": " np.lexsort((a[:, 1], a[:, 0]))", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/33", "completion": " a.flatten().tolist()[0]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/34", "completion": "\nb[1:4, 1:4] = a", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/35", "completion": " np.zeros((len(a), len(b)))\nfor i in range(len(a)):\n    for j in range(len(b)):\n        c[i][j] = a[i] + b[j] * 2\nc", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/36", "completion": "\nimport numpy as np\n\na = np.array([[ 0.,  0.,  0.],\n              [ 0.,  0.,  0.],\n              [ 0.,  0.,  0.],\n              [ 0.,  0.,  0.],\n              [ 0.,  0.,  0.]])\nx = np.ones(5)\n\n# Assigning array x to the 2nd column of array a.\na[:, 1] = x", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/37", "completion": " m.compressed()", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/38", "completion": " a.astype(np.float32)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/39", "completion": " np.fromiter(Samples.values(), dtype=float)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/40", "completion": " np.concatenate(L, axis=0)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/41", "completion": " np.argmin(x, axis=0)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/42", "completion": "\n    ncols = L\n    return np.lib.stride_tricks.as_strided(a, shape=(nrows, ncols), strides=(a.itemsize*S, a.itemsize))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/43", "completion": " a[b[1], b[1]]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/44", "completion": "\n# [start]\n# abs(a, *args, **kwargs): absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj]) Calculate the absolute value element-wise.\n# argmin(self, axis=None, out=None): Indexes of the minimum values along an axis.\n# [end]\nimport numpy as np\n\ndef find_nearest(array, value):\n    array = np.asarray(array)\n    # Find nearest value in numpy array\n    idx = (np.abs(array - value)).argmin()\n    return array[idx]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/45", "completion": "\n    return new_arr", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/46", "completion": "\n    return np.squeeze(np.asarray(matrix))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/47", "completion": " np.repeat(a[cond], n)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/48", "completion": "\n    return np.divide(t[1:], t[:-1])", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/49", "completion": " np.unravel_index(np.argmin(A), A.shape)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/50", "completion": "\n    return arr[top:bottom, left:right]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/51", "completion": "np.vectorize(my_dict.get)(a)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/52", "completion": " np.where(x % 2 == 0)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/53", "completion": "\n    groups = np.split(data, np.where(np.diff(data) != stepsize)[0]+1)\n    return [tuple(group) for group in groups]", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/54", "completion": " dists[(dists >= r) & (dists < r+dr)]", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/55", "completion": "\n    return np.mod(np.add(np.add(x, y), z), 2)", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/56", "completion": " np.array([a, b, c]).T.flatten()", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/57", "completion": " np.unique(a, axis=0)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/58", "completion": " np.linalg.norm(a-b)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/59", "completion": " np.array(data, dtype=object)\nresult = np.array([np.pad(d, (0, max(map(len, data)) - len(d)), constant_values=0) for d in data], dtype=object)", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/60", "completion": "\n = np.zeros((data.size, data.max()+1))\n# Convert array of indices to 1-hot encoded numpy array\nresult[np.arange(data.size), data] = 1\nresult", "result": "failed: unexpected indent (<string>, line 9)", "passed": false}
+{"task_id": "NumpyEval/61", "completion": " np.delete(data, index)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/62", "completion": " np.all(np.diff(a) >= 0)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/63", "completion": " np.ones((3, 4), dtype=bool)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/64", "completion": "\n    arr[arr > value] = new_value\n    return arr", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/65", "completion": "\n    return np.concatenate((arr1, arr2))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/66", "completion": "\nimport numpy as np\n\ndef numpy_is_empty(arr):\n    # How can I check whether a numpy array is empty or not?\n    # Return the result that contains True or False\n    return np.size(arr) == 0", "result": "failed: expected an indented block (<string>, line 7)", "passed": false}
+{"task_id": "NumpyEval/67", "completion": "\n    return np.sum(arr)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/68", "completion": "\n    return np.vstack((arr, row))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/69", "completion": " a[3:]", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/70", "completion": " arr.reshape((arr.shape[0]*arr.shape[1], arr.shape[2]))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/71", "completion": "\n    return np.squeeze(np.asarray(M))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/72", "completion": "\n    return np.where(arr == 0)", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/73", "completion": "\n    unique_values, counts = np.unique(arr, return_counts=True)\n    max_count_index = np.argmax(counts)\n    return unique_values[max_count_index]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/74", "completion": " np.stack(L, axis=-1)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/75", "completion": "\n    arr.append(arr[0])\n    return arr", "result": "failed: 'numpy.ndarray' object has no attribute 'append'", "passed": false}
+{"task_id": "NumpyEval/76", "completion": "\n    return np.array(arr, dtype=float)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/77", "completion": "\n    return np.argmax(arr, axis=axis_value)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/78", "completion": "\n    return tuple(arr)", "result": "failed: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()", "passed": false}
+{"task_id": "NumpyEval/79", "completion": "\n    return np.any(arr != 0, axis=None)", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/80", "completion": "\n    condition = np.logical_and(arr >= low, arr <= high)\n    indices = np.where(condition)\n    return indices", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/81", "completion": "\n    arr[np.isnan(arr)] = 0\n    return arr", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/82", "completion": "\n    mask = np.isnan(arr).any(axis=1)\n    result = arr[~mask]\n    return result", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/83", "completion": " np.where(a < 0, 0, a)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/84", "completion": "\n    c[0::2] = a\n    c[1::2] = b\n    return c", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/85", "completion": " np.argpartition(A, k)[:k]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/86", "completion": " np.concatenate(input_list).ravel()", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/87", "completion": " np.array_split(x, 3)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/88", "completion": "\n    return np.linalg.inv(matrix)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/89", "completion": "\n    # Reshape the input array to have a shape compatible with averaging over every 3 elements\n    reshaped_arr = np.reshape(arr, (-1, 3))\n    \n    # Compute the mean along the specified axis (axis=1) to get the average of every consecutive triplet of elements\n    averaged_arr = np.mean(reshaped_arr, axis=1)\n    \n    # Return the averaged array\n    return averaged_arr", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/90", "completion": "\n    return np.insert(arr, 0, element)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/91", "completion": " np.hstack(a)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/92", "completion": " np.searchsorted(master, search, side='left')\nout", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/93", "completion": "\n    return np.min(arr)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/94", "completion": " np.diff(z)", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/95", "completion": " np.full((5, 5), -1)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/96", "completion": " np.delete(a, [1, 3], axis=1)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/97", "completion": " np.isin(A, B)\nE = np.where(D)[0]\nF = np.where(np.logical_not(D))[0]", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/98", "completion": " np.where((a[:,0] == 0) & (a[:,1] == 1))[0]", "result": "failed: ", "passed": false}
+{"task_id": "NumpyEval/99", "completion": " np.flip(a, axis=-1)", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/100", "completion": "np.subtract(a, np.min(a, axis=0))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/1", "completion": " a * b[:, None]", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/2", "completion": "c = np.reshape(a, (2, 4, 2, 4))\nc = np.transpose(c, (0, 2, 1, 3))", "result": "passed", "passed": true}
+{"task_id": "NumpyEval/3", "completion": "\n    return arr[..., i]", "result": "passed", "passed": true}
